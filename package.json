@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/blakeface/banana-phone.git"
   },
-  "keywords": ["phone", "hardware", "yellow"],
+  "keywords": [
+    "phone",
+    "hardware",
+    "yellow"
+  ],
   "author": "Blake Netzeband",
   "license": "MIT",
   "bugs": {
@@ -20,6 +24,7 @@
   },
   "homepage": "https://github.com/blakeface/banana-phone#readme",
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
