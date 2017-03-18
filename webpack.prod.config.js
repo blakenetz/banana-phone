@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -38,6 +39,6 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   resolveLoader: {
-    root: `${__dirname}/node_modules/`
+    root: path.join(__dirname, 'node_modules')
   },
 };
