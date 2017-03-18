@@ -36,9 +36,12 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    root: path.resolve('./mydir')
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    modulesDirectories: [
+      '/Users/netzebandito/workspace/banana-phone/node_modules'
+    ]
   },
 };
