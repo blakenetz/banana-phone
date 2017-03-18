@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-source-map',
   entry: [
     './client/index.js'
   ],
@@ -10,6 +10,14 @@ module.exports = {
     path: `${__dirname}/dist/`,
     filename: 'bundle.js'
   },
+  plugins: [
+    new ExtractTextPlugin('./style.css')
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
   module: {
     loaders: [{
       exclude: /node_modules/,
@@ -32,7 +40,4 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './dist'
   },
-  plugins: [
-    new ExtractTextPlugin('./style.css')
-  ]
 };

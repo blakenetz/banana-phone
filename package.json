@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
     "build": "node ./node_modules/webpack/bin/webpack.js --production",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,6 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "bulma": "^0.3.1",
     "debug": "^2.6.2",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^1.0.1",
