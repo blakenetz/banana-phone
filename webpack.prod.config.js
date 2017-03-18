@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
-    './client/index.js'
+    '/client/index.js'
   ],
   output: {
     path: `${__dirname}/dist/`,
@@ -38,6 +38,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './dist'
+    contentBase: '/dist'
   },
 };
