@@ -32,7 +32,7 @@ module.exports = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         'style',
-        'css?sourceMap!sass?sourceMap'      )
+        'css?sourceMap!sass?sourceMap')
     }]
   },
   resolve: {
