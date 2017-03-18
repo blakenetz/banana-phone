@@ -40,8 +40,6 @@ module.exports = {
     root: path.resolve('./mydir')
   },
   resolveLoader: {
-    modulesDirectories: [
-      '/Users/netzebandito/workspace/banana-phone/node_modules'
-    ]
+    root: path.join(__dirname, 'node_modules')
   },
 };
