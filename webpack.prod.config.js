@@ -38,6 +38,6 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   resolveLoader: {
-    moduleExtensions: ['-loader']
+    root: path.join(__dirname, 'node_modules')
   },
 };
