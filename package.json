@@ -1,0 +1,49 @@
+{
+  "name": "banana-phone",
+  "version": "1.0.0",
+  "description": "Source code for Banana Phone site!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
+    "build": "node ./node_modules/webpack/bin/webpack.js --production",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakeface/banana-phone.git"
+  },
+  "keywords": ["phone", "hardware", "yellow"],
+  "author": "Blake Netzeband",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeface/banana-phone/issues"
+  },
+  "homepage": "https://github.com/blakeface/banana-phone#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.10.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "bulma": "^0.3.1",
+    "debug": "^2.6.2",
+    "express": "^4.15.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "morgan": "^1.8.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "serve-favicon": "^2.4.1",
+    "webpack": "^1.14.0"
+  }
+}
