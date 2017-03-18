@@ -20,7 +20,8 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      loader: 'babel-loader',
+      test: /\.js$/,
+      loader: 'babel',
       exclude: /node_modules/,
       query: {
         presets: ['react', 'es2015', 'stage-1']
@@ -35,5 +36,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  }
+  },
+  resolveLoader: {
+    moduleExtensions: ['-loader']
+  },
 };
