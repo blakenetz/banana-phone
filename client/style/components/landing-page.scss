@@ -10,9 +10,10 @@
 
   img {
     width: 20vw;
+    min-width: 10em;
   }
   h1 {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $white-bg;
     padding: 0.25em;
     padding-top: 0.35em;
     font-family: "Orator Std";
