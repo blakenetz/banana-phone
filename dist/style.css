@@ -1,0 +1,19 @@
+body {
+  background: #000000; }
+
+.lp {
+  background-image: url("/images/bg-jungle-lp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around; }
+  .lp img {
+    width: 20vw; }
+  .lp h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.25em;
+    padding-top: 0.35em;
+    font-family: "Orator Std"; }
