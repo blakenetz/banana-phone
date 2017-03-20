@@ -36,8 +36,8 @@ class About extends Component {
         break;
       case 'email':
         const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        reg.test(value) ? this.setState({ invalidEmail: false }) : this.setState({ invalidEmail: true })
         value.trim().length > 0 ? this.setState({ reqEmail: false }) : this.setState({ reqEmail: true });
+        reg.test(value) ? this.setState({ invalidEmail: false }) : this.setState({ invalidEmail: true })
         break
     }
   }
@@ -70,11 +70,13 @@ class About extends Component {
   }
 
   render(){
+    console.log(this.state.formSent, this.state.reqEmail, this.state.invalidEmail, this.state.reqName, this.state.name.length, this.state.email.length)
+    console.log(!this.state.formSent && !this.state.reqEmail && !this.state.invalidEmail && !this.state.reqName && this.state.name.length > 0 && this.state.email.length > 0)
     return (
       <section className="container about">
-        <p><strong>BananaPhone</strong> is a banana shaped bluetooth enabled handset that wirelessly connects to your smartphone so you can talk your friends ON A BANANA!</p>
+        <p><strong>Banana Phone</strong> is a banana-shaped bluetooth-enabled handset that wirelessly connects to your smartphone, so you can talk to your friends ON A BANANA!</p>
         <form onSubmit={this.handleSubmit}>
-          <p>Sign up to stay updated on everything <strong>BananaPhone</strong></p>
+          <p>Sign up to stay updated on everything <strong>Banana Phone</strong></p>
           <div className="row">
             <div className="five columns">
               <input type="text"
@@ -105,11 +107,9 @@ class About extends Component {
               <input type="submit"
                     className="button"
                     value={this.state.submitButton}
-                    disabled={this.state.formSent} />
+                    disabled={this.state.formSent || this.state.reqEmail || this.state.invalidEmail || this.state.reqName || this.state.name.length == 0 || this.state.email.length == 0 } />
             </div>
-
           </div>
-          { this.state.formSent ? <p className="helper">Thanks for signing up!</p> : null }
         </form>
       </section>
     )

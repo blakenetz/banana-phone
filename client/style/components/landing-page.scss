@@ -7,45 +7,31 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around;
 
   img {
     width: 20vw;
     min-width: 10em;
+    padding-top: 2em;
   }
   h1 {
-    background-color: $white-bg;
-    color: black;
+    color: $yellow;
     font-family: $title;
-    padding: 0.25em;
-
-    & .taller {
-      font-size: 6rem;
-    }
+    padding-top: 2em;
   }
 }
 
 @media (max-width: 750px) {
   .lp h1 {
     font-size: 4.2rem;
-    & .taller {
-      font-size: 5.2rem;
-    }
   }
 }
 @media (max-width: 550px) {
   .lp h1 {
     font-size: 3.2rem;
-    & .taller {
-      font-size: 4.2rem;
-    }
   }
 }
 @media (max-width: 400px) {
   .lp h1 {
     font-size: 2.7rem;
-    & .taller {
-      font-size: 3.7rem;
-    }
   }
 }
