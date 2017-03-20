@@ -2,7 +2,7 @@
   "name": "banana-phone",
   "version": "1.0.0",
   "description": "Source code for Banana Phone site!",
-  "main": "index.js",
+  "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
@@ -14,7 +14,7 @@
   },
   "keywords": [
     "phone",
-    "hardware",
+    "bluetooth",
     "yellow"
   ],
   "author": "Blake Netzeband",
@@ -41,11 +41,13 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
     "debug": "^2.6.2",
     "express": "^4.15.2",
+    "mailerlite": "^0.4.0",
     "morgan": "^1.8.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "request": "^2.81.0",
     "serve-favicon": "^2.4.1"
   }
 }
