@@ -45,7 +45,7 @@ class About extends Component {
   handleSubmit(e){
     e.preventDefault();
 
-    fetch('http://localhost:3000/signup', {
+    fetch('/signup', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

@@ -1,6 +1,11 @@
 body {
   background: #000000; }
 
+p, h1, h2, h3, h4, h5, h6, input, label {
+  color: #dedede;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100; }
+
 .lp {
   background-image: url("/images/bg-jungle-lp.png");
   background-size: cover;
@@ -11,9 +16,75 @@ body {
   align-items: center;
   justify-content: space-around; }
   .lp img {
-    width: 20vw; }
+    width: 20vw;
+    min-width: 10em; }
   .lp h1 {
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 0.25em;
-    padding-top: 0.35em;
-    font-family: "Orator Std"; }
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    padding: 0.25em; }
+    .lp h1 .taller {
+      font-size: 6rem; }
+
+@media (max-width: 750px) {
+  .lp h1 {
+    font-size: 4.2rem; }
+    .lp h1 .taller {
+      font-size: 5.2rem; } }
+
+@media (max-width: 550px) {
+  .lp h1 {
+    font-size: 3.2rem; }
+    .lp h1 .taller {
+      font-size: 4.2rem; } }
+
+@media (max-width: 400px) {
+  .lp h1 {
+    font-size: 2.7rem; }
+    .lp h1 .taller {
+      font-size: 3.7rem; } }
+
+.about {
+  padding-top: 2em; }
+  .about p {
+    font-size: 1.7em;
+    font-weight: 100;
+    text-align: center; }
+    .about p.helper {
+      color: #FCBE15;
+      font-size: 1em;
+      text-align: left; }
+  .about form p:first-of-type {
+    margin-bottom: 0em; }
+  .about form input {
+    background: #5c5c5c;
+    border: 1px solid #000;
+    margin-bottom: 0em; }
+    .about form input:focus {
+      border: 1px solid #FCBE15; }
+    .about form input.button {
+      background: #FCBE15; }
+      .about form input.button[disabled] {
+        background-color: #000;
+        color: #FCBE15;
+        border: 1px solid #FCBE15;
+        cursor: default; }
+    .about form input[disabled] {
+      cursor: default;
+      color: #000; }
+
+@media (max-width: 850px) {
+  .about form p:first-of-type {
+    font-size: 1.4em; } }
+
+@media (max-width: 650px) {
+  .about form p:first-of-type {
+    font-size: 1.2em; } }
+
+@media (max-width: 550px) {
+  .about form p:first-of-type {
+    font-size: 1em; } }
+
+@media (max-width: 450px) {
+  .about form p:first-of-type {
+    font-size: 0.9em; } }
