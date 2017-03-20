@@ -7,6 +7,7 @@ const cors = require('cors');
 const app = express();
 const request = require('request');
 const fs = require('fs');
+require('dotenv').config()
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -29,7 +30,7 @@ app.post('/signup', (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-MailerLite-ApiKey': 'a4228ab3b0c0d43acd5ff2a4799031e8',
+      'X-MailerLite-ApiKey': process.env.API_KEY,
     },
     form: subscriberObj
   }

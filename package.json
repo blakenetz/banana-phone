@@ -44,6 +44,7 @@
     "body-parser": "^1.17.1",
     "cors": "^2.8.1",
     "debug": "^2.6.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "mailerlite": "^0.4.0",
     "morgan": "^1.8.1",
