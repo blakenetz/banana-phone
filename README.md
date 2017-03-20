@@ -5,6 +5,7 @@
 🛠 Specs:
   * Node.js
   * React
+  * Express
   * ES6 - compiled with Babel   
   * Webpack
   * SCSS
@@ -12,6 +13,6 @@
 
 📲 To install / run / build:
   * $ npm install
-  * $ npm start
+  * $ npm run dev
   * visit localhost:8080
-  * $ npm build
+  * $ npm run build
