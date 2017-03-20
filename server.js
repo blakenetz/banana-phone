@@ -9,9 +9,6 @@ const request = require('request');
 const fs = require('fs');
 require('dotenv').config()
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -19,6 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(favicon(path.join(__dirname, 'images/favicons', 'favicon.ico')));
 app.set('views', path.join(__dirname, 'dist'));
 
 app.post('/signup', (req, res) => {
