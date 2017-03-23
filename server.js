@@ -4,10 +4,11 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const app = express();
 const request = require('request');
 const fs = require('fs');
 require('dotenv').config()
+
+const app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -24,7 +25,7 @@ app.post('/signup', (req, res) => {
   subscriberObj.type = 'active'
 
   const options = {
-    uri: 'https://api.mailerlite.com/api/v2/groups/6050495/subscribers',
+    uri: 'https://api.mailerlite.com/api/v2/groups/'+process.env.GROUP_ID+'/subscribers',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
