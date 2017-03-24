@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import LandingPage from './components/landing-page';
-import About from './components/about';
+import Product from './components/product';
+import SignupForm from './components/signup-form';
 
 require('./style/style.scss');
 
@@ -11,7 +12,6 @@ class App extends Component {
     return (
       <div>
         <LandingPage />
-        <About />
       </div>
     );
   }
