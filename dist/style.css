@@ -20,7 +20,7 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     min-width: 10em;
     padding-top: 2em; }
   .lp h1 {
-    color: #FCBE15;
+    color: #FDE303;
     font-family: "Quicksand", sans-serif;
     padding-top: 2em; }
 
@@ -37,54 +37,78 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     font-size: 2.7rem; } }
 
 .about {
-  margin-top: -6em; }
+  width: 65%; }
   .about p {
-    font-size: 1.7em;
+    padding-top: 1em;
+    font-size: 1.4em;
     font-weight: 100;
     text-align: center; }
-    .about p.helper {
-      color: #FCBE15;
-      font-size: 1em;
-      text-align: left; }
-  .about form p:first-of-type {
-    margin-bottom: 0em; }
-  .about form input {
-    background: #5c5c5c;
-    border: 1px solid #000;
-    margin-bottom: 0em; }
-    .about form input:focus {
-      border: 1px solid #FCBE15; }
-    .about form input.button {
-      background: #FCBE15; }
-      .about form input.button[disabled] {
-        background-color: #000;
-        color: #FCBE15;
-        border: 1px solid #FCBE15;
-        cursor: default; }
-    .about form input[disabled] {
-      cursor: default;
-      color: #000; }
-    .about form input[type='submit'] {
-      -webkit-appearance: none;
-      -webkit-border-radius: 4px;
-      border-radius: 4px; }
 
 @media (max-width: 850px) {
   .about {
-    margin-top: -15em; }
-    .about p, .about form p:first-of-type {
-      font-size: 1.4em; } }
+    width: 75%; }
+    .about p {
+      padding-top: 2.5em; } }
 
 @media (max-width: 650px) {
-  .about p, .about form p:first-of-type {
+  .about {
+    width: 85%; }
+    .about p {
+      padding-top: 3.5em;
+      font-size: 1.2em; } }
+
+@media (max-width: 550px) {
+  .about p {
+    padding-top: 4.5em;
+    font-size: 1em; } }
+
+@media (max-width: 450px) {
+  .about p {
+    padding-top: 5.5em;
+    font-size: 0.9em; } }
+
+form p {
+  font-size: 1.4em;
+  margin-bottom: 0em; }
+
+form .helper {
+  color: #FDE303;
+  font-size: 1em;
+  text-align: left; }
+
+form input:focus {
+  border: 1px solid #FDE303; }
+
+form input[disabled] {
+  cursor: default;
+  color: #000; }
+
+form input.button {
+  background: #FDE303; }
+  form input.button[disabled] {
+    background-color: #000;
+    color: #FDE303;
+    border: 1px solid #FDE303;
+    cursor: default; }
+
+form input[type='text'] {
+  background: #5c5c5c;
+  border: 1px solid #000;
+  margin-bottom: 0em; }
+
+form input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+@media (max-width: 650px) {
+  form p {
     font-size: 1.2em; } }
 
 @media (max-width: 550px) {
-  .about {
-    margin-top: -20em; }
-    .about p, .about form p:first-of-type {
-      font-size: 1em; } }
+  form p {
+    font-size: 1em; } }
 
 @media (max-width: 450px) {
-  .about p, .about form p:first-of-type {
+  form p {
     font-size: 0.9em; } }
