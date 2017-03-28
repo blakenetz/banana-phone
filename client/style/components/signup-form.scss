@@ -2,14 +2,16 @@ form {
   p{
     font-size: $font-size-large;
     margin-bottom: 0em;
+    &.sent-message{
+      color: $yellow;
+    }
   }
   .helper {
     color: $yellow;
-    font-size: 1em;
+    font-size: $font-size-small;
     text-align: left;
   }
   input {
-
     &:focus {
       border: 1px solid $yellow;
     }

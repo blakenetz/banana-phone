@@ -73,7 +73,9 @@ class SignupForm extends Component {
     return (
       <section className="container">
         <form onSubmit={this.handleSubmit}>
-          <p>Sign up to stay updated on everything <strong>Banana Phone</strong></p>
+          { this.state.formSent
+            ? <p className='sent-message'>Thanks a <strong>bunch!</strong> We'll be in touch shortly!</p>
+            : <p>Sign up to stay updated on everything <strong>Banana Phone</strong></p> }
           <div className="row">
             <div className="five columns">
               <input type="text"
