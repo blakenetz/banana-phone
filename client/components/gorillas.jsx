@@ -4,7 +4,7 @@ class About extends Component {
   render(){
     return (
       <section className="gorillas row">
-        <div className="one-half column bg-face">&nbsp;</div>
+        <div className="one-half column bg-face"></div>
         <div className="one-half column bg-hand">
           <p>Giving back is important at Banana Phone, which is why we're routing 1% of all sales to Gearing Up for Gorillas.</p>
           <p>G4G is the only UK charity that focuses 100% on the conservation of the rare mountain gorilla in Virunga National Park, located in eastern DR Congo, by providing funding and equipment to the rangers who protect them</p>
