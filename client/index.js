@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import LandingPage from './components/landing-page';
 import Gorillas from './components/gorillas';
 import SignupForm from './components/signup-form';
+import Footer from './components/footer';
 
 require('./style/style.scss');
 
@@ -14,6 +15,7 @@ class App extends Component {
         <LandingPage />
         <Gorillas />
         <SignupForm />
+        <Footer />
       </div>
     );
   }

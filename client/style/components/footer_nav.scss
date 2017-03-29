@@ -1,0 +1,15 @@
+nav {}
+footer {
+  @include flex;
+  a {
+    color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  img {
+    width: 5em;
+  }
+}
