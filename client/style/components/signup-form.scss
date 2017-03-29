@@ -13,7 +13,7 @@ form {
   }
   input {
     &:focus {
-      border: 1px solid $yellow;
+      border: 1px solid $yellow !important;
     }
     &[disabled]{
       cursor: default;

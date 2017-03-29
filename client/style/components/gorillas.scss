@@ -1,0 +1,30 @@
+.gorillas {
+  .column {
+    margin: 0em;
+    height: 500px;
+    width: 50%;
+  }
+  .bg-face {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla.jpg') no-repeat center/cover;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla.jpg') no-repeat center/cover;
+  }
+  .bg-hand {
+    padding:1em;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla-hand.jpg') no-repeat center/cover;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla-hand.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/gorilla-hand.jpg') no-repeat center/cover;
+  }
+  a {
+    color: $yellow;
+  }
+}
+
+@media (max-width: 750px) {
+  .column.bg-face {
+    display: none;
+  }
+  .column.bg-hand {
+    width: 100%
+  }
+}
