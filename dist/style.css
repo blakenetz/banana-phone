@@ -144,3 +144,16 @@ form input[type='submit'] {
     display: none; }
   .column.bg-hand {
     width: 100%; } }
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  footer a {
+    color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em; }
+    footer a:hover {
+      color: #FDE303; }
+  footer img {
+    width: 5em; }
