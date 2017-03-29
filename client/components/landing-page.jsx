@@ -9,7 +9,6 @@ class LandingPage extends Component {
         <img src="images/logo.png" />
         <h1>A PHONE WITH APPEAL</h1>
         <About />
-        <SignupForm />
       </section>
     )
   }
