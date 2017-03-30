@@ -12,6 +12,19 @@ form {
     text-align: left;
   }
   input {
+    &::-webkit-input-placeholder {
+      color: $input-font-color;
+    }
+    &:-moz-placeholder {
+      color: $input-font-color;
+    }
+    &::-moz-placeholder {
+      color: $input-font-color;
+    }
+    &:-ms-input-placeholder {
+      color: $input-font-color;
+    }
+
     &:focus {
       border: 1px solid $yellow !important;
     }

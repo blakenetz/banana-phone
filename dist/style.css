@@ -83,6 +83,18 @@ form .helper {
   font-size: 1em;
   text-align: left; }
 
+form input::-webkit-input-placeholder {
+  color: #d1d1d1; }
+
+form input:-moz-placeholder {
+  color: #d1d1d1; }
+
+form input::-moz-placeholder {
+  color: #d1d1d1; }
+
+form input:-ms-input-placeholder {
+  color: #d1d1d1; }
+
 form input:focus {
   border: 1px solid #FDE303 !important; }
 
