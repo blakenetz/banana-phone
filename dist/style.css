@@ -72,6 +72,19 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     .about p:first-of-type {
       padding-top: 5.5em; } }
 
+.phone {
+  height: 100vh;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end; }
+
 form p {
   font-size: 1.4em;
   margin-bottom: 0em; }
@@ -130,7 +143,9 @@ form input[type='submit'] {
 
 @media (max-width: 450px) {
   form p {
-    font-size: 0.9em; } }
+    font-size: 0.9em; }
+  form p:last-of-type {
+    font-size: 0.75em; } }
 
 .gorillas .column {
   margin: 0em;
