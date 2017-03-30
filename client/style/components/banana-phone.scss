@@ -1,0 +1,12 @@
+.phone {
+  height: 100vh;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+
+  @include flex;
+  justify-content: flex-end;
+}

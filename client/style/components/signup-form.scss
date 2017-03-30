@@ -63,5 +63,8 @@ form {
     p {
       font-size: $font-size-small-x
     }
+    p:last-of-type {
+      font-size: $font-size-small-xx
+    }
   }
 }
