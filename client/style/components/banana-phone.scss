@@ -1,7 +1,10 @@
 .phone {
   height: 100vh;
+  background: -moz-linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
+  background: -webkit-gradient(linear, 0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background: -webkit-linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background: -o-linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
+  background: -ms-linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background-attachment: fixed;
 

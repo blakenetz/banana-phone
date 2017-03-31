@@ -9,7 +9,7 @@ class Footer extends Component {
           <a href="https://www.instagram.com/bananaphone.io/?hl=en" target="_blank"><i className="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
         </section>
         <section>
-          <p>#phonewithappeal #yellow #gorillamarketing</p>
+          <p>#phonewithappeal #yellow? #gorillamarketing</p>
         </section>
       </footer>
     )

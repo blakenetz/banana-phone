@@ -73,11 +73,12 @@ class SignupForm extends Component {
     return (
       <section className="container">
         <form onSubmit={this.handleSubmit}>
+          <p><strong>The Banana Phone launches May 1st</strong></p>
           { this.state.formSent
             ? <p className='sent-message'>Thanks a <strong>bunch!</strong> We'll be in touch shortly!</p>
-            : <p>Sign up to stay updated on everything <strong>Banana Phone</strong></p> }
+            : <p>Sign up to stay updated</p> }
           <div className="row">
-            <div className="five columns">
+            <div className="one-half column">
               <input type="text"
                     name="name"
                     placeholder="Name"
@@ -89,7 +90,7 @@ class SignupForm extends Component {
               { this.state.reqName ? <p className="helper">Yellow!!? I think you forgot something... </p> : null }
             </div>
 
-            <div className="five columns">
+            <div className="one-half column">
               <input type="text"
                     name="email"
                     placeholder="Email"
@@ -101,13 +102,13 @@ class SignupForm extends Component {
               { this.state.reqEmail ? <p className="helper">Yellow!!? I think you forgot something... </p> : null }
               { this.state.invalidEmail ? <p className="helper">Double-check your email address, you might have a typo... </p> : null }
             </div>
+          </div>
 
-            <div className="two columns">
-              <input type="submit"
+          <div className="submit-wrapper">
+            <input type="submit"
                     className="button"
                     value={this.state.submitButton}
                     disabled={this.state.formSent || this.state.reqEmail || this.state.invalidEmail || this.state.reqName || this.state.name.length == 0 || this.state.email.length == 0 } />
-            </div>
           </div>
         </form>
       </section>

@@ -1,6 +1,9 @@
 .lp {
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
+  background: -webkit-gradient(linear, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
   background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/bg-jungle-lp.png') no-repeat center/cover;
   height: 100vh;
   @include flex;
