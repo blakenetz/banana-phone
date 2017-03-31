@@ -6,9 +6,7 @@ class Taglines extends Component {
       <section className="taglines">
         <div className="tagline-container">
           <h2>Talk More</h2>
-          <h2>🍌</h2>
           <h2>Smile More</h2>
-          <h2>🍌</h2>
           <h2>Save Gorillas</h2>
         </div>
       </section>

@@ -1,8 +1,8 @@
 .taglines {
   height: 100vh;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
   background-attachment: fixed;
   @include flex;
   justify-content: flex-end;
