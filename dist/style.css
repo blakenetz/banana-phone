@@ -7,10 +7,9 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   font-weight: 100; }
 
 .lp {
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat;
-  background-size: cover;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
   height: 100vh;
   display: flex;
   flex-flow: column;
@@ -37,11 +36,15 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     font-size: 2.7rem; } }
 
 .about {
-  width: 65%; }
+  width: 65%;
+  background: -webkit-linear-gradient(0deg, black 60%, transparent);
+  background: -o-linear-gradient(0deg, black 60%, transparent);
+  background: linear-gradient(0deg, black 60%, transparent); }
   .about p {
     font-size: 1.4em;
     font-weight: 100;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.5em #000; }
     .about p:first-of-type {
       padding-top: 1em;
       margin-bottom: 0em; }
@@ -74,12 +77,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
 
 .phone {
   height: 100vh;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat;
-  background-size: contain;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
   background-attachment: fixed;
-  background-position: center;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -153,15 +154,15 @@ form input[type='submit'] {
   width: 50%; }
 
 .gorillas .bg-face {
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla.jpg") no-repeat center/cover; }
+  background: -webkit-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
+  background: -o-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
+  background: linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover; }
 
 .gorillas .bg-hand {
   padding: 1.5em;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla-hand.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla-hand.jpg") no-repeat center/cover;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/gorilla-hand.jpg") no-repeat center/cover; }
+  background: -webkit-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
+  background: -o-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
+  background: linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover; }
 
 .gorillas a {
   color: #FDE303; }
