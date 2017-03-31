@@ -36,10 +36,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     font-size: 2.7rem; } }
 
 .about {
-  width: 65%;
-  background: -webkit-linear-gradient(0deg, black 60%, transparent);
-  background: -o-linear-gradient(0deg, black 60%, transparent);
-  background: linear-gradient(0deg, black 60%, transparent); }
+  background: -webkit-linear-gradient(0deg, black 33%, transparent);
+  background: -o-linear-gradient(0deg, black 33%, transparent);
+  background: linear-gradient(0deg, black 33%, transparent);
+  width: 65%; }
   .about p {
     font-size: 1.4em;
     font-weight: 100;
@@ -77,62 +77,54 @@ p, h1, h2, h3, h4, h5, h6, input, label {
 
 .phone {
   height: 100vh;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.png") no-repeat center/contain;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background-attachment: fixed;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-end; }
 
-form p {
-  font-size: 1.4em;
-  margin-bottom: 0em; }
-  form p.sent-message {
-    color: #FDE303; }
-
-form .helper {
-  color: #FDE303;
-  font-size: 1em;
-  text-align: left; }
-
-form input::-webkit-input-placeholder {
-  color: #d1d1d1; }
-
-form input:-moz-placeholder {
-  color: #d1d1d1; }
-
-form input::-moz-placeholder {
-  color: #d1d1d1; }
-
-form input:-ms-input-placeholder {
-  color: #d1d1d1; }
-
-form input:focus {
-  border: 1px solid #FDE303 !important; }
-
-form input[disabled] {
-  cursor: default;
-  color: #000; }
-
-form input.button {
-  background: #FDE303; }
-  form input.button[disabled] {
-    background-color: #000;
+form {
+  padding-top: 1em; }
+  form p {
+    font-size: 1.4em;
+    margin-bottom: 0em; }
+    form p.sent-message {
+      color: #FDE303; }
+  form .helper {
     color: #FDE303;
-    border: 1px solid #FDE303;
-    cursor: default; }
-
-form input[type='text'] {
-  background: #5c5c5c;
-  border: 1px solid #000;
-  margin-bottom: 0em; }
-
-form input[type='submit'] {
-  -webkit-appearance: none;
-  -webkit-border-radius: 4px;
-  border-radius: 4px; }
+    font-size: 1em;
+    text-align: left; }
+  form input::-webkit-input-placeholder {
+    color: #d1d1d1; }
+  form input:-moz-placeholder {
+    color: #d1d1d1; }
+  form input::-moz-placeholder {
+    color: #d1d1d1; }
+  form input:-ms-input-placeholder {
+    color: #d1d1d1; }
+  form input:focus {
+    border: 1px solid #FDE303 !important; }
+  form input[disabled] {
+    cursor: default;
+    color: #000; }
+  form input.button {
+    background: #FDE303; }
+    form input.button[disabled] {
+      background-color: #000;
+      color: #FDE303;
+      border: 1px solid #FDE303;
+      cursor: default; }
+  form input[type='text'] {
+    background: #5c5c5c;
+    border: 1px solid #000;
+    margin-bottom: 0em; }
+  form input[type='submit'] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
 
 @media (max-width: 650px) {
   form p {
@@ -150,28 +142,30 @@ form input[type='submit'] {
 
 .gorillas .column {
   margin: 0em;
-  height: 500px;
+  height: 25em;
   width: 50%; }
 
-.gorillas .bg-face {
-  background: -webkit-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover; }
+.gorillas .left {
+  background: url("/images/gorilla-face-close.jpg") no-repeat center/cover; }
 
-.gorillas .bg-hand {
+.gorillas .right {
   padding: 1.5em;
-  background: -webkit-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover;
-  background: linear-gradient(0deg, transparent, black 95%), url("/images/gorilla.jpg") no-repeat center/cover; }
+  background: -webkit-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+  background: -o-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+  background: linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover; }
 
 .gorillas a {
   color: #FDE303; }
 
 @media (max-width: 750px) {
-  .column.bg-face {
+  .column.left {
     display: none; }
-  .column.bg-hand {
-    width: 100%; } }
+  .column.right {
+    width: 100%; }
+  #eyes {
+    width: 100vw;
+    height: 3em;
+    background: url("/images/gorilla-eyes.jpg") no-repeat center/cover; } }
 
 footer {
   display: flex;
@@ -185,3 +179,19 @@ footer {
       color: #FDE303; }
   footer img {
     width: 5em; }
+
+.taglines {
+  height: 100vh;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end; }
+  .taglines h2 {
+    background: -webkit-linear-gradient(0deg, black 33%, transparent);
+    background: -o-linear-gradient(0deg, black 33%, transparent);
+    background: linear-gradient(0deg, black 33%, transparent);
+    margin-bottom: 0; }
