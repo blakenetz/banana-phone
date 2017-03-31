@@ -4,7 +4,6 @@ class About extends Component {
   render(){
     return (
       <section className="gorillas row">
-        <div id="eyes"></div>
         <div className="one-half column left"></div>
         <div className="one-half column right">
           <p>Giving back is important at Banana Phone, which is why we're routing 1% of all sales to Gearing Up for Gorillas.</p>
