@@ -100,9 +100,11 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   .phone {
     background: #000;
     height: 0vh; }
-  .phone-labeled img {
-    width: 100vw;
-    height: auto; } }
+  .phone-labeled {
+    margin-right: 33%; }
+    .phone-labeled img {
+      width: 100vw;
+      height: auto; } }
 
 form {
   padding-top: 2em; }
