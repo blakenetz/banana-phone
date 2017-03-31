@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import LandingPage from './components/landing-page';
 import BananaPhone from './components/banana-phone';
+import BananaPhoneLabeled from './components/banana-phone-labels';
 import Gorillas from './components/gorillas';
 import Taglines from './components/taglines';
 import SignupForm from './components/signup-form';
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
         <LandingPage />
         <BananaPhone />
+        <BananaPhoneLabeled />
         <Gorillas />
         <Taglines />
         <SignupForm />
