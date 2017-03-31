@@ -5,7 +5,7 @@
 }
 
 @mixin font-bg {
-  background: -webkit-linear-gradient(0deg, rgb(0, 0, 0) 33%, rgba(0, 0, 0, 0));
-  background: -o-linear-gradient(0deg, rgb(0, 0, 0) 33%, rgba(0, 0, 0, 0));
-  background: linear-gradient(0deg, rgb(0, 0, 0) 33%, rgba(0, 0, 0, 0));
+  background: -webkit-linear-gradient(0deg, #000 33%, rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(0deg, #000 33%, rgba(0, 0, 0, 0));
+  background: linear-gradient(0deg, #000 33%, rgba(0, 0, 0, 0));
 }
