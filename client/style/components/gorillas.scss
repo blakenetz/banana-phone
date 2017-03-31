@@ -1,19 +1,18 @@
 .gorillas {
   .column {
     margin: 0em;
-    height: 500px;
+    height: 25em;
     width: 50%;
   }
-  .bg-face {
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
+  .left {
+    background: url('/images/gorilla-face-close.jpg') no-repeat center/cover;
+
   }
-  .bg-hand {
+  .right {
     padding:1.5em;
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 95%), url('/images/gorilla.jpg') no-repeat center/cover;
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
   }
   a {
     color: $yellow;
@@ -21,10 +20,15 @@
 }
 
 @media (max-width: 750px) {
-  .column.bg-face {
+  .column.left {
     display: none;
   }
-  .column.bg-hand {
+  .column.right {
     width: 100%
+  }
+  #eyes {
+    width: 100vw;
+    height: 3em;
+    background: url('/images/gorilla-eyes.jpg') no-repeat center/cover;
   }
 }
