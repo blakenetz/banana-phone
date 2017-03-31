@@ -4,7 +4,13 @@ class Taglines extends Component {
   render(){
     return (
       <section className="taglines">
-        <h2>Talk More 🍌 Smile More 🍌 Save Gorillas</h2>
+        <div className="tagline-container">
+          <h2>Talk More</h2>
+          <h2>🍌</h2>
+          <h2>Smile More</h2>
+          <h2>🍌</h2>
+          <h2>Save Gorillas</h2>
+        </div>
       </section>
     )
   }
