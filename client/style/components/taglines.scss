@@ -9,7 +9,7 @@
 
   .tagline-container{
     width: 100vw;
-    max-width: 1280px;
+    max-width: 960px;
     @include font-bg;
     @include flex;
     flex-flow: row nowrap;
@@ -35,7 +35,16 @@
   }
 }
 @media (max-width: 550px){
-  .taglines h2{
-    font-size: $title-size-small-x;
+  .taglines {
+    height: 20vh;
+    background: #000;
+    .tagline-container {
+      background: $yellow;
+    }
+    h2 {
+      color: #000;
+      line-height: $title-size-small;
+      font-size: $title-size-small-x;
+    }
   }
 }

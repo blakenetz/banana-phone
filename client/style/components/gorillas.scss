@@ -19,16 +19,32 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1120px) {
+  .column.left {
+    width: 35%;
+  }
+  .column.right {
+    width: 65%;
+  }
+}
+@media (max-width: 865px) {
   .column.left {
     display: none;
   }
   .column.right {
-    width: 100%
+    width: 100%;
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
   }
   #eyes {
     width: 100vw;
     height: 3em;
     background: url('/images/gorilla-eyes.jpg') no-repeat center/cover;
+  }
+}
+@media (max-width: 750px) {
+  .column.right {
+    height: 70vh;
   }
 }

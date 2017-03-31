@@ -8,3 +8,11 @@
   @include flex;
   justify-content: flex-end;
 }
+
+@media (max-width: 550px) {
+  .phone {
+    background: #000;
+    height: 0vh;
+  }
+
+}
