@@ -77,17 +77,35 @@ p, h1, h2, h3, h4, h5, h6, input, label {
 
 .phone {
   height: 100vh;
-  background: -webkit-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: -o-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: linear-gradient(0deg, #000, transparent 60%), url("/images/phone-front-left.png") no-repeat center/contain;
+  background: -webkit-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background: -o-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background: linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
   background-attachment: fixed;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-end; }
 
+.phone-labeled {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  .phone-labeled figure {
+    padding-top: 1em;
+    padding-bottom: 2em; }
+  .phone-labeled img {
+    height: 42em; }
+
+@media (max-width: 550px) {
+  .phone {
+    background: #000;
+    height: 0vh; }
+  .phone-labeled img {
+    width: 100vw;
+    height: auto; } }
+
 form {
-  padding-top: 1em; }
+  padding-top: 2em; }
   form p {
     font-size: 1.4em;
     margin-bottom: 0em; }
@@ -157,15 +175,28 @@ form {
 .gorillas a {
   color: #FDE303; }
 
-@media (max-width: 750px) {
+@media (max-width: 1120px) {
+  .column.left {
+    width: 35%; }
+  .column.right {
+    width: 65%; } }
+
+@media (max-width: 865px) {
   .column.left {
     display: none; }
   .column.right {
-    width: 100%; }
+    width: 100%;
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover; }
   #eyes {
     width: 100vw;
     height: 3em;
     background: url("/images/gorilla-eyes.jpg") no-repeat center/cover; } }
+
+@media (max-width: 750px) {
+  .column.right {
+    height: 70vh; } }
 
 footer {
   display: flex;
@@ -182,9 +213,9 @@ footer {
 
 .taglines {
   height: 100vh;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background-attachment: fixed;
   display: flex;
   flex-flow: column;
@@ -192,7 +223,7 @@ footer {
   justify-content: flex-end; }
   .taglines .tagline-container {
     width: 100vw;
-    max-width: 1280px;
+    max-width: 960px;
     background: -webkit-linear-gradient(0deg, #000 33%, transparent);
     background: -o-linear-gradient(0deg, #000 33%, transparent);
     background: linear-gradient(0deg, #000 33%, transparent);
@@ -217,5 +248,12 @@ footer {
     font-size: 1.8em; } }
 
 @media (max-width: 550px) {
-  .taglines h2 {
-    font-size: 1.3em; } }
+  .taglines {
+    height: 20vh;
+    background: #000; }
+    .taglines .tagline-container {
+      background: #FDE303; }
+    .taglines h2 {
+      color: #000;
+      line-height: 1.8em;
+      font-size: 1.3em; } }
