@@ -1,12 +1,17 @@
 .gorillas {
   .column {
     margin: 0em;
-    height: 25em;
+    height: 30em;
     width: 50%;
   }
   .left {
     background: url('/images/gorilla-face-close.jpg') no-repeat center/cover;
-
+    @include flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    cite{
+      color: white;
+    }
   }
   .right {
     padding:1.5em;
@@ -17,11 +22,20 @@
   a {
     color: $yellow;
   }
+  figure {
+    text-align: center;
+    img{
+      height: 5em;
+    }
+  }
 }
 
 @media (max-width: 1120px) {
   .column.left {
     width: 35%;
+    cite{
+      color: black;
+    }
   }
   .column.right {
     width: 65%;
