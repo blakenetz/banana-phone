@@ -21,6 +21,9 @@
       margin-bottom: 0;
     }
   }
+  img {
+    visibility: hidden;
+  }
 }
 @media (max-width: 960px){
   .taglines h2{
@@ -39,7 +42,7 @@
 }
 @media (max-width: 550px){
   .taglines {
-    height: 20vh;
+    height: auto;
     background: #000;
     .tagline-container {
       background: $input-font-color;
@@ -48,6 +51,11 @@
       color: #000;
       line-height: $title-size-large;
       font-size: $title-size-small-x;
+    }
+    img {
+      height: 15em;
+      visibility: visible;
+      padding-bottom: 2em;
     }
   }
 }

@@ -7,12 +7,12 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   font-weight: 100; }
 
 .lp {
-  background: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
-  background: -webkit-gradient(linear, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
-  background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/bg-jungle-lp.png") no-repeat center/cover;
+  background: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
+  background: -webkit-gradient(linear, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
+  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
+  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
+  background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   height: 100vh;
   display: flex;
   flex-flow: column;
@@ -71,15 +71,11 @@ p, h1, h2, h3, h4, h5, h6, input, label {
 
 @media (max-width: 550px) {
   .about p {
-    font-size: 1em; }
-    .about p:first-of-type {
-      padding-top: 4.5em; } }
+    font-size: 1em; } }
 
 @media (max-width: 450px) {
   .about p {
-    font-size: 0.9em; }
-    .about p:first-of-type {
-      padding-top: 5.5em; } }
+    font-size: 0.9em; } }
 
 .phone {
   height: 100vh;
@@ -94,6 +90,8 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   flex-flow: column;
   align-items: center;
   justify-content: flex-end; }
+  .phone img {
+    visibility: hidden; }
 
 .phone-labeled {
   display: flex;
@@ -108,7 +106,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
 @media (max-width: 550px) {
   .phone {
     background: #000;
-    height: 0vh; }
+    height: auto; }
+    .phone img {
+      height: 15em;
+      visibility: visible; }
   .phone-labeled {
     margin-right: 33%; }
     .phone-labeled img {
@@ -177,11 +178,18 @@ form {
 
 .gorillas .column {
   margin: 0em;
-  height: 25em;
+  height: 30em;
   width: 50%; }
 
 .gorillas .left {
-  background: url("/images/gorilla-face-close.jpg") no-repeat center/cover; }
+  background: url("/images/gorilla-face-close.jpg") no-repeat center/cover;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-end; }
+  .gorillas .left cite {
+    color: white; }
 
 .gorillas .right {
   padding: 1.5em;
@@ -192,9 +200,16 @@ form {
 .gorillas a {
   color: #FDE303; }
 
+.gorillas figure {
+  text-align: center; }
+  .gorillas figure img {
+    height: 5em; }
+
 @media (max-width: 1120px) {
   .column.left {
     width: 35%; }
+    .column.left cite {
+      color: black; }
   .column.right {
     width: 65%; } }
 
@@ -212,7 +227,7 @@ form {
 
 @media (max-width: 750px) {
   .column.right {
-    height: 70vh; } }
+    height: auto; } }
 
 footer {
   display: flex;
@@ -256,6 +271,8 @@ footer {
     justify-content: space-around; }
     .taglines .tagline-container h2 {
       margin-bottom: 0; }
+  .taglines img {
+    visibility: hidden; }
 
 @media (max-width: 960px) {
   .taglines h2 {
@@ -271,11 +288,15 @@ footer {
 
 @media (max-width: 550px) {
   .taglines {
-    height: 20vh;
+    height: auto;
     background: #000; }
     .taglines .tagline-container {
       background: #d1d1d1; }
     .taglines h2 {
       color: #000;
       line-height: 2.5em;
-      font-size: 1.3em; } }
+      font-size: 1.3em; }
+    .taglines img {
+      height: 15em;
+      visibility: visible;
+      padding-bottom: 2em; } }

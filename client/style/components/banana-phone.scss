@@ -8,6 +8,10 @@
   background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background-attachment: fixed;
 
+  img {
+    visibility: hidden;
+  }
+
   @include flex;
   justify-content: flex-end;
 }
@@ -24,7 +28,11 @@
 @media (max-width: 550px) {
   .phone {
     background: #000;
-    height: 0vh;
+    height: auto;
+    img {
+      height: 15em;
+      visibility: visible;
+    }
   }
 
   .phone-labeled {

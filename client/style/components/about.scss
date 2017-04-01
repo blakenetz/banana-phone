@@ -37,9 +37,6 @@
   .about {
     p {
       font-size: $font-size-small;
-      &:first-of-type {
-        padding-top: 4.5em;
-      }
     }
   }
 }
@@ -47,9 +44,6 @@
   .about {
     p {
       font-size: $font-size-small-x;
-      &:first-of-type {
-        padding-top: 5.5em;
-      }
     }
   }
 }
