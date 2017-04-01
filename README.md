@@ -11,6 +11,7 @@ Hosted at BananaPhone.io
   * Webpack
   * SCSS
   * ExtractTextPlugin 😮
+  * Image compression / encoding with PNGQuant and Guetzli
 
 🔩 Hosting specs:
   * Bread-n-butter Elastic Beanstalk:
@@ -24,5 +25,6 @@ Hosted at BananaPhone.io
 📲 To install / run / build:
   * $ npm install
   * $ npm run dev
-  * visit localhost:8080
+  * frontend served on localhost:8080
+  * server on localhost:3000
   * $ npm run build

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'whatwg-fetch'; 
 
 class SignupForm extends Component {
   constructor(props){
