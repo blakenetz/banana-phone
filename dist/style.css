@@ -91,7 +91,7 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   align-items: center;
   justify-content: flex-end; }
   .phone img {
-    visibility: hidden; }
+    display: none; }
 
 .phone-labeled {
   display: flex;
@@ -109,7 +109,7 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     height: auto; }
     .phone img {
       height: 15em;
-      visibility: visible; }
+      display: block; }
   .phone-labeled {
     margin-right: 33%; }
     .phone-labeled img {
