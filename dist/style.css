@@ -272,7 +272,7 @@ footer {
     .taglines .tagline-container h2 {
       margin-bottom: 0; }
   .taglines img {
-    visibility: hidden; }
+    display: none; }
 
 @media (max-width: 960px) {
   .taglines h2 {
@@ -298,5 +298,5 @@ footer {
       font-size: 1.3em; }
     .taglines img {
       height: 15em;
-      visibility: visible;
+      display: block;
       padding-bottom: 2em; } }
