@@ -9,7 +9,7 @@
   background-attachment: fixed;
 
   img {
-    visibility: hidden;
+    display: none;
   }
 
   @include flex;
@@ -31,7 +31,7 @@
     height: auto;
     img {
       height: 15em;
-      visibility: visible;
+      display: block;
     }
   }
 
