@@ -148,7 +148,7 @@ form {
       color: #FDE303;
       border: 1px solid #FDE303;
       cursor: default; }
-  form input[type='text'] {
+  form input[type='text'], form input[type='email'] {
     background: #5c5c5c;
     border: 1px solid #000;
     margin-bottom: 0em; }

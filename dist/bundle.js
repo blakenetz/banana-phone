@@ -22126,14 +22126,15 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'one-half column' },
-	              _react2.default.createElement('input', { type: 'text',
+	              _react2.default.createElement('input', { type: 'email',
 	                name: 'email',
 	                placeholder: 'Email',
 	                className: 'u-full-width',
 	                disabled: this.state.formSent,
 	                value: this.state.email,
 	                onChange: this.handleChange,
-	                onBlur: this.handleBlur }),
+	                onBlur: this.handleBlur,
+	                novalidate: true }),
 	              this.state.reqEmail ? _react2.default.createElement(
 	                'p',
 	                { className: 'helper' },
