@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'whatwg-fetch'; 
+import 'whatwg-fetch';
 
 class SignupForm extends Component {
   constructor(props){
@@ -92,14 +92,15 @@ class SignupForm extends Component {
             </div>
 
             <div className="one-half column">
-              <input type="text"
+              <input type="email"
                     name="email"
                     placeholder="Email"
                     className="u-full-width"
                     disabled={this.state.formSent}
                     value={this.state.email}
                     onChange={this.handleChange}
-                    onBlur={this.handleBlur} />
+                    onBlur={this.handleBlur}
+                    novalidate />
               { this.state.reqEmail ? <p className="helper">Yellow!!? I think you forgot something... </p> : null }
               { this.state.invalidEmail ? <p className="helper">Double-check your email address, you might have a typo... </p> : null }
             </div>
