@@ -22134,7 +22134,7 @@
 	                value: this.state.email,
 	                onChange: this.handleChange,
 	                onBlur: this.handleBlur,
-	                novalidate: true }),
+	                noValidate: true }),
 	              this.state.reqEmail ? _react2.default.createElement(
 	                'p',
 	                { className: 'helper' },

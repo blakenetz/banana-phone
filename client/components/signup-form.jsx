@@ -100,7 +100,7 @@ class SignupForm extends Component {
                     value={this.state.email}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur}
-                    novalidate />
+                    noValidate />
               { this.state.reqEmail ? <p className="helper">Yellow!!? I think you forgot something... </p> : null }
               { this.state.invalidEmail ? <p className="helper">Double-check your email address, you might have a typo... </p> : null }
             </div>
