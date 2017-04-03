@@ -14,6 +14,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -86,6 +90,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   background: -ms-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
   background: linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -94,6 +102,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     display: none; }
 
 .phone-labeled {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -183,6 +195,10 @@ form {
 
 .gorillas .left {
   background: url("/images/gorilla-face-close.jpg") no-repeat center/cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -230,6 +246,10 @@ form {
     height: auto; } }
 
 footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -251,6 +271,10 @@ footer {
   background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -264,6 +288,10 @@ footer {
     background: -o-linear-gradient(0deg, #000 33%, transparent);
     background: -ms-linear-gradient(0deg, #000 33%, transparent);
     background: linear-gradient(0deg, #000 33%, transparent);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: column;
     align-items: center;
