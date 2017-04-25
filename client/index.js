@@ -6,7 +6,6 @@ import BananaPhone from './components/banana-phone';
 import BananaPhoneLabeled from './components/banana-phone-labels';
 import Gorillas from './components/gorillas';
 import Taglines from './components/taglines';
-import SignupForm from './components/signup-form';
 import Footer from './components/footer';
 
 require('./style/style.scss');
@@ -20,7 +19,6 @@ class App extends Component {
         <BananaPhoneLabeled />
         <Gorillas />
         <Taglines />
-        <SignupForm />
         <Footer />
       </div>
     );
