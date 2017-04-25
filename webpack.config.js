@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: (process.env.ENVIRONMENT == 'DEV') ? 'eval' : 'cheap-module-source-map',
   entry: [
     './client/index.js'
   ],
@@ -22,7 +22,8 @@ module.exports = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         'style',
-        'css?sourceMap!sass?sourceMap'      )
+        'css?sourceMap!sass?sourceMap'
+      )
     }]
   },
   resolve: {

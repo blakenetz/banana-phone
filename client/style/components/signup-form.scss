@@ -51,6 +51,9 @@ form {
       border: 1px solid #000;
       margin-bottom: 0em;
     }
+    &[type='email'] {
+      @extend [type='text'];
+    }
     &[type='submit']{
       -webkit-appearance: none;
       -webkit-border-radius:4px;

@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(cors());
+if (process.env.ENVIRONMENT == 'DEV') app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(favicon(path.join(__dirname, 'dist/images/favicons', 'favicon.ico')));
 app.set('views', path.join(__dirname, 'dist'));

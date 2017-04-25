@@ -14,6 +14,10 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -86,14 +90,22 @@ p, h1, h2, h3, h4, h5, h6, input, label {
   background: -ms-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
   background: linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-end; }
   .phone img {
-    visibility: hidden; }
+    display: none; }
 
 .phone-labeled {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -109,7 +121,7 @@ p, h1, h2, h3, h4, h5, h6, input, label {
     height: auto; }
     .phone img {
       height: 15em;
-      visibility: visible; }
+      display: block; }
   .phone-labeled {
     margin-right: 33%; }
     .phone-labeled img {
@@ -148,7 +160,7 @@ form {
       color: #FDE303;
       border: 1px solid #FDE303;
       cursor: default; }
-  form input[type='text'] {
+  form input[type='text'], form input[type='email'] {
     background: #5c5c5c;
     border: 1px solid #000;
     margin-bottom: 0em; }
@@ -183,6 +195,10 @@ form {
 
 .gorillas .left {
   background: url("/images/gorilla-face-close.jpg") no-repeat center/cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -230,6 +246,10 @@ form {
     height: auto; } }
 
 footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center; }
@@ -251,6 +271,10 @@ footer {
   background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -264,6 +288,10 @@ footer {
     background: -o-linear-gradient(0deg, #000 33%, transparent);
     background: -ms-linear-gradient(0deg, #000 33%, transparent);
     background: linear-gradient(0deg, #000 33%, transparent);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -272,7 +300,7 @@ footer {
     .taglines .tagline-container h2 {
       margin-bottom: 0; }
   .taglines img {
-    visibility: hidden; }
+    display: none; }
 
 @media (max-width: 960px) {
   .taglines h2 {
@@ -298,5 +326,7 @@ footer {
       font-size: 1.3em; }
     .taglines img {
       height: 15em;
-      visibility: visible;
+      display: block;
       padding-bottom: 2em; } }
+
+/*# sourceMappingURL=style.css.map*/

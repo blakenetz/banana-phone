@@ -22,7 +22,7 @@
     }
   }
   img {
-    visibility: hidden;
+    display: none;
   }
 }
 @media (max-width: 960px){
@@ -54,7 +54,7 @@
     }
     img {
       height: 15em;
-      visibility: visible;
+      display: block;
       padding-bottom: 2em;
     }
   }
