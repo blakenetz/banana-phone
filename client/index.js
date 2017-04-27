@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import Nav from './components/nav';
 import LandingPage from './components/landing-page';
 import BananaPhone from './components/banana-phone';
 import BananaPhoneLabeled from './components/banana-phone-labels';
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <LandingPage />
         <BananaPhone />
         <BananaPhoneLabeled />

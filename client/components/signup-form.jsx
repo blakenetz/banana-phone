@@ -110,7 +110,6 @@ class SignupForm extends Component {
             <input type="submit"
                     className="button"
                     value={this.state.submitButton}
-                    tabIndex="0"
                     disabled={this.state.formSent || this.state.reqEmail || this.state.invalidEmail || this.state.reqName || this.state.name.length == 0 || this.state.email.length == 0 } />
           </div>
         </form>
