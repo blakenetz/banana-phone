@@ -17,21 +17,30 @@
     color: $yellow;
     font-family: $title;
     padding-top: 2em;
+
+    @media (max-width: 750px) {
+        font-size: 4.2rem;
+    }
+    @media (max-width: 550px) {
+        font-size: 3.2rem;
+    }
+    @media (max-width: 400px) {
+        font-size: 2.7rem;
+    }
   }
 }
 
-@media (max-width: 750px) {
-  .lp h1 {
-    font-size: 4.2rem;
-  }
-}
-@media (max-width: 550px) {
-  .lp h1 {
-    font-size: 3.2rem;
-  }
-}
-@media (max-width: 400px) {
-  .lp h1 {
-    font-size: 2.7rem;
+.vid {
+  @include flex;
+  a {
+    width: 60%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    @media (max-width: 1050px){
+      width: 80%;
+    }
+    img {
+      width: 100%;
+    }
   }
 }

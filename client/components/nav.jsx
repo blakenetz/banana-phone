@@ -1,9 +1,30 @@
 import React, { Component } from 'react';
+import debounce from 'javascript-debounce';
+
 
 class Nav extends Component {
   constructor(props){
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.handleScroll = debounce(this.handleScroll.bind(this), 0)
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(e){
+    const nav = document.querySelector('nav')
+    if (e.srcElement.body.scrollTop > 200) {
+      nav.classList.remove("is-hidden");
+    }
+    else{
+      nav.classList.add("is-hidden");
+    }
   }
 
   handleClick(e){
@@ -22,7 +43,7 @@ class Nav extends Component {
 
   render(){
     return (
-      <nav>
+      <nav className="is-hidden">
         <section>
           <img src="images/logo.png" alt="Banana Phone logo" />
           <h3>Talk More. Smile More. Save Gorillas</h3>
