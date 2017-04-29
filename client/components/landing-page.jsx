@@ -8,6 +8,10 @@ class LandingPage extends Component {
         <img src="images/logo.png" alt="Banana Phone logo" />
         <h1>A PHONE WITH APPEAL</h1>
         <Signup />
+        <div className='scroll'>
+          <i className="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i>
+          <p>scroll down</p>
+        </div>
       </section>
     )
   }

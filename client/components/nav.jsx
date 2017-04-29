@@ -57,17 +57,10 @@ class Nav extends Component {
               href="javascript:void(0)" >
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                  width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
-                <path fill="#000000" stroke="#FDE303" strokeWidth="3" strokeMiterlimit="10" d="M29.765,50.32h6.744V33.998h4.499l0.596-5.624
+                <path fill="#000000" stroke="#FFFFFF" strokeWidth="3" strokeMiterlimit="10" d="M29.765,50.32h6.744V33.998h4.499l0.596-5.624
                   h-5.095l0.007-2.816c0-1.466,0.141-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369
                   V50.32z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30C64,50.568,50.568,64,34,64z"/>
               </svg>
-              <div className="fb-share-button"
-                    data-href="https://igg.me/at/bananaphone"
-                    data-layout="button"
-                    data-size="small"
-                    data-mobile-iframe="true">
-
-              </div>
             </a>
             <figcaption>Share</figcaption>
           </figure>
@@ -78,7 +71,7 @@ class Nav extends Component {
                 href="javascript:void(0)" >
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                  width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
-                <path fill="#000000" stroke="#FDE303" strokeWidth="3" strokeMiterlimit="10" d="M38.167,22.283
+                <path fill="#000000" stroke="#FFFFFF" strokeWidth="3" strokeMiterlimit="10" d="M38.167,22.283
                   c-2.619,0.953-4.274,3.411-4.086,6.101l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017
                   c-0.754,2.267-0.272,4.661,1.299,6.271c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233
                   c-0.146,0.149,0.356,2.076,0.754,2.839c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021

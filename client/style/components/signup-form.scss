@@ -8,6 +8,14 @@ form {
       color: $yellow;
     }
   }
+  a{
+    font-size: inherit;
+    font-weight: bold;
+    &:hover
+    , &:active {
+      color: $yellow;
+    }
+  }
   .helper {
     color: $yellow;
     font-size: $font-size-small;
