@@ -71,13 +71,13 @@
 
 	var _landingPage2 = _interopRequireDefault(_landingPage);
 
-	var _video = __webpack_require__(188);
-
-	var _video2 = _interopRequireDefault(_video);
-
-	var _bananaPhone = __webpack_require__(189);
+	var _bananaPhone = __webpack_require__(188);
 
 	var _bananaPhone2 = _interopRequireDefault(_bananaPhone);
+
+	var _video = __webpack_require__(190);
+
+	var _video2 = _interopRequireDefault(_video);
 
 	var _bananaPhoneLabels = __webpack_require__(191);
 
@@ -21969,13 +21969,8 @@
 	                'svg',
 	                { version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
 	                  width: '45', height: '45', viewBox: '0 0 67 67', enableBackground: 'new 0 0 67 67' },
-	                _react2.default.createElement('path', { fill: '#000000', stroke: '#FDE303', strokeWidth: '3', strokeMiterlimit: '10', d: 'M29.765,50.32h6.744V33.998h4.499l0.596-5.624 h-5.095l0.007-2.816c0-1.466,0.141-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369 V50.32z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30C64,50.568,50.568,64,34,64z' })
-	              ),
-	              _react2.default.createElement('div', { className: 'fb-share-button',
-	                'data-href': 'https://igg.me/at/bananaphone',
-	                'data-layout': 'button',
-	                'data-size': 'small',
-	                'data-mobile-iframe': 'true' })
+	                _react2.default.createElement('path', { fill: '#000000', stroke: '#FFFFFF', strokeWidth: '3', strokeMiterlimit: '10', d: 'M29.765,50.32h6.744V33.998h4.499l0.596-5.624 h-5.095l0.007-2.816c0-1.466,0.141-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369 V50.32z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30C64,50.568,50.568,64,34,64z' })
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'figcaption',
@@ -21996,7 +21991,7 @@
 	                'svg',
 	                { version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
 	                  width: '45', height: '45', viewBox: '0 0 67 67', enableBackground: 'new 0 0 67 67' },
-	                _react2.default.createElement('path', { fill: '#000000', stroke: '#FDE303', strokeWidth: '3', strokeMiterlimit: '10', d: 'M38.167,22.283 c-2.619,0.953-4.274,3.411-4.086,6.101l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017 c-0.754,2.267-0.272,4.661,1.299,6.271c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233 c-0.146,0.149,0.356,2.076,0.754,2.839c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021 c-1.173,0-1.215,0.021-1.089,0.467c0.419,1.378,2.074,2.84,3.918,3.476l1.299,0.444l-1.131,0.678 c-1.676,0.977-3.646,1.525-5.616,1.566C20.775,43.256,20,43.341,20,43.404c0,0.212,2.557,1.397,4.044,1.865 c4.463,1.377,9.765,0.782,13.746-1.568c2.829-1.674,5.657-5,6.978-8.221c0.713-1.715,1.426-4.852,1.426-6.354 c0-0.975,0.062-1.102,1.236-2.267c0.691-0.678,1.34-1.419,1.467-1.631c0.209-0.403,0.188-0.403-0.881-0.043 c-1.781,0.636-2.033,0.551-1.152-0.402c0.65-0.678,1.426-1.907,1.426-2.267c0-0.063-0.314,0.042-0.671,0.233 c-0.377,0.212-1.216,0.53-1.845,0.72l-1.131,0.361l-1.026-0.7c-0.566-0.381-1.361-0.805-1.781-0.932 C40.766,21.902,39.131,21.944,38.167,22.283z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30 C64,50.568,50.568,64,34,64z' })
+	                _react2.default.createElement('path', { fill: '#000000', stroke: '#FFFFFF', strokeWidth: '3', strokeMiterlimit: '10', d: 'M38.167,22.283 c-2.619,0.953-4.274,3.411-4.086,6.101l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017 c-0.754,2.267-0.272,4.661,1.299,6.271c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233 c-0.146,0.149,0.356,2.076,0.754,2.839c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021 c-1.173,0-1.215,0.021-1.089,0.467c0.419,1.378,2.074,2.84,3.918,3.476l1.299,0.444l-1.131,0.678 c-1.676,0.977-3.646,1.525-5.616,1.566C20.775,43.256,20,43.341,20,43.404c0,0.212,2.557,1.397,4.044,1.865 c4.463,1.377,9.765,0.782,13.746-1.568c2.829-1.674,5.657-5,6.978-8.221c0.713-1.715,1.426-4.852,1.426-6.354 c0-0.975,0.062-1.102,1.236-2.267c0.691-0.678,1.34-1.419,1.467-1.631c0.209-0.403,0.188-0.403-0.881-0.043 c-1.781,0.636-2.033,0.551-1.152-0.402c0.65-0.678,1.426-1.907,1.426-2.267c0-0.063-0.314,0.042-0.671,0.233 c-0.377,0.212-1.216,0.53-1.845,0.72l-1.131,0.361l-1.026-0.7c-0.566-0.381-1.361-0.805-1.781-0.932 C40.766,21.902,39.131,21.944,38.167,22.283z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30 C64,50.568,50.568,64,34,64z' })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -22116,7 +22111,17 @@
 	          null,
 	          'A PHONE WITH APPEAL'
 	        ),
-	        _react2.default.createElement(_signupForm2.default, null)
+	        _react2.default.createElement(_signupForm2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'scroll' },
+	          _react2.default.createElement('i', { className: 'fa fa-arrow-circle-o-down fa-2x', 'aria-hidden': 'true' }),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'scroll down'
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -22245,7 +22250,12 @@
 	            _react2.default.createElement(
 	              'strong',
 	              null,
-	              'The Banana Phone launches May 1st'
+	              'Order your Banana Phone ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'https://igg.me/at/bananaphone', target: '_blank' },
+	                'Now'
+	              )
 	            )
 	          ),
 	          this.state.formSent ? _react2.default.createElement(
@@ -22796,59 +22806,6 @@
 /* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Video = function (_Component) {
-	  _inherits(Video, _Component);
-
-	  function Video() {
-	    _classCallCheck(this, Video);
-
-	    return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
-	  }
-
-	  _createClass(Video, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "section",
-	        { className: "vid" },
-	        _react2.default.createElement(
-	          "a",
-	          { href: "https://igg.me/at/bananaphone", target: "_blank" },
-	          _react2.default.createElement("img", { src: "images/video-ph.png", alt: "video placeholder" })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Video;
-	}(_react.Component);
-
-		exports.default = Video;
-
-/***/ }),
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -22861,7 +22818,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _about = __webpack_require__(190);
+	var _about = __webpack_require__(189);
 
 	var _about2 = _interopRequireDefault(_about);
 
@@ -22900,7 +22857,7 @@
 		exports.default = BananaPhone;
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22972,6 +22929,59 @@
 	}(_react.Component);
 
 		exports.default = About;
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Video = function (_Component) {
+	  _inherits(Video, _Component);
+
+	  function Video() {
+	    _classCallCheck(this, Video);
+
+	    return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
+	  }
+
+	  _createClass(Video, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "section",
+	        { className: "vid" },
+	        _react2.default.createElement(
+	          "a",
+	          { href: "https://igg.me/at/bananaphone", target: "_blank" },
+	          _react2.default.createElement("img", { src: "images/video-ph.png", alt: "video placeholder" })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Video;
+	}(_react.Component);
+
+		exports.default = Video;
 
 /***/ }),
 /* 191 */
@@ -23224,6 +23234,15 @@
 	      return _react2.default.createElement(
 	        "footer",
 	        null,
+	        _react2.default.createElement(
+	          "section",
+	          null,
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "visit us at"
+	          )
+	        ),
 	        _react2.default.createElement(
 	          "section",
 	          null,
