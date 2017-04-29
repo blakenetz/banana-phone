@@ -34,6 +34,7 @@ nav {
     }
     &:hover figcaption {
       visibility: visible;
+      color: $yellow;
     }
     &:last-of-type{
       width: 5.5em;
@@ -49,6 +50,7 @@ nav {
   h3 {
     padding-left: 1em;
     margin-bottom: 0;
+    @include font-bg;
     @media (max-width: 920px){
       font-size: 3rem;
     }
@@ -63,23 +65,41 @@ nav {
     }
   }
   figcaption {
-    color: $yellow;
     visibility: hidden;
     margin-top: -0.7em;
+    font-family: $raleway;
     &:last-of-type{
       position: absolute;
       top: 4.5em
     }
+    @media (max-width: 480px) {
+      visibility: visible;
+      &:active {
+        color: $yellow;
+      }
+    }
   }
-  path:hover{
-    fill: $yellow;
-    stroke: #000;
+  path {
+    &:hover{
+      fill: $yellow;
+      stroke: #000;
+    }
+    @media (max-width: 480px) {
+      fill: $yellow;
+      stroke: #000;
+    }
   }
   i{
-    color: $yellow;
+    color: #FFF;
+    &:hover {
+      color: $yellow;
+    }
+    @media (max-width: 480px) {
+      color: $yellow;
+    }
   }
   .fa-3x {
-    font-size: 2.5em; //ugly but you gotta do what you gotta do
+    font-size: 2.5em;
   }
 
   .fb-share-button{
@@ -90,6 +110,9 @@ nav {
 
 footer {
   @include flex;
+  @media (max-width: 480px) {
+    padding-bottom: 5.5em;
+  }
   a {
     color: white;
     padding-left: 0.5em;
@@ -97,8 +120,16 @@ footer {
     &:hover {
       color: $yellow;
     }
+    @media (max-width: 480px) {
+      &:active {
+        color: $yellow;
+      }
+    }
   }
   img {
     width: 5em;
+  }
+  p {
+    margin-bottom: 0;
   }
 }

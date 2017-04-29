@@ -16,8 +16,8 @@
   h1 {
     color: $yellow;
     font-family: $title;
-    padding-top: 2em;
-
+    padding-top: 1em;
+    margin-bottom: 0;
     @media (max-width: 750px) {
         font-size: 4.2rem;
     }
@@ -26,6 +26,17 @@
     }
     @media (max-width: 400px) {
         font-size: 2.7rem;
+    }
+  }
+  .scroll {
+    @include flex;
+    i{
+      color: #FFF;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: $font-size-large;
     }
   }
 }

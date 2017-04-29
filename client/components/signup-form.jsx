@@ -74,7 +74,7 @@ class SignupForm extends Component {
     return (
       <section className="container">
         <form onSubmit={this.handleSubmit}>
-          <p><strong>The Banana Phone launches May 1st</strong></p>
+          <p><strong>Order your Banana Phone <a href='https://igg.me/at/bananaphone' target='_blank'>Now</a></strong></p>
           { this.state.formSent
             ? <p className='sent-message'>Thanks a <strong>bunch!</strong> We'll be in touch shortly!</p>
             : <p>Sign up to stay updated</p> }
