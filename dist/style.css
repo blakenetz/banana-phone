@@ -502,6 +502,7 @@ footer {
       .taglines img {
         height: 15em;
         display: block;
-        padding-bottom: 2em; } }
+        padding-bottom: 2em;
+        padding-top: 2em; } }
 
 /*# sourceMappingURL=style.css.map*/
