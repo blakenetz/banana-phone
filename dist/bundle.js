@@ -22023,7 +22023,7 @@
 	            _react2.default.createElement(
 	              'figcaption',
 	              null,
-	              'Buy now!'
+	              'Order now!'
 	            )
 	          )
 	        )
@@ -23087,7 +23087,15 @@
 	      return _react2.default.createElement(
 	        "section",
 	        { className: "gorillas row" },
-	        _react2.default.createElement("div", { className: "one-half column left" }),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "one-half column left" },
+	          _react2.default.createElement(
+	            "cite",
+	            null,
+	            "\xA9PaulTaggart"
+	          )
+	        ),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "one-half column right" },
@@ -23115,7 +23123,13 @@
 	              { href: "http://www.g4g.co.uk", target: "_blank" },
 	              "G4G.co.uk"
 	            )
-	          )
+	          ),
+	          _react2.default.createElement(
+	            "figure",
+	            null,
+	            _react2.default.createElement("img", { src: "/images/g4g-logo.png", alt: "Gearing Up For Gorillas logo" })
+	          ),
+	          _react2.default.createElement("img", { className: "banner", src: "/images/g4g-banner.jpg", alt: "Gearing Up For Gorillas logo" })
 	        )
 	      );
 	    }
