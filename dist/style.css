@@ -146,7 +146,7 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
     padding-top: 1em;
     padding-bottom: 2em; }
   .phone-labeled img {
-    height: 42em; }
+    height: 40em; }
 
 @media (max-width: 550px) {
   .phone {
@@ -158,8 +158,7 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
   .phone-labeled {
     margin-right: 33%; }
     .phone-labeled img {
-      width: 100vw;
-      height: auto; } }
+      height: 30em; } }
 
 form {
   padding-top: 2em; }
@@ -226,38 +225,34 @@ form {
   form p:last-of-type {
     font-size: 0.85em; } }
 
-.gorillas .column {
-  margin: 0em;
-  height: 30em;
-  width: 50%; }
-
-.gorillas .left {
-  background: url("/images/gorilla-face-close.jpg") no-repeat center/cover;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  align-items: flex-start;
-  justify-content: flex-end; }
-  .gorillas .left cite {
-    color: white; }
-
-.gorillas .right {
-  padding: 1.5em;
-  background: -webkit-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover; }
-
-.gorillas a {
-  color: #FDE303; }
-
-.gorillas figure {
-  text-align: center; }
-  .gorillas figure img {
-    height: 5em; }
+.gorillas {
+  background: -webkit-linear-gradient(180deg, transparent, #000), url("/images/g4g-banner.jpg") no-repeat center/contain;
+  background: -o-linear-gradient(180deg, transparent, #000), url("/images/g4g-banner.jpg") no-repeat center/contain;
+  background: linear-gradient(180deg, transparent, #000), url("/images/g4g-banner.jpg") no-repeat center/contain; }
+  .gorillas .column {
+    margin: 0em;
+    height: 30em;
+    width: 50%; }
+  .gorillas .left {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    .gorillas .left cite {
+      color: white; }
+  .gorillas .right {
+    padding: 1.5em; }
+  .gorillas a {
+    color: #FDE303; }
+  .gorillas figure {
+    text-align: center; }
+    .gorillas figure img {
+      height: 5em; }
 
 @media (max-width: 1120px) {
   .column.left {
