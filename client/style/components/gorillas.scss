@@ -41,7 +41,7 @@
       width: 65%;
     }
     @media (max-width: 865px) {
-      width: 100%;
+      width: 100vw;
       background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
       background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
       background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
