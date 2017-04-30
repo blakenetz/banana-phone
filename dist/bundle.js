@@ -23112,12 +23112,12 @@
 	          _react2.default.createElement(
 	            "p",
 	            null,
-	            "Join us in helping provide what the rangers need and make a real difference to the future of the mountain gorilla.  G4G has proven that practical assistance can be directed to where it really matters - to the rangers at the sharp end."
+	            "Join us in helping provide what the rangers need and make a real difference to the future of the mountain gorilla. G4G has proven that practical assistance can be directed to where it really matters - to the rangers at the sharp end."
 	          ),
 	          _react2.default.createElement(
 	            "p",
 	            null,
-	            "To learn more, checkout the award winning documentary Virunga on Netflix or visit the Gearing Up for Gorillas website at",
+	            "To learn more, checkout the award winning documentary Virunga on Netflix or visit the Gearing Up for Gorillas website at ",
 	            _react2.default.createElement(
 	              "a",
 	              { href: "http://www.g4g.co.uk", target: "_blank" },
