@@ -5,7 +5,7 @@ class BananaPhoneLabel extends Component {
     return (
       <section className="phone-labeled">
         <figure>
-          <img src="/images/phone-labeled.jpg" alt="detailed view of the Banana Phone" />
+          <img src="/images/phone-diagram.png" alt="detailed view of the Banana Phone" />
         </figure>
       </section>
     )
