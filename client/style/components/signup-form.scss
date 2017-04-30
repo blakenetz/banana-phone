@@ -7,6 +7,20 @@ form {
     &.sent-message{
       color: $yellow;
     }
+    &:last-of-type {
+      @media (max-width: 450px) {
+        font-size: $font-size-small-xx
+      }
+    }
+    @media (max-width: 650px) {
+      font-size: $font-size-med;
+    }
+    @media (max-width: 550px) {
+          font-size: $font-size-small;
+    }
+    @media (max-width: 450px) {
+      font-size: $font-size-small-x
+    }
   }
   a{
     font-size: inherit;
@@ -74,30 +88,5 @@ form {
   }
   .row {
     padding-top: 0.75em;
-  }
-}
-
-@media (max-width: 650px) {
-  form{
-    p {
-      font-size: $font-size-med;
-    }
-  }
-}
-@media (max-width: 550px) {
-  form{
-    p {
-      font-size: $font-size-small;
-    }
-  }
-}
-@media (max-width: 450px) {
-  form{
-    p {
-      font-size: $font-size-small-x
-    }
-    p:last-of-type {
-      font-size: $font-size-small-xx
-    }
   }
 }

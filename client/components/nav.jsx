@@ -102,7 +102,7 @@ class Nav extends Component {
             <a href="https://igg.me/at/bananaphone" target="_blank">
               <i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
             </a>
-            <figcaption>Buy now!</figcaption>
+            <figcaption>Order now!</figcaption>
           </figure>
         </section>
       </nav>
