@@ -1,7 +1,4 @@
 .gorillas {
-  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
-  background: -o-linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
   .column {
     margin: 0em;
     height: 30em;
@@ -11,12 +8,58 @@
     @include flex;
     align-items: flex-start;
     justify-content: flex-end;
+    background: url('/images/gorilla-face-close.jpg') no-repeat center/cover;
+    @media (max-width: 1120px) {
+      width: 35%;
+    }
+    @media (max-width: 865px) {
+      display: none;
+    }
+
     cite{
       color: white;
+      @media (max-width: 1120px) {
+        color: black;
+      }
     }
   }
   .right {
-    padding:1.5em;
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    p {
+      padding-left:1.5em;
+      padding-right:1.5em;
+      &:first-of-type {
+        padding-top: 1.5em;
+      }
+    }
+    @media (max-width: 1120px) {
+      width: 65%;
+    }
+    @media (max-width: 865px) {
+      width: 100%;
+      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+      background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+      background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+      background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    }
+    @media (max-width: 750px) {
+      height: auto;
+    }
+  }
+  .banner{
+    display: none;
+    @media (max-width: 865px) {
+      display: initial;
+      width: 100vw;
+      margin-bottom: -0.5em;
+    }
   }
   a {
     color: $yellow;
@@ -26,36 +69,8 @@
     img{
       height: 5em;
     }
-  }
-}
-
-@media (max-width: 1120px) {
-  .column.left {
-    width: 35%;
-    cite{
-      color: black;
+    @media (max-width: 865px) {
+      display: none;
     }
-  }
-  .column.right {
-    width: 65%;
-  }
-}
-@media (max-width: 865px) {
-  .column.left {
-    display: none;
-  }
-  .column.right {
-    width: 100%;
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-  }
-}
-@media (max-width: 750px) {
-  .column.right {
-    height: auto;
   }
 }

@@ -9,6 +9,10 @@
   background-attachment: fixed;
   @include flex;
   justify-content: flex-end;
+  @media (max-width: 550px){
+    height: auto;
+    background: #000;
+  }
 
   .tagline-container{
     width: 100vw;
@@ -17,42 +21,30 @@
     @include flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    @media (max-width: 550px){
+      background: $input-font-color;
+    }
     h2 {
       margin-bottom: 0;
+      @media (max-width: 960px){
+        font-size: $title-size-large;
+      }
+      @media (max-width: 750px){
+        font-size: $title-size-medium;
+      }
+      @media (max-width: 650px){
+        font-size: $title-size-small;
+      }
+      @media (max-width: 550px){
+        color: #000;
+        line-height: $title-size-large;
+        font-size: $title-size-small-x;
+      }
     }
   }
   img {
     display: none;
-  }
-}
-@media (max-width: 960px){
-  .taglines h2{
-    font-size: $title-size-large;
-  }
-}
-@media (max-width: 750px){
-  .taglines h2{
-    font-size: $title-size-medium;
-  }
-}
-@media (max-width: 650px){
-  .taglines h2{
-    font-size: $title-size-small;
-  }
-}
-@media (max-width: 550px){
-  .taglines {
-    height: auto;
-    background: #000;
-    .tagline-container {
-      background: $input-font-color;
-    }
-    h2 {
-      color: #000;
-      line-height: $title-size-large;
-      font-size: $title-size-small-x;
-    }
-    img {
+    @media (max-width: 550px){
       height: 15em;
       display: block;
       padding-bottom: 2em;

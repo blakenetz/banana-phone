@@ -7,9 +7,18 @@
   background: -ms-linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/phone-close-glossy.jpg') no-repeat center/contain;
   background-attachment: fixed;
+  @media (max-width: 550px) {
+    background: #000;
+    height: auto;
+  }
+
 
   img {
     display: none;
+    @media (max-width: 550px) {
+      height: 15em;
+      display: block;
+    }
   }
 
   @include flex;
@@ -17,29 +26,17 @@
 }
 .phone-labeled {
   @include flex;
+  @media (max-width: 550px) {
+    margin-right: 33%;
+  }
   figure{
     padding-top: 1em;
     padding-bottom: 2em;
   }
   img {
     height: 40em;
-  }
-}
-@media (max-width: 550px) {
-  .phone {
-    background: #000;
-    height: auto;
-    img {
-      height: 15em;
-      display: block;
-    }
-  }
-
-  .phone-labeled {
-    margin-right: 33%;
-    img {
+    @media (max-width: 550px) {
       height: 30em;
     }
   }
-
 }
