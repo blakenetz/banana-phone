@@ -1,11 +1,13 @@
 .gorillas {
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
+  background: -o-linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000), url('/images/g4g-banner.jpg') no-repeat center/contain;
   .column {
     margin: 0em;
     height: 30em;
     width: 50%;
   }
   .left {
-    background: url('/images/gorilla-face-close.jpg') no-repeat center/cover;
     @include flex;
     align-items: flex-start;
     justify-content: flex-end;
@@ -15,9 +17,6 @@
   }
   .right {
     padding:1.5em;
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
   }
   a {
     color: $yellow;
