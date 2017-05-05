@@ -1,0 +1,14 @@
+.vid {
+  @include flex;
+  a {
+    width: 60%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    @media (max-width: 1050px){
+      width: 80%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
