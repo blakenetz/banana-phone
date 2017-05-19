@@ -41,6 +41,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "aws-sdk": "^2.52.0",
     "body-parser": "^1.17.1",
     "cors": "^2.8.1",
     "debug": "^2.6.2",

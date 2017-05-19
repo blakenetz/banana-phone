@@ -21,6 +21,7 @@ Hosted at BananaPhone.io
     * Rolling Green-Blue deployments
     * NGINX proxy server
   * Domain managed with Route 53
+  * Logging with custom Lamba function
 
 📲 To install / run / build:
   * $ npm install

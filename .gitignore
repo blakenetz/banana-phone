@@ -2,6 +2,7 @@
 .gitignore
 .env
 sourcebundle.zip
+AwsConfig.json
 
 # Logs
 logs

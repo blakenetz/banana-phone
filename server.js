@@ -6,9 +6,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const request = require('request');
 const fs = require('fs');
-require('dotenv').config()
+const aws = require('aws-sdk');
+require('dotenv').config();
 
 const app = express();
+
+aws.config.loadFromPath('./AwsConfig.json');
+const s3 = new aws.S3();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -23,7 +27,25 @@ app.set('views', path.join(__dirname, 'dist'));
 app.post('/signup', (req, res) => {
   const subscriberObj = req.body
   subscriberObj.type = 'active'
+  const subscriberStr = subscriberObj.name + ',' + subscriberObj.email
 
+  // update S3
+  const params = {
+    Bucket: 'banana-phone-emails',
+    Key: 'emails.csv',
+  }
+  s3.getObject(params, function(err, data){
+    if (err) console.log(err, err.stack);
+    else {
+      params.Body = data.Body.toString('utf-8') + '\n' + subscriberStr;
+      s3.putObject(params, function(err, data) {
+        if (err) console.log(err, err.stack);
+        else console.log(data);
+      });
+    }
+  })
+
+  // updated mailerlite
   const options = {
     uri: 'https://api.mailerlite.com/api/v2/groups/'+process.env.GROUP_ID+'/subscribers',
     method: 'POST',
@@ -33,19 +55,20 @@ app.post('/signup', (req, res) => {
     },
     form: subscriberObj
   }
-
   request(options, (err, res, body) => {
-    if (err) {
-      const message = `${datetime}: ${err} \n`
-      fs.writeFileSync('error.txt', message, {flag: 'a+'})
-    }
+    const response = JSON.stringify(body)
 
-    if (!err && res.statusCode == 200) {
-      const response = JSON.parse(body)
-      const message = `${response['date_created']}: name: ${response['name']} email: ${response['email']} \n`
+    if (!err && res.statusCode === 200) {
+      const message = `${response['date_created']} - name: ${response['name']}, email: ${response['email']} \n`
       fs.writeFileSync('success.txt', message, {flag: 'a+'})
     }
+    else {
+      const message = `Error: ${err}. Body: ${response} \n`
+      fs.writeFileSync('error.txt', message, {flag: 'a+'})
+    }
   })
+
+  // return success!
   res.json({success:true})
 })
 
