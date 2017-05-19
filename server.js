@@ -11,7 +11,7 @@ require('dotenv').config();
 
 const app = express();
 
-aws.config.loadFromPath('./AwsConfig.json');
+if (process.env.ENVIRONMENT === 'DEV') aws.config.loadFromPath('./AwsConfig.json');
 const s3 = new aws.S3();
 
 app.use(logger('dev'));
@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'dist'));
 app.post('/signup', (req, res) => {
   const subscriberObj = req.body
   subscriberObj.type = 'active'
-  const subscriberStr = subscriberObj.name + ',' + subscriberObj.email
+  const subscriberStr = subscriberObj.name   + ',' + subscriberObj.email
 
   // update S3
   const params = {
