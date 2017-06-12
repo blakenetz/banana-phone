@@ -9,7 +9,7 @@ const fs = require('fs');
 const aws = require('aws-sdk');
 require('dotenv').config();
 
-const app = express();
+const app = express() ;
 
 aws.config.update({
   "accessKeyId": process.env.AWS_ACCESS_KEY_ID,
