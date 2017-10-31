@@ -9,6 +9,7 @@ logs
 npm-debug.log*
 error.txt
 success.txt
+todo.txt
 
 # Runtime data
 pids
