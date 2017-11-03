@@ -4,8 +4,7 @@
   "description": "Source code for Banana Phone site!",
   "main": "./bin/www",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
     "build": "node ./node_modules/webpack/bin/webpack.js --production"
   },
   "repository": {
@@ -32,7 +31,7 @@
     "babel-preset-stage-1": "^6.16.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "node-sass": "^3.10.1",
+    "node-sass": "^3.13.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "sass-loader": "^4.0.2",
@@ -41,15 +40,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.52.0",
-    "body-parser": "^1.17.1",
-    "cors": "^2.8.1",
-    "debug": "^2.6.2",
-    "dotenv": "^4.0.0",
-    "express": "^4.15.2",
     "javascript-debounce": "^1.0.0",
-    "morgan": "^1.8.1",
-    "request": "^2.81.0",
     "serve-favicon": "^2.4.1",
     "whatwg-fetch": "^2.0.3"
   }

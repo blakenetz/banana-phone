@@ -1,97 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="sw">
-<<<<<<< HEAD
-  <head>
-    <title>Banana Phone</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A banana shaped, bluetooth mobile device. A phone with appeal">
-    <meta name="keywords" content="bluetooth, banana phone, mobile device, mobile, bananaphone">
-    <meta name="author" content="Blake Netzeband @blakenetz">
-    <link rel="author" href="http://blakeface.us" />
-    <link rel="canonical" href="http://bananaphone.io" />
-
-    <!-- style / fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700|Quicksand" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet" media="screen" type="text/css">
-    <script src="https://use.fontawesome.com/ef764e9903.js"></script>
-
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/images/favicons/manifest.json">
-    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-96623014-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- Google Remarketing Tag -->
-    <script type="text/javascript">
-      var google_conversion_id = 849965632;
-      var google_custom_params = window.google_tag_params;
-      var google_remarketing_only = true;
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-    <noscript>
-      <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/849965632/?guid=ON&amp;script=0"/>
-      </div>
-    </noscript>
-
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s){
-        if (f.fbq) return;n=f.fbq=function(){ n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments) };
-        if (!f._fbq) f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-        t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)
-      }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '136449413576745');
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" src="https://www.facebook.com/tr?id=136449413576745&ev=PageView&noscript=1" />
-    </noscript>
-
-  </head>
-
-  <body>
-    <main class="root"></main>
-    <script src="bundle.js" charset="utf-8"></script>
-  </body>
-=======
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Banana Phone</title>
 
+		<!-- search engines + security -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+		<meta name="referrer" content="origin-when-crossorigin">
+		<meta name="robots" content="index, follow">
+		<meta name="googlebot" content="index, follow">
+		
 		<!-- GENERAL  -->
-		<!-- LETS UNCOMMENT THIS ONCE WE REMOVE THE EMAIL LIST FORM  -->
-		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
 		<meta name="description" content="Banana Phone is a banana-shaped, Bluetooth-enabled, mobile handset that connects to your smartphone and interact with your voice assistant">
 		<meta name="subject" content="hardware">
 		<meta name="rating" content="General">
-
-		<!-- search engines -->
-		<!-- LETS ADJUST THESE ON PROD -->
-		<meta name="robots" content="none">
-		<meta name="googlebot" content="none">
-		<meta name="google" content="nositelinkssearchbox">
-		<meta http-equiv="x-dns-prefetch-control" content="off">
 
 		<!-- style / fonts -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
@@ -101,11 +25,11 @@
 
 		<!-- about -->
 		<link rel="manifest" href="PACKAGE.json">
-		<meta name="referrer" content="origin">
 		<link rel="license" href="LICENSE">
 		<link rel="me" href="https://blakeface.us/" type="text/html">
 		<link rel="me" href="mailto:blake.netzeband@gmail.com">
 		<link rel="index" href="http://bananaphone.io">
+		
 
 		<!-- favicons and such -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
@@ -155,5 +79,4 @@
 		}(document, 'script', 'facebook-jssdk'));
 		</script>
 	</body>
->>>>>>> inprog
 </html>
