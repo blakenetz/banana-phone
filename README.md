@@ -20,3 +20,5 @@ Hosted at BananaPhone.io
   * $ npm start
   * frontend served on localhost:8080
   * $ npm run build
+
+Currently a static site. View node branch for a simple Node server.
