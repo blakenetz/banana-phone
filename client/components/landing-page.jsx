@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 
-class LandingPage extends Component {
+export default class LandingPage extends Component {
   render(){
     return (
       <section className="lp">
-        <img src="images/logo.png" alt="Banana Phone logo" />
-        
-        <h1>A PHONE WITH APPEAL</h1>
-        
-        <div className='scroll'>
-          <i className="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i>
-          <p>scroll down</p>
+        <div className="lpTop">
+          <h1>Banana Phone</h1>
+        </div>
+        <div className="lpBottom">
+          <img src="http://via.placeholder.com/600x250" alt="placeholder" />
+          <p>Banana Phone is a banana-shaped, Bluetooth®-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends on a banana!</p>
         </div>
       </section>
     )
   }
-
 }
-
-export default LandingPage;

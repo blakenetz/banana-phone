@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class About extends Component {
+export default class Gorillas extends Component {
   render(){
     return (
       <section className="gorillas row">
@@ -20,7 +20,4 @@ class About extends Component {
       </section>
     )
   }
-
 }
-
-export default About;

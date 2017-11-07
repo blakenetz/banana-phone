@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import debounce from 'javascript-debounce';
 
-class Nav extends Component {
+export default class Nav extends Component {
   constructor(props){
     super(props)
     this.handleClick = this.handleClick.bind(this)
@@ -111,5 +111,3 @@ class Nav extends Component {
     )
   }
 }
-
-export default Nav;
