@@ -4,7 +4,8 @@
   "description": "Source code for Banana Phone site!",
   "main": "./bin/www",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
+    "start": "node ./src/bundle.js",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
     "build": "node ./node_modules/webpack/bin/webpack.js --production"
   },
   "repository": {
