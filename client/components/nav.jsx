@@ -18,8 +18,7 @@ class Nav extends Component {
 
   handleScroll(e){
     const nav = document.querySelector('nav')
-    // crossbrowser hack
-    if ( (e.pageY && e.pageY > 200) || (e.srcElement && e.srcElement.body.scrollTop > 200)) {
+    if (window.pageYOffset > 200) {
       nav.classList.remove("is-hidden");
     }
     else{
@@ -75,6 +74,7 @@ class Nav extends Component {
             </a>
             <figcaption>Share</figcaption>
           </figure>
+
           <figure>
             <a className="twitter-share-button"
                 onClick={this.handleClick}
@@ -99,6 +99,7 @@ class Nav extends Component {
             </a>
             <figcaption>Tweet</figcaption>
           </figure>
+
           <figure>
             <a href="https://igg.me/at/bananaphone" target="_blank">
               <i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
