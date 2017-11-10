@@ -22003,8 +22003,7 @@
 	    key: 'handleScroll',
 	    value: function handleScroll(e) {
 	      var nav = document.querySelector('nav');
-	      // crossbrowser hack
-	      if (e.pageY && e.pageY > 200 || e.srcElement && e.srcElement.body.scrollTop > 200) {
+	      if (window.pageYOffset > 200) {
 	        nav.classList.remove("is-hidden");
 	      } else {
 	        nav.classList.add("is-hidden");
