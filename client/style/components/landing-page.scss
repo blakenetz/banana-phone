@@ -5,9 +5,19 @@
 		width: 100%;
 		@include flex;
 		height: 80vh;
+		img {
+			position: absolute;
+			height: 100%;
+		}
 	}
-	img {
+	#igBadge {
+		width: 15vw;
+		height: auto;
+		min-width: 100px;
+		max-width: 140px;
+		transform: rotate(15deg);
+		margin: -50px 50px 0 0;
 		position: absolute;
-		height: 100%;
+		right: 0;
 	}
 }
