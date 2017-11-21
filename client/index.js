@@ -40,7 +40,7 @@ class App extends Component {
       duration: 1500,
       delay: 500,
     });
-    
+
   }
 
   render() {
@@ -51,10 +51,10 @@ class App extends Component {
         <About />
         <Features />
         <Gorillas />
+        <Footer />  
         
         { /* <Video />
-        <Taglines />
-        <Footer />  */ }
+        <Taglines /> */ }
       </div>
     );
   }

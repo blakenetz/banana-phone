@@ -104,12 +104,13 @@ nav {
 
 
 footer {
+	padding: 1em;
 	@include flex;
 	@media (max-width: 480px) {
 		padding-bottom: 5.5em;
 	}
 	a {
-		color: white;
+		color: #000;
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 		&:hover {

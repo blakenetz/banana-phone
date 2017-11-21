@@ -64,7 +64,8 @@ class Nav extends Component {
 							id="fb"
 							onClick={this.handleClick}
 							href={isMobile ? 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Figg.me%2Fat%2Fbananaphone&amp;src=sdkpreparse' : 'javascript:void(0)'}
-							target={isMobile ? '_blank' : '_self'}>
+							target={isMobile ? '_blank' : '_self'}
+							rel={isMobile ? 'noopener noreferrer' : ''} >
 
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								 width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
@@ -82,7 +83,8 @@ class Nav extends Component {
 								onClick={this.handleClick}
 								id="tw"
 								href={isMobile ? 'https://twitter.com/intent/tweet?text=Yellow!&hashtags=#phonewithappeal,yellow,gorillamarketing' : 'javascript:void(0)'}
-								target={isMobile ? '_blank' : '_self'}  >
+								target={isMobile ? '_blank' : '_self'}
+								rel={isMobile ? 'noopener noreferrer' : ''} >
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								 width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
 								<path fill="#000000" stroke="#FFFFFF" strokeWidth="3" strokeMiterlimit="10" d="M38.167,22.283
@@ -104,7 +106,7 @@ class Nav extends Component {
 
 					{/* BUY NOW */}
 					<figure>
-						<a href="https://igg.me/at/bananaphone" target="_blank">
+						<a href="https://igg.me/at/bananaphone" target="_blank" rel="noopener noreferrer">
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy on Amazon.com

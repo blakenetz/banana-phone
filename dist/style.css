@@ -1,9 +1,14 @@
+/* backgrounds */
+/* font colors */
+/* font sizes */
+/* title sizes */
+/* fonts */
 body {
   padding: 0;
   margin: 0; }
 
 p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
-  color: #dedede;
+  /*color: $main-font-color;*/
   font-family: "Raleway", sans-serif;
   font-weight: 100; }
 
@@ -11,20 +16,30 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
   display: none; }
 
 .lp {
-  background-color: #000;
-  height: 80vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center; }
-  .lp img {
-    height: 50vh;
-    min-width: 10em; }
+  height: 100vh; }
+  .lp #top {
+    background-color: #000;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 80vh; }
+    .lp #top img {
+      position: absolute;
+      height: 100%; }
+  .lp #igBadge {
+    width: 15vw;
+    height: auto;
+    min-width: 100px;
+    max-width: 140px;
+    transform: rotate(15deg);
+    margin: -50px 50px 0 0;
+    position: absolute;
+    right: 0; }
 
 .vid {
   display: -webkit-box;
@@ -45,24 +60,11 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       width: 100%; }
 
 .about {
-  background: -moz-linear-gradient(0deg, #000 33%, transparent);
-  background: -webkit-gradient(linear, 0deg, #000 33%, transparent);
-  background: -webkit-linear-gradient(0deg, #000 33%, transparent);
-  background: -o-linear-gradient(0deg, #000 33%, transparent);
-  background: -ms-linear-gradient(0deg, #000 33%, transparent);
-  background: linear-gradient(0deg, #000 33%, transparent);
-  width: 65%; }
-  @media (max-width: 850px) {
-    .about {
-      width: 75%; } }
-  @media (max-width: 650px) {
-    .about {
-      width: 85%; } }
+  min-height: 100vh; }
   .about p {
     font-size: 1.4em;
     font-weight: 100;
-    text-align: center;
-    text-shadow: 0.1em 0.1em 0.5em #000; }
+    text-align: center; }
     @media (max-width: 650px) {
       .about p {
         font-size: 1.2em; } }
@@ -73,7 +75,7 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       .about p {
         font-size: 0.9em; } }
     .about p:first-of-type {
-      padding-top: 1em;
+      padding-top: 5em;
       margin-bottom: 0em; }
       @media (max-width: 850px) {
         .about p:first-of-type {
@@ -81,16 +83,61 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       @media (max-width: 650px) {
         .about p:first-of-type {
           padding-top: 3.5em; } }
+  .about .steps {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 3em; }
+    .about .steps:last-of-type {
+      padding-bottom: 3em; }
+  .about .iconWrap {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
+    .about .iconWrap:nth-child(odd) {
+      border: 5px solid #000;
+      border-radius: 90px; }
+      .about .iconWrap:nth-child(odd) i:nth-child(2) {
+        position: absolute;
+        margin: -19px 0 0 14px;
+        transform: rotate(45deg); }
+    .about .iconWrap:nth-child(3) {
+      margin-right: 30px; }
+    .about .iconWrap img {
+      width: 70%; }
+  .about .instruction {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+    .about .instruction p {
+      padding-top: 0; }
+    .about .instruction ul {
+      list-style-position: outside; }
+    .about .instruction li {
+      margin-bottom: 0; }
 
-.phone {
+.phoneLabelled {
+  background: #000;
+  color: #FFF;
+  width: 100vw;
   height: 100vh;
-  background: -moz-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: -webkit-gradient(linear, 0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: -webkit-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: -o-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: -ms-linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background: linear-gradient(0deg, #000, transparent 60%), url("/images/phone-close-glossy.jpg") no-repeat center/contain;
-  background-attachment: fixed;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -98,37 +145,19 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: flex-end; }
-  @media (max-width: 550px) {
-    .phone {
-      background: #000;
-      height: auto; } }
-  .phone img {
-    display: none; }
-    @media (max-width: 550px) {
-      .phone img {
-        height: 15em;
-        display: block; } }
-
-.phone-labeled {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column;
-  align-items: center; }
-  @media (max-width: 550px) {
-    .phone-labeled {
-      margin-right: 33%; } }
-  .phone-labeled figure {
+  flex-direction: row; }
+  .phoneLabelled figure {
     padding-top: 1em;
     padding-bottom: 2em; }
-  .phone-labeled img {
+  .phoneLabelled img {
     height: 40em; }
     @media (max-width: 550px) {
-      .phone-labeled img {
+      .phoneLabelled img {
         height: 30em; } }
+  .phoneLabelled div {
+    padding-left: 4em; }
+    .phoneLabelled div ul {
+      list-style-position: outside; }
 
 form {
   padding-top: 2em; }
@@ -193,80 +222,81 @@ form {
   form .row {
     padding-top: 0.75em; }
 
-.gorillas .column {
-  margin: 0em;
-  height: 30em;
-  width: 50%; }
-
-.gorillas .left {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  align-items: flex-start;
-  justify-content: flex-end;
-  background: url("/images/gorilla-face-close.jpg") no-repeat center/cover; }
-  @media (max-width: 1120px) {
-    .gorillas .left {
-      width: 35%; } }
-  @media (max-width: 865px) {
-    .gorillas .left {
-      display: none; } }
-  .gorillas .left cite {
-    color: white; }
+.gorillas {
+  color: #FFF; }
+  .gorillas .column {
+    margin: 0em;
+    height: 30em;
+    width: 50%; }
+  .gorillas .left {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: url("/images/gorilla-face-close.jpg") no-repeat center/cover; }
     @media (max-width: 1120px) {
-      .gorillas .left cite {
-        color: black; } }
-
-.gorillas .right {
-  background: -moz-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: -webkit-gradient(linear, 0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: -webkit-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: -o-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: -ms-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
-  background: linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover; }
-  .gorillas .right p {
-    padding-left: 1.5em;
-    padding-right: 1.5em; }
-    .gorillas .right p:first-of-type {
-      padding-top: 1.5em; }
-  @media (max-width: 1120px) {
-    .gorillas .right {
-      width: 65%; } }
-  @media (max-width: 865px) {
-    .gorillas .right {
-      width: 100vw;
-      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
-      background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
-      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
-      background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
-      background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover; } }
-  @media (max-width: 750px) {
-    .gorillas .right {
-      height: auto; } }
-
-.gorillas .banner {
-  display: none; }
-  @media (max-width: 865px) {
-    .gorillas .banner {
-      display: initial;
-      width: 100vw;
-      margin-bottom: -0.5em; } }
-
-.gorillas a {
-  color: #FDE303; }
-
-.gorillas figure {
-  text-align: center; }
-  .gorillas figure img {
-    height: 5em; }
-  @media (max-width: 865px) {
-    .gorillas figure {
-      display: none; } }
+      .gorillas .left {
+        width: 35%; } }
+    @media (max-width: 865px) {
+      .gorillas .left {
+        display: none; } }
+    .gorillas .left cite {
+      color: white; }
+      @media (max-width: 1120px) {
+        .gorillas .left cite {
+          color: black; } }
+  .gorillas .right {
+    background: -moz-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: -webkit-gradient(linear, 0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: -webkit-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: -o-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: -ms-linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover;
+    background: linear-gradient(0deg, transparent, #000), url("/images/gorilla-face.jpg") no-repeat center/cover; }
+    .gorillas .right h2 {
+      text-align: center;
+      margin: 0; }
+    .gorillas .right p {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      margin-bottom: 1em; }
+      .gorillas .right p:first-of-type {
+        padding-top: 1em; }
+    @media (max-width: 1120px) {
+      .gorillas .right {
+        width: 65%; } }
+    @media (max-width: 865px) {
+      .gorillas .right {
+        width: 100vw;
+        background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+        background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+        background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+        background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+        background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/gorilla-face.jpg") no-repeat center/cover; } }
+    @media (max-width: 750px) {
+      .gorillas .right {
+        height: auto; } }
+  .gorillas .banner {
+    display: none; }
+    @media (max-width: 865px) {
+      .gorillas .banner {
+        display: initial;
+        width: 100vw;
+        margin-bottom: -0.5em; } }
+  .gorillas a {
+    color: #FDE303; }
+  .gorillas figure {
+    text-align: center; }
+    .gorillas figure img {
+      height: 5em; }
+    @media (max-width: 865px) {
+      .gorillas figure {
+        display: none; } }
 
 nav {
   display: -webkit-box;
@@ -361,6 +391,7 @@ nav {
         color: #FDE303; }
 
 footer {
+  padding: 1em;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -372,7 +403,7 @@ footer {
     footer {
       padding-bottom: 5.5em; } }
   footer a {
-    color: white;
+    color: #000;
     padding-left: 0.5em;
     padding-right: 0.5em; }
     footer a:hover {
@@ -385,15 +416,15 @@ footer {
   footer p {
     margin-bottom: 0; }
 
-.taglines {
-  height: 100vh;
-  background: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: -webkit-gradient(linear, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/phone-front-left.png") no-repeat center/contain;
-  background-attachment: fixed;
+.taglineContainer {
+  width: 100vw;
+  max-width: 960px;
+  background: -moz-linear-gradient(0deg, #000 33%, transparent);
+  background: -webkit-gradient(linear, 0deg, #000 33%, transparent);
+  background: -webkit-linear-gradient(0deg, #000 33%, transparent);
+  background: -o-linear-gradient(0deg, #000 33%, transparent);
+  background: -ms-linear-gradient(0deg, #000 33%, transparent);
+  background: linear-gradient(0deg, #000 33%, transparent);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -401,55 +432,26 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: flex-end; }
+  flex-flow: row nowrap;
+  justify-content: space-around; }
   @media (max-width: 550px) {
-    .taglines {
-      height: auto;
-      background: #000; } }
-  .taglines .tagline-container {
-    width: 100vw;
-    max-width: 960px;
-    background: -moz-linear-gradient(0deg, #000 33%, transparent);
-    background: -webkit-gradient(linear, 0deg, #000 33%, transparent);
-    background: -webkit-linear-gradient(0deg, #000 33%, transparent);
-    background: -o-linear-gradient(0deg, #000 33%, transparent);
-    background: -ms-linear-gradient(0deg, #000 33%, transparent);
-    background: linear-gradient(0deg, #000 33%, transparent);
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: space-around; }
+    .taglineContainer {
+      background: #d1d1d1; } }
+  .taglineContainer h2 {
+    margin-bottom: 0; }
+    @media (max-width: 960px) {
+      .taglineContainer h2 {
+        font-size: 2.5em; } }
+    @media (max-width: 750px) {
+      .taglineContainer h2 {
+        font-size: 2.2em; } }
+    @media (max-width: 650px) {
+      .taglineContainer h2 {
+        font-size: 1.8em; } }
     @media (max-width: 550px) {
-      .taglines .tagline-container {
-        background: #d1d1d1; } }
-    .taglines .tagline-container h2 {
-      margin-bottom: 0; }
-      @media (max-width: 960px) {
-        .taglines .tagline-container h2 {
-          font-size: 2.5em; } }
-      @media (max-width: 750px) {
-        .taglines .tagline-container h2 {
-          font-size: 2.2em; } }
-      @media (max-width: 650px) {
-        .taglines .tagline-container h2 {
-          font-size: 1.8em; } }
-      @media (max-width: 550px) {
-        .taglines .tagline-container h2 {
-          color: #000;
-          line-height: 2.5em;
-          font-size: 1.3em; } }
-  .taglines img {
-    display: none; }
-    @media (max-width: 550px) {
-      .taglines img {
-        height: 15em;
-        display: block;
-        padding-bottom: 2em;
-        padding-top: 2em; } }
+      .taglineContainer h2 {
+        color: #000;
+        line-height: 2.5em;
+        font-size: 1.3em; } }
 
 /*# sourceMappingURL=style.css.map*/
