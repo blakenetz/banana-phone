@@ -1,24 +1,10 @@
-.phone {
+.phoneLabelled {
+  background: #000;
+  color: #FFF;
+  width: 100vw;
   height: 100vh;
-  #sidebyside {
-    display: inline-flex;
-    #left {
-      width: 60vw;
-    }
-    #right {
-      width: 40vw;
-    }
-  }
-  img {
-    width: 80%;
-    padding: 3em 0;
-  }
-}
-.phone-labeled {
   @include flex;
-  @media (max-width: 550px) {
-    margin-right: 33%;
-  }
+  flex-direction: row;
   figure{
     padding-top: 1em;
     padding-bottom: 2em;
@@ -27,6 +13,12 @@
     height: 40em;
     @media (max-width: 550px) {
       height: 30em;
+    }
+  }
+  div {
+    padding-left: 4em;
+    ul {
+      list-style-position: outside;
     }
   }
 }

@@ -30,6 +30,9 @@
 		@include flex;
 		flex-direction: row;
 		padding-top: 3em;
+		&:last-of-type {
+			padding-bottom: 3em;
+		}
 	}
 
 	.iconWrap {

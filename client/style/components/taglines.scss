@@ -1,54 +1,29 @@
-.taglines {
-  height: 100vh;
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background: -webkit-gradient(linear, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/phone-front-left.png') no-repeat center/contain;
-  background-attachment: fixed;
+.taglineContainer{
+  width: 100vw;
+  max-width: 960px;
+  @include font-bg;
   @include flex;
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   @media (max-width: 550px){
-    height: auto;
-    background: #000;
+    background: $input-font-color;
   }
-
-  .tagline-container{
-    width: 100vw;
-    max-width: 960px;
-    @include font-bg;
-    @include flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    @media (max-width: 550px){
-      background: $input-font-color;
+  h2 {
+    margin-bottom: 0;
+    @media (max-width: 960px){
+      font-size: $title-size-large;
     }
-    h2 {
-      margin-bottom: 0;
-      @media (max-width: 960px){
-        font-size: $title-size-large;
-      }
-      @media (max-width: 750px){
-        font-size: $title-size-medium;
-      }
-      @media (max-width: 650px){
-        font-size: $title-size-small;
-      }
-      @media (max-width: 550px){
-        color: #000;
-        line-height: $title-size-large;
-        font-size: $title-size-small-x;
-      }
+    @media (max-width: 750px){
+      font-size: $title-size-medium;
     }
-  }
-  img {
-    display: none;
+    @media (max-width: 650px){
+      font-size: $title-size-small;
+    }
     @media (max-width: 550px){
-      height: 15em;
-      display: block;
-      padding-bottom: 2em;
-      padding-top: 2em;
+      color: #000;
+      line-height: $title-size-large;
+      font-size: $title-size-small-x;
     }
   }
 }
+

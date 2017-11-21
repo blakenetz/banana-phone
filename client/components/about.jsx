@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
-import ScrollReveal from 'scrollreveal';
 
 export default class About extends Component {
-  componentDidMount() {
-    window.sr = ScrollReveal();
-    sr.reveal('#aboutText', { 
-      duration: 1500,
-      delay: 500,
-      reset: true,
-    });
-    sr.reveal('.steps', { 
-      duration: 1500,
-      delay: 500,
-      reset: true,
-    }, 100);
-  }
-
   render(){
     return (
       <section className="container about">
