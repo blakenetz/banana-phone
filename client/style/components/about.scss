@@ -26,7 +26,45 @@
 		}
 	}
 
-	img {
-		width: 15vw;
+	.steps {
+		@include flex;
+		flex-direction: row;
+		padding-top: 3em;
+	}
+
+	.iconWrap {
+		width: 100px;
+		min-width: 100px;
+		height: 100px;
+		@include flex;
+		justify-content: center;
+
+		&:nth-child(odd) {
+			border: 5px solid #000;
+			border-radius: 90px;
+			i:nth-child(2){
+				position: absolute;
+				margin: -19px 0 0 14px;
+				transform: rotate(45deg);
+			}
+		}
+		&:nth-child(3){
+			margin-right: 30px;
+		}
+		img {
+			width: 70%;
+		}
+	}
+	.instruction{
+		@include flex;
+		p {
+			padding-top: 0;
+		}
+		ul {
+			list-style-position: outside;
+		}
+		li {
+			margin-bottom: 0;
+		}
 	}
 }

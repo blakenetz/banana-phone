@@ -53,7 +53,7 @@ class Nav extends Component {
 		return (
 			<nav className="is-hidden">
 				<section>
-					<img src="images/logo.png" alt="Banana Phone logo" />
+					<img src="images/logo-whitetext.png" alt="Banana Phone logo" />
 				</section>
 
 				<section id="social-media">
