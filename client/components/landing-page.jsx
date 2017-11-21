@@ -4,7 +4,9 @@ export default class LandingPage extends Component {
 	render(){
 		return (
 			<section className="lp">
-				<img src="images/watermark.png" alt="Banana Phone logo" />
+				<div id="top">
+					<img src="images/front.png" alt="Banana Phone front view" />
+				</div>
 			</section>
 		)
 	}

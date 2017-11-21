@@ -1,12 +1,13 @@
 .lp {
-	background-color: #000;
-	height: 80vh;
-	width: 100%;
-	@include flex;
-	justify-content: center;
-
+	height: 100vh;
+	#top {
+		background-color: #000;
+		width: 100%;
+		@include flex;
+		height: 80vh;
+	}
 	img {
-		height: 50vh;
-		min-width: 10em;
+		position: absolute;
+		height: 100%;
 	}
 }

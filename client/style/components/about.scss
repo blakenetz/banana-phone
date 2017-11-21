@@ -1,18 +1,10 @@
 .about{
-  @include font-bg;
-  width: 65%;
-  @media (max-width: 850px) {
-    width: 75%;
-  }
-  @media (max-width: 650px) {
-    width: 85%;
-  }
+  min-height: 100vh;
 
   p {
     font-size: $font-size-large;
     font-weight: 100;
     text-align: center;
-    text-shadow: 0.1em 0.1em 0.5em #000;
     @media (max-width: 650px) {
       font-size: $font-size-med;
     }
@@ -23,7 +15,7 @@
       font-size: $font-size-small-x;
     }
     &:first-of-type {
-      padding-top: 1em;
+      padding-top: 5em;
       margin-bottom: 0em;
       @media (max-width: 850px) {
         padding-top: 2.5em;
