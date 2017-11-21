@@ -1,5 +1,6 @@
 body {
-  background: #000000; }
+  padding: 0;
+  margin: 0; }
 
 p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
   color: #dedede;
@@ -10,61 +11,20 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
   display: none; }
 
 .lp {
-  background: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  background: -webkit-gradient(linear, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  height: 100vh;
+  background-color: #000;
+  height: 80vh;
+  width: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-flow: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .lp img {
-    width: 20vw;
-    min-width: 10em;
-    padding-top: 2em; }
-  .lp h1 {
-    color: #FDE303;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 1em;
-    margin-bottom: 0; }
-    @media (max-width: 750px) {
-      .lp h1 {
-        font-size: 4.2rem; } }
-    @media (max-width: 550px) {
-      .lp h1 {
-        font-size: 3.2rem; } }
-    @media (max-width: 400px) {
-      .lp h1 {
-        font-size: 2.7rem; } }
-  .lp .scroll {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: column;
-    align-items: center; }
-    .lp .scroll i {
-      color: #FFF;
-      text-align: center; }
-    .lp .scroll p {
-      text-align: center;
-      font-size: 1.4em; }
-      @media (max-width: 650px) {
-        .lp .scroll p {
-          font-size: 1.2em; } }
-      @media (max-width: 550px) {
-        .lp .scroll p {
-          font-size: 1em; } }
-      @media (max-width: 450px) {
-        .lp .scroll p {
-          font-size: 0.9em; } }
+    height: 50vh;
+    min-width: 10em; }
 
 .vid {
   display: -webkit-box;
@@ -346,41 +306,21 @@ nav {
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 0; }
-    nav figure:first-of-type {
-      padding-right: 1em; }
+    margin: 0;
+    padding-right: 1em; }
     nav figure:hover figcaption {
       visibility: visible;
       color: #FDE303; }
-    nav figure:last-of-type {
-      width: 5.5em;
-      padding-right: 1em; }
+    nav figure a:last-of-type {
+      height: 45px;
+      /* same as svg viewbox*/ }
+      nav figure a:last-of-type i {
+        padding-right: 0.4em; }
   nav img {
     width: 6em;
     height: 5em; }
     @media (max-width: 480px) {
       nav img {
-        display: none; } }
-  nav h3 {
-    padding-left: 1em;
-    margin-bottom: 0;
-    background: -moz-linear-gradient(0deg, #000 33%, transparent);
-    background: -webkit-gradient(linear, 0deg, #000 33%, transparent);
-    background: -webkit-linear-gradient(0deg, #000 33%, transparent);
-    background: -o-linear-gradient(0deg, #000 33%, transparent);
-    background: -ms-linear-gradient(0deg, #000 33%, transparent);
-    background: linear-gradient(0deg, #000 33%, transparent); }
-    @media (max-width: 920px) {
-      nav h3 {
-        font-size: 3rem; } }
-    @media (max-width: 815px) {
-      nav h3 {
-        font-size: 2.2rem; } }
-    @media (max-width: 680px) {
-      nav h3 {
-        font-size: 1.7rem; } }
-    @media (max-width: 595px) {
-      nav h3 {
         display: none; } }
   nav figcaption {
     visibility: hidden;
@@ -403,8 +343,6 @@ nav {
       stroke: #000; } }
   nav i {
     color: #FFF; }
-    nav i:hover {
-      color: #FDE303; }
     @media (max-width: 480px) {
       nav i {
         color: #FDE303; } }
@@ -412,6 +350,15 @@ nav {
     font-size: 2.5em; }
   nav .fb-share-button {
     display: none; }
+  nav button {
+    height: 100%;
+    padding-top: 0.6em;
+    margin-bottom: 0; }
+    nav button:hover {
+      border-color: #FDE303;
+      color: #FDE303; }
+      nav button:hover i {
+        color: #FDE303; }
 
 footer {
   display: -webkit-box;

@@ -1,51 +1,12 @@
 .lp {
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  background: -webkit-gradient(linear, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
-  height: 100vh;
-  @include flex;
+	background-color: #000;
+	height: 80vh;
+	width: 100%;
+	@include flex;
+	justify-content: center;
 
-  img {
-    width: 20vw;
-    min-width: 10em;
-    padding-top: 2em;
-  }
-  h1 {
-    color: $yellow;
-    font-family: $title;
-    padding-top: 1em;
-    margin-bottom: 0;
-    @media (max-width: 750px) {
-        font-size: 4.2rem;
-    }
-    @media (max-width: 550px) {
-        font-size: 3.2rem;
-    }
-    @media (max-width: 400px) {
-        font-size: 2.7rem;
-    }
-  }
-  .scroll {
-    @include flex;
-    i{
-      color: #FFF;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      font-size: $font-size-large;
-      @media (max-width: 650px) {
-        font-size: $font-size-med;
-      }
-      @media (max-width: 550px) {
-            font-size: $font-size-small;
-      }
-      @media (max-width: 450px) {
-        font-size: $font-size-small-x
-      }
-    }
-  }
+	img {
+		height: 50vh;
+		min-width: 10em;
+	}
 }

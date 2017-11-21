@@ -19,12 +19,12 @@ class App extends Component {
       <div>
         <Nav />
         <LandingPage />
-        <BananaPhone />
+        { /* <BananaPhone />
         <Video />
         <BananaPhoneLabeled />
         <Gorillas />
         <Taglines />
-        <Footer />
+        <Footer /> */ }
       </div>
     );
   }

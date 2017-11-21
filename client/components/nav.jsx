@@ -76,7 +76,7 @@ class Nav extends Component {
 						<figcaption>Share</figcaption>
 					</figure>
 
-				{/* TWITTER */}
+					{/* TWITTER */}
 					<figure>
 						<a className="twitter-share-button"
 								onClick={this.handleClick}
