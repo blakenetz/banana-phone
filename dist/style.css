@@ -37,9 +37,9 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
     min-width: 100px;
     max-width: 140px;
     transform: rotate(15deg);
-    margin: -50px 50px 0 0;
+    margin: -50px 0 0 0;
     position: absolute;
-    right: 0; }
+    right: 15vw; }
 
 .vid {
   display: -webkit-box;
@@ -60,11 +60,20 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       width: 100%; }
 
 .about {
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding-top: 5em; }
+  .about .stepsWrapper {
+    background: -moz-linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain;
+    background: -webkit-gradient(linear, transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain;
+    background: -webkit-linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain;
+    background: -o-linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain;
+    background: -ms-linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain;
+    background: linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url("/images/side-right.png") no-repeat right/contain; }
   .about p {
     font-size: 1.4em;
     font-weight: 100;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 0px 0px 6px #FFF; }
     @media (max-width: 650px) {
       .about p {
         font-size: 1.2em; } }
@@ -75,7 +84,6 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       .about p {
         font-size: 0.9em; } }
     .about p:first-of-type {
-      padding-top: 5em;
       margin-bottom: 0em; }
       @media (max-width: 850px) {
         .about p:first-of-type {
@@ -93,12 +101,12 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
     align-items: center;
     flex-direction: row;
     padding-top: 3em; }
+    @media (max-width: 840px) {
+      .about .steps {
+        padding-top: 1.5em; } }
     .about .steps:last-of-type {
       padding-bottom: 3em; }
   .about .iconWrap {
-    width: 100px;
-    min-width: 100px;
-    height: 100px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -106,18 +114,48 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    width: 100px;
+    min-width: 100px;
+    height: 100px; }
+    @media (max-width: 840px) {
+      .about .iconWrap {
+        width: 70px;
+        min-width: 70px;
+        height: 70px; } }
     .about .iconWrap:nth-child(odd) {
       border: 5px solid #000;
       border-radius: 90px; }
-      .about .iconWrap:nth-child(odd) i:nth-child(2) {
+      .about .iconWrap:nth-child(odd) i.bp-arrow {
         position: absolute;
-        margin: -19px 0 0 14px;
-        transform: rotate(45deg); }
+        transform: rotate(45deg);
+        margin: -19px 0 0 14px; }
+        @media (max-width: 840px) {
+          .about .iconWrap:nth-child(odd) i.bp-arrow {
+            margin: -15px 0 0 12px; } }
+    @media (max-width: 840px) {
+      .about .iconWrap:nth-of-type(even) {
+        width: 40px;
+        min-width: 40px; } }
     .about .iconWrap:nth-child(3) {
       margin-right: 30px; }
     .about .iconWrap img {
       width: 70%; }
+    .about .iconWrap i.fa {
+      font-size: 5em; }
+      @media (max-width: 840px) {
+        .about .iconWrap i.fa {
+          font-size: 3.5em; } }
+    .about .iconWrap i.bp-arrow {
+      font-size: 2em; }
+      @media (max-width: 840px) {
+        .about .iconWrap i.bp-arrow {
+          font-size: 1.5em; } }
+    .about .iconWrap i.bp-plus {
+      font-size: 3em; }
+      @media (max-width: 840px) {
+        .about .iconWrap i.bp-plus {
+          font-size: 2em; } }
   .about .instruction {
     display: -webkit-box;
     display: -moz-box;
@@ -132,6 +170,9 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       list-style-position: outside; }
     .about .instruction li {
       margin-bottom: 0; }
+      @media (max-width: 840px) {
+        .about .instruction li {
+          font-size: 0.9em; } }
 
 .phoneLabelled {
   background: #000;

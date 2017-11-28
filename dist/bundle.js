@@ -23172,135 +23172,139 @@
 	        ),
 	        _react2.default.createElement(
 	          "div",
-	          { className: "steps" },
+	          { className: "stepsWrapper" },
 	          _react2.default.createElement(
 	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-mobile fa-5x", "aria-hidden": "true" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-plus fa-3x", "aria-hidden": "true" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "instruction" },
+	            { className: "steps" },
 	            _react2.default.createElement(
-	              "p",
-	              null,
-	              _react2.default.createElement(
-	                "strong",
-	                null,
-	                "Step One"
-	              )
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-mobile", "aria-hidden": "true" })
 	            ),
 	            _react2.default.createElement(
-	              "ul",
-	              null,
-	              _react2.default.createElement(
-	                "li",
-	                null,
-	                "Pair your smartphone via Bluetooth"
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "steps" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-phone fa-5x", "aria-hidden": "true" }),
-	            _react2.default.createElement("i", { className: "fa fa-arrow-down fa-2x", "aria-hidden": "true" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-plus fa-3x", "aria-hidden": "true" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "instruction" },
-	            _react2.default.createElement(
-	              "p",
-	              null,
-	              _react2.default.createElement(
-	                "strong",
-	                null,
-	                "Step Two"
-	              )
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
 	            ),
 	            _react2.default.createElement(
-	              "ul",
-	              null,
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "instruction" },
 	              _react2.default.createElement(
-	                "li",
+	                "p",
 	                null,
-	                "Recieve calls on your Banana Phone"
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Step One"
+	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
+	                "ul",
 	                null,
-	                "Click the multifunctional button to answer"
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  "Pair your smartphone via Bluetooth"
+	                )
 	              )
 	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "steps" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-phone fa-5x", "aria-hidden": "true" }),
-	            _react2.default.createElement("i", { className: "fa fa-arrow-up fa-2x", "aria-hidden": "true" })
 	          ),
 	          _react2.default.createElement(
 	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("i", { className: "fa fa-plus fa-3x", "aria-hidden": "true" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "iconWrap" },
-	            _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "instruction" },
+	            { className: "steps" },
 	            _react2.default.createElement(
-	              "p",
-	              null,
-	              _react2.default.createElement(
-	                "strong",
-	                null,
-	                "Step Three"
-	              )
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
+	              _react2.default.createElement("i", { className: "fa fa-arrow-down bp-arrow", "aria-hidden": "true" })
 	            ),
 	            _react2.default.createElement(
-	              "ul",
-	              null,
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "instruction" },
 	              _react2.default.createElement(
-	                "li",
+	                "p",
 	                null,
-	                "Initiate calls from your Banana Phone"
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Step Two"
+	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
+	                "ul",
 	                null,
-	                "Voice activate calling with Siri and OK Google"
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  "Recieve calls on your Banana Phone"
+	                ),
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  "Click the multifunctional button to answer"
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "steps" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
+	              _react2.default.createElement("i", { className: "fa fa-arrow-up bp-arrow", "aria-hidden": "true" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "iconWrap" },
+	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "instruction" },
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Step Three"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "ul",
+	                null,
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  "Initiate calls from your Banana Phone"
+	                ),
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  "Voice activate calling with Siri and OK Google"
+	                )
 	              )
 	            )
 	          )

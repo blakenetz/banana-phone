@@ -13,7 +13,7 @@ class Footer extends Component {
           <a href="https://twitter.com/bananaphoneco?lang=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
         </section>
         <section>
-          <p>#phonewithappeal #yellow? #gorillamarketing</p>
+          <p>#bananaphone</p>
         </section>
       </footer>
     )
