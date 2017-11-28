@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
 export default class LandingPage extends Component {
-	render(){
-		return (
-			<section className="lp">
-				<div id="top">
-					<img src="images/front.png" alt="Banana Phone front view" />
-				</div>
-				<img id="igBadge" src="images/indiegogo-badge.png" alt="Successfully funded with Indiegogo" />
-			</section>
-		)
-	}
+  render(){
+    return (
+      <section className="lp">
+        <img src="images/logo.png" alt="Banana Phone logo" />
+        <h1>A PHONE WITH APPEAL</h1>
+        <div className='scroll'>
+          <i className="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i>
+          <p>scroll down</p>
+        </div>
+      </section>
+    )
+  }
 }
