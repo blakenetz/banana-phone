@@ -12,6 +12,7 @@
 
   .left {
     overflow: hidden;
+    width: 35%;
     img {
       width: 100%;
       @media(min-width: 1250) {
@@ -20,9 +21,6 @@
       @media (max-width: 475px) {
         display: none;
       }
-    }
-    @media (max-width: 1120px) {
-      width: 35%;
     }
   }
 
