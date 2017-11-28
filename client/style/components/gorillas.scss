@@ -1,36 +1,40 @@
 .gorillas {
   color: #FFF;
+  background-color: #000;
   .column {
     margin: 0em;
-    height: 30em;
     width: 50%;
+    max-height: 660px;
   }
+  a {
+    color: $yellow;
+  }
+
   .left {
-    @include flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    background: url('/images/gorilla-face-close.jpg') no-repeat center/cover;
+    overflow: hidden;
+    img {
+      width: 100%;
+      @media(min-width: 1250) {
+        margin-top: -50px;
+      }
+      @media (max-width: 475px) {
+        display: none;
+      }
+    }
     @media (max-width: 1120px) {
       width: 35%;
     }
-    @media (max-width: 865px) {
-      display: none;
-    }
-
-    cite{
-      color: white;
-      @media (max-width: 1120px) {
-        color: black;
-      }
-    }
   }
+
   .right {
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000), url('/images/gorilla-face.jpg') no-repeat center/cover;
+    height: 660px;
+    max-height: 660px;
+    @include flex;
+    justify-content: space-around;
+    width: 65%;
+    @media (max-width: 475px) {
+      width: 100%;
+    }
     h2 {
       text-align: center;
       margin: 0;
@@ -43,40 +47,11 @@
         padding-top: 1em;
       }
     }
-    @media (max-width: 1120px) {
-      width: 65%;
-    }
-    @media (max-width: 865px) {
-      width: 100vw;
-      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-      background: -webkit-gradient(linear, 0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-      background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-      background: -ms-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gorilla-face.jpg') no-repeat center/cover;
-    }
-    @media (max-width: 750px) {
-      height: auto;
-    }
-  }
-  .banner{
-    display: none;
-    @media (max-width: 865px) {
-      display: initial;
-      width: 100vw;
-      margin-bottom: -0.5em;
-    }
-  }
-  a {
-    color: $yellow;
-  }
-  figure {
-    text-align: center;
-    img{
-      height: 5em;
-    }
-    @media (max-width: 865px) {
-      display: none;
+    figure {
+      text-align: center;
+      img{
+        height: 5em;
+      }
     }
   }
 }

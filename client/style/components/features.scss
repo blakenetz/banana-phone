@@ -5,6 +5,10 @@
   height: 100vh;
   @include flex;
   flex-direction: row;
+  @media (max-width: 475px) {
+    flex-direction: column;
+    height: auto;
+  }
   figure{
     padding-top: 1em;
     padding-bottom: 2em;
@@ -16,9 +20,6 @@
     }
     @media (max-width: 630px) {
       height: 25em;
-    }
-    @media (max-width: 475px) {
-      display: none;
     }
   }
   div {

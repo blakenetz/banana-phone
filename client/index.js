@@ -6,6 +6,7 @@ import Nav from './components/nav';
 import LandingPage from './components/landing-page';
 import About from './components/about';
 import Features from './components/features';
+import Press from './components/press';
 import Gorillas from './components/gorillas';
 import Footer from './components/footer';
 
@@ -13,6 +14,7 @@ require('./style/style.scss');
 
 class App extends Component {
   componentDidMount() {
+    return;
     window.sr = ScrollReveal();
     // about section
     sr.reveal('#aboutText', {
@@ -47,6 +49,7 @@ class App extends Component {
         <About />
         <Features />
         <Gorillas />
+        <Press />
         <Footer />
       </div>
     );
