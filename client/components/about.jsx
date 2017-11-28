@@ -9,12 +9,14 @@ export default class About extends Component {
 	        <p>We’re taking a bite out of the Apple accessory ecosystem one Banana at a time.</p>
       	</div>
 
+        <div className="stepsWrapper"> 
+
         <div className="steps">
           <div className="iconWrap">
-            <i className="fa fa-mobile fa-5x" aria-hidden="true"></i>
+            <i className="fa fa-mobile" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
-            <i className="fa fa-plus fa-3x" aria-hidden="true"></i>
+            <i className="fa fa-plus bp-plus" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
             <img src="images/logo-blacktext.png" alt="Banana Phone logo" />
@@ -29,11 +31,11 @@ export default class About extends Component {
 
         <div className="steps">
           <div className="iconWrap">
-            <i className="fa fa-phone fa-5x" aria-hidden="true"></i>
-            <i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-phone" aria-hidden="true"></i>
+            <i className="fa fa-arrow-down bp-arrow" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
-            <i className="fa fa-plus fa-3x" aria-hidden="true"></i>
+            <i className="fa fa-plus bp-plus" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
             <img src="images/logo-blacktext.png" alt="Banana Phone logo" />
@@ -49,11 +51,11 @@ export default class About extends Component {
 
         <div className="steps">
           <div className="iconWrap">
-            <i className="fa fa-phone fa-5x" aria-hidden="true"></i>
-            <i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-phone" aria-hidden="true"></i>
+            <i className="fa fa-arrow-up bp-arrow" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
-            <i className="fa fa-plus fa-3x" aria-hidden="true"></i>
+            <i className="fa fa-plus bp-plus" aria-hidden="true"></i>
           </div>
           <div className="iconWrap">
             <img src="images/logo-blacktext.png" alt="Banana Phone logo" />
@@ -65,6 +67,7 @@ export default class About extends Component {
               <li>Voice activate calling with Siri and OK Google</li>
             </ul>
           </div>
+        </div>
         </div>
       </section>
     )
