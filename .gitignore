@@ -3,6 +3,8 @@
 .env
 sourcebundle.zip
 AwsConfig.json
+.firebaserc
+firebase.json
 
 # Logs
 logs

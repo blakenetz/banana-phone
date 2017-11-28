@@ -1,62 +1,23 @@
-.lp {  
-  .lpTop {
-    height: 80vh;
-    background: url('/images/jungle.png') no-repeat center/cover;
-  
-    h1 {
-      color: $yellow;
-      font-family: $raleway;
-      padding-top: 1em;
-      margin-bottom: 0;
-      text-align: center;
-      @media (max-width: 750px) {
-          font-size: 4.2rem;
-      }
-      @media (max-width: 550px) {
-          font-size: 3.2rem;
-      }
-      @media (max-width: 400px) {
-          font-size: 2.7rem;
-      }
-    }
-  }
-
-  .lpBottom {
-    @include flex;
-    img {
-      margin-top: -175px;
-    }
-
-    p {
-      margin: 15rem 0;
-      padding: 0 3rem;
-      text-align: center;
-      font-size: $font-size-large;
-      @media (max-width: 650px) {
-        font-size: $font-size-med;
-      }
-      @media (max-width: 550px) {
-        font-size: $font-size-small;
-      }
-      @media (max-width: 450px) {
-        font-size: $font-size-small-x
-      }
-    }
-    
-  }
-}
-
-.indiegogo {
-  @include flex;
-  background-color: white;
-  img {
-    width: 90vw;
-    height: auto;
-    -webkit-clip-path: url(#svgPath);
-    clip-path: url(#svgPath);
-  }
-  svg {
-    stroke: #FFF;
-    height: 30rem;
-  }
+.lp {
+	height: 100vh;
+	#top {
+		background-color: #000;
+		width: 100%;
+		@include flex;
+		height: 80vh;
+		img {
+			position: absolute;
+			height: 100%;
+		}
+	}
+	#igBadge {
+		width: 15vw;
+		height: auto;
+		min-width: 100px;
+		max-width: 140px;
+		transform: rotate(15deg);
+		margin: -50px 0 0 0;
+		position: absolute;
+		right: 15vw;
+	}
 }
