@@ -1,7 +1,11 @@
 .about{
 	min-height: 100vh;
 	padding-top: 5em;
-	
+
+	video {
+		width: 100%;
+	}
+
 	.stepsWrapper {
 		background: -moz-linear-gradient(transparent 0%, rgba(255, 255, 255, 0.9) 90%), url('/images/side-right.png') no-repeat right/contain;
 		background: -webkit-gradient(linear, transparent 0%, rgba(255, 255, 255, 0.9) 90%), url('/images/side-right.png') no-repeat right/contain;
@@ -51,7 +55,7 @@
 	.iconWrap {
 		@include flex;
 		justify-content: center;
-		
+
 		width: 100px;
 		min-width: 100px;
 		height: 100px;
