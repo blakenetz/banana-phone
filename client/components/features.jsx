@@ -5,7 +5,7 @@ export default class Features extends Component {
     return (
       <section className="phoneLabelled">
         <div>
-          <h2>Talk More Smile More</h2>
+          <h2>Features & Functions</h2>
           <ul>
       			<li className="featureLi">Talk Time: 10 Hours</li>
       			<li className="featureLi">Idle Time:  70 Hours</li>

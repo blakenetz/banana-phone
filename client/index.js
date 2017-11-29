@@ -17,26 +17,28 @@ require('./style/style.scss');
 
 class App extends Component {
   componentDidMount() {
+    return;
+
     window.sr = ScrollReveal();
     // about section
-    sr.reveal('#aboutText', { 
+    sr.reveal('#aboutText', {
       duration: 1500,
       delay: 500,
     });
-    sr.reveal('.steps', { 
+    sr.reveal('.steps', {
       duration: 1500,
       delay: 500,
     }, 50);
     // feature and gorilla section
-    sr.reveal('#phoneLabelled', { 
+    sr.reveal('#phoneLabelled', {
       duration: 1500,
       delay: 500,
     });
-    sr.reveal('.featureLi', { 
+    sr.reveal('.featureLi', {
       duration: 1500,
       delay: 500,
     }, 50);
-    sr.reveal('.right', { 
+    sr.reveal('.right', {
       duration: 1500,
       delay: 500,
     });
@@ -51,8 +53,8 @@ class App extends Component {
         <About />
         <Features />
         <Gorillas />
-        <Footer />  
-        
+        <Footer />
+
         { /* <Video />
         <Taglines /> */ }
       </div>
