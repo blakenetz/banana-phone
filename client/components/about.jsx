@@ -7,22 +7,24 @@ export default class About extends Component {
 
 	render(){
 		return (
-			<section className="container about">
-				<div id="aboutText">
+			<section className="about">
+				<div id="aboutText" className="container">
 					<p><strong>Banana Phone</strong> is a banana-shaped, Bluetooth<sup>&reg;</sup>-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends <i>on a banana!</i></p>
 					<p>We’re taking a bite out of the Apple accessory ecosystem one Banana at a time.</p>
 				</div>
 
-				<video src="images/video.mp4"
-								preload="metadata"
-								poster="images/videoPoster.png"
-								onClick={this.handleClick.bind(this)}
-								ref="video"
-								controls>
-					<p>Sorry! Your browser is a rotten banana and doesn't support mp4 videos</p>
-				</video>
+				<div className="container">
+					<video src="images/video.mp4"
+									preload="metadata"
+									poster="images/videoPoster.png"
+									onClick={this.handleClick.bind(this)}
+									ref="video"
+									controls>
+						<p>Sorry! Your browser is a rotten banana and doesn't support mp4 videos</p>
+					</video>
+				</div>
 
-				<div className="stepsWrapper">
+				<div className="stepsWrapper container">
 					<div className="steps">
 						<div className="iconWrap">
 							<i className="fa fa-mobile" aria-hidden="true"></i>
@@ -80,6 +82,10 @@ export default class About extends Component {
 							</ul>
 						</div>
 					</div>
+				</div>
+
+				<div className="parallax">
+					<img src="images/banana-bunch.jpg" alt="a Banana Phone in a banana bunch" />
 				</div>
 			</section>
 		)

@@ -126,4 +126,13 @@
 			}
 		}
 	}
+	.parallax {
+		background: url('/images/columbia.jpg') no-repeat center/cover;
+		@include parallax-container;
+		width:100vw;
+
+		img {
+			@include parallax-img;
+		}
+	}
 }
