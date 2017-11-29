@@ -7,10 +7,6 @@ import LandingPage from './components/landing-page';
 import About from './components/about';
 import Features from './components/features';
 import Gorillas from './components/gorillas';
-
-
-import Video from './components/video';
-import Taglines from './components/taglines';
 import Footer from './components/footer';
 
 require('./style/style.scss');
@@ -54,9 +50,6 @@ class App extends Component {
         <Features />
         <Gorillas />
         <Footer />
-
-        { /* <Video />
-        <Taglines /> */ }
       </div>
     );
   }
