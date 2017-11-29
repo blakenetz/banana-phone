@@ -7,6 +7,7 @@ import LandingPage from './components/landing-page';
 import About from './components/about';
 import Features from './components/features';
 import Gorillas from './components/gorillas';
+import Press from './components/press';
 import Footer from './components/footer';
 
 require('./style/style.scss');
@@ -49,6 +50,7 @@ class App extends Component {
         <About />
         <Features />
         <Gorillas />
+        <Press />
         <Footer />
       </div>
     );

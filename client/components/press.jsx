@@ -4,8 +4,6 @@ export default class Press extends Component {
 	render(){
 		return (
 			<section className="press">
-				<img id="columbia" src="images/columbia.jpg" alt="a hand holding a Banana Phone with a coloful Columbian village background" />
-
 				<div className="pressWrapper container">
 					<h2>Press</h2>
 					<div className="pressLinks">
