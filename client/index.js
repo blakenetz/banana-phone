@@ -8,6 +8,7 @@ import About from './components/about';
 import Features from './components/features';
 import Gorillas from './components/gorillas';
 import Press from './components/press';
+import FAQ from './components/faq';
 import Footer from './components/footer';
 
 require('./style/style.scss');
@@ -51,6 +52,7 @@ class App extends Component {
         <Features />
         <Gorillas />
         <Press />
+        <FAQ />
         <Footer />
       </div>
     );

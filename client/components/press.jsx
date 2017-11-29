@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 export default class Press extends Component {
+	componentDidMount() {
+		const parent = document.querySelector('.press');
+		const pressSection = document.querySelector('.pressWrapper');
+		parent.setAttribute('style', `height:${pressSection.offsetHeight + 25}px`);
+	}
+
 	render(){
 		return (
 			<section className="press">

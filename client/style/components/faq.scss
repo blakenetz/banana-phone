@@ -1,0 +1,12 @@
+.faq {
+	padding: 5em;
+	ul {
+		padding: 0 1.6em;
+	}
+	li {
+		@extend p;
+		&:not(.faqli) {
+			list-style: none;
+		}
+	}
+}
