@@ -106,7 +106,7 @@ export default class Nav extends Component {
 
 					{/* BUY NOW */}
 					<figure>
-						<a href="https://igg.me/at/bananaphone" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset" target="_blank" rel="noopener noreferrer">
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy on Amazon.com

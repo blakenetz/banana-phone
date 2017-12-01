@@ -18,7 +18,7 @@ export default class LandingPage extends Component {
 				</div>
 
 				<div className="parallax">
-					<img src="/images/side-right.png" alt="upclose image of the Banana Phone" />
+					<img src="/images/front.png" alt="upclose image of the Banana Phone" />
 				</div>
 
 			</section>

@@ -59,12 +59,12 @@
   }
 }
 .parallax {
-  background: -moz-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
-  background: -webkit-gradient(linear, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
-  background: -webkit-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
-  background: -o-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
-  background: -ms-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
-  background: linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: -moz-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
+  background: -webkit-gradient(linear, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
+  background: -webkit-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
+  background: -o-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
+  background: -ms-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
+  background: linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/front.png') no-repeat center/contain;
   @include parallax-container;
 
   img {
