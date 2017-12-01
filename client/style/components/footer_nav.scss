@@ -1,3 +1,5 @@
+$nav-break-small: 480px;
+
 nav {
   @include flex;
   flex-flow: row;
@@ -9,7 +11,7 @@ nav {
   right: 0;
   height: 5.5em;
   z-index: 3;
-  @media (max-width: 480px){
+  @media (max-width: $nav-break-small){
     top: initial;
     bottom: 0;
   }
@@ -18,7 +20,7 @@ nav {
     padding-left: 2em;
     display: inherit;
     align-items: center;
-    @media (max-width: 480px){
+    @media (max-width: $nav-break-small){
       &#social-media {
         width: 100vw;
         justify-content: space-around;
@@ -36,15 +38,17 @@ nav {
       visibility: visible;
       color: $yellow;
     }
-    &:last-of-type{
-      width: 5.5em;
-      padding-right: 1em;
+    &.navIcon{
+      padding: 0 0.8em;
+      #lastItem {
+        margin-left: -1.2em;
+      }
     }
   }
   img {
     width: 6em;
     height: 5em;
-    @media (max-width: 480px){
+    @media (max-width: $nav-break-small){
       display: none;
     }
   }
@@ -52,16 +56,16 @@ nav {
     padding-left: 1em;
     margin-bottom: 0;
     @include font-bg;
-    @media (max-width: 920px){
+    @media (max-width: 955px){
       font-size: 3rem;
     }
-    @media (max-width: 815px){
+    @media (max-width: 850px){
       font-size: 2.2rem;
     }
-    @media (max-width: 680px){
+    @media (max-width: 710px){
       font-size: 1.7rem;
     }
-    @media (max-width: 595px){
+    @media (max-width: 625px){
       display: none;
     }
   }
@@ -71,9 +75,9 @@ nav {
     font-family: $raleway;
     &:last-of-type{
       position: absolute;
-      top: 4.5em
+      top: 4.5em;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $nav-break-small) {
       visibility: visible;
       &:active {
         color: $yellow;
@@ -85,7 +89,7 @@ nav {
       fill: $yellow;
       stroke: #000;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $nav-break-small) {
       fill: $yellow;
       stroke: #000;
     }
@@ -95,7 +99,7 @@ nav {
     &:hover {
       color: $yellow;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $nav-break-small) {
       color: $yellow;
     }
   }
@@ -111,7 +115,7 @@ nav {
 
 footer {
   @include flex;
-  @media (max-width: 480px) {
+  @media (max-width: $nav-break-small) {
     padding-bottom: 5.5em;
   }
   a {
@@ -121,7 +125,7 @@ footer {
     &:hover {
       color: $yellow;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $nav-break-small) {
       &:active {
         color: $yellow;
       }

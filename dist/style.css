@@ -352,9 +352,10 @@ nav {
     nav figure:hover figcaption {
       visibility: visible;
       color: #FDE303; }
-    nav figure:last-of-type {
-      width: 5.5em;
-      padding-right: 1em; }
+    nav figure.navIcon {
+      padding: 0 0.8em; }
+      nav figure.navIcon #lastItem {
+        margin-left: -1.2em; }
   nav img {
     width: 6em;
     height: 5em; }
@@ -370,16 +371,16 @@ nav {
     background: -o-linear-gradient(0deg, #000 33%, transparent);
     background: -ms-linear-gradient(0deg, #000 33%, transparent);
     background: linear-gradient(0deg, #000 33%, transparent); }
-    @media (max-width: 920px) {
+    @media (max-width: 955px) {
       nav h3 {
         font-size: 3rem; } }
-    @media (max-width: 815px) {
+    @media (max-width: 850px) {
       nav h3 {
         font-size: 2.2rem; } }
-    @media (max-width: 680px) {
+    @media (max-width: 710px) {
       nav h3 {
         font-size: 1.7rem; } }
-    @media (max-width: 595px) {
+    @media (max-width: 625px) {
       nav h3 {
         display: none; } }
   nav figcaption {

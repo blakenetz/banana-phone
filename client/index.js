@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import Nav from './components/nav';
 import LandingPage from './components/landing-page';
 import BananaPhone from './components/banana-phone';
-import Video from './components/video';
 import BananaPhoneLabeled from './components/banana-phone-labels';
 import Gorillas from './components/gorillas';
 import Taglines from './components/taglines';
@@ -19,7 +18,6 @@ class App extends Component {
         <Nav />
         <LandingPage />
         <BananaPhone />
-        <Video />
         <BananaPhoneLabeled />
         <Gorillas />
         <Taglines />
