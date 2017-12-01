@@ -121,6 +121,9 @@ p, h1, h2, h3, h4, h5, h6, input, label, figcaption, a {
       @media (max-width: 650px) {
         .about p:first-of-type {
           padding-top: 3.5em; } }
+  .about video {
+    padding: 5em 0;
+    width: 100%; }
 
 .phone {
   height: 100vh;

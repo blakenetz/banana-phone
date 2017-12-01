@@ -1,36 +1,41 @@
 .about{
-  @include font-bg;
-  width: 65%;
-  @media (max-width: 850px) {
-    width: 75%;
-  }
-  @media (max-width: 650px) {
-    width: 85%;
-  }
+	@include font-bg;
+	width: 65%;
+	@media (max-width: 850px) {
+		width: 75%;
+	}
+	@media (max-width: 650px) {
+		width: 85%;
+	}
 
-  p {
-    font-size: $font-size-large;
-    font-weight: 100;
-    text-align: center;
-    text-shadow: 0.1em 0.1em 0.5em #000;
-    @media (max-width: 650px) {
-      font-size: $font-size-med;
-    }
-    @media (max-width: 550px) {
-      font-size: $font-size-small;
-    }
-    @media (max-width: 450px) {
-      font-size: $font-size-small-x;
-    }
-    &:first-of-type {
-      padding-top: 1em;
-      margin-bottom: 0em;
-      @media (max-width: 850px) {
-        padding-top: 2.5em;
-      }
-      @media (max-width: 650px) {
-        padding-top: 3.5em;
-      }
-    }
-  }
+	p {
+		font-size: $font-size-large;
+		font-weight: 100;
+		text-align: center;
+		text-shadow: 0.1em 0.1em 0.5em #000;
+		@media (max-width: 650px) {
+			font-size: $font-size-med;
+		}
+		@media (max-width: 550px) {
+			font-size: $font-size-small;
+		}
+		@media (max-width: 450px) {
+			font-size: $font-size-small-x;
+		}
+		&:first-of-type {
+			padding-top: 1em;
+			margin-bottom: 0em;
+			@media (max-width: 850px) {
+				padding-top: 2.5em;
+			}
+			@media (max-width: 650px) {
+				padding-top: 3.5em;
+			}
+		}
+	}
+
+	video {
+		padding: 5em 0;
+		width: 100%;
+	}
 }

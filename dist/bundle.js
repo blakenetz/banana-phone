@@ -22291,7 +22291,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -22309,51 +22309,79 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var About = function (_Component) {
-	  _inherits(About, _Component);
+		_inherits(About, _Component);
 
-	  function About() {
-	    _classCallCheck(this, About);
+		function About() {
+			_classCallCheck(this, About);
 
-	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+		}
 
-	  _createClass(About, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "section",
-	        { className: "container about" },
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          _react2.default.createElement(
-	            "strong",
-	            null,
-	            "Banana Phone"
-	          ),
-	          " is a banana-shaped, Bluetooth",
-	          _react2.default.createElement(
-	            "sup",
-	            null,
-	            "\xAE"
-	          ),
-	          "-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends ",
-	          _react2.default.createElement(
-	            "i",
-	            null,
-	            "on a banana!"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "We\u2019re taking a bite out of the Apple accessory ecosystem one Banana at a time."
-	        )
-	      );
-	    }
-	  }]);
+		_createClass(About, [{
+			key: "handleClick",
+			value: function handleClick() {
+				if (this.refs.video.paused) {
+					this.refs.video.play();
+					this.refs.video.controls = true;
+				} else {
+					this.refs.video.pause();
+					this.refs.video.controls = false;
+				}
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"section",
+					{ className: "container about" },
+					_react2.default.createElement(
+						"p",
+						null,
+						_react2.default.createElement(
+							"strong",
+							null,
+							"Banana Phone"
+						),
+						" is a banana-shaped, Bluetooth",
+						_react2.default.createElement(
+							"sup",
+							null,
+							"\xAE"
+						),
+						"-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends ",
+						_react2.default.createElement(
+							"i",
+							null,
+							"on a banana!"
+						)
+					),
+					_react2.default.createElement(
+						"p",
+						null,
+						"We\u2019re taking a bite out of the Apple accessory ecosystem one Banana at a time."
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "container" },
+						_react2.default.createElement(
+							"video",
+							{ src: "images/video.mp4",
+								preload: "metadata",
+								poster: "images/videoPoster.png",
+								onClick: this.handleClick.bind(this),
+								ref: "video" },
+							_react2.default.createElement(
+								"p",
+								null,
+								"Sorry! Your browser is a rotten banana and doesn't support mp4 videos"
+							)
+						)
+					)
+				);
+			}
+		}]);
 
-	  return About;
+		return About;
 	}(_react.Component);
 
 		exports.default = About;
