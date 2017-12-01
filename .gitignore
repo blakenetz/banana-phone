@@ -4,6 +4,9 @@
 sourcebundle.zip
 AwsConfig.json
 
+# stored on aws
+video.mp4
+
 # Logs
 logs
 *.log
