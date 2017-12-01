@@ -67,31 +67,35 @@
 
 	var _scrollreveal2 = _interopRequireDefault(_scrollreveal);
 
-	var _nav = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/nav\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _nav = __webpack_require__(186);
 
 	var _nav2 = _interopRequireDefault(_nav);
 
-	var _landingPage = __webpack_require__(187);
+	var _landingPage = __webpack_require__(188);
 
 	var _landingPage2 = _interopRequireDefault(_landingPage);
 
-	var _about = __webpack_require__(188);
+	var _about = __webpack_require__(189);
 
 	var _about2 = _interopRequireDefault(_about);
 
-	var _features = __webpack_require__(189);
+	var _features = __webpack_require__(190);
 
 	var _features2 = _interopRequireDefault(_features);
 
-	var _gorillas = __webpack_require__(190);
+	var _gorillas = __webpack_require__(191);
 
 	var _gorillas2 = _interopRequireDefault(_gorillas);
 
-	var _press = __webpack_require__(191);
+	var _press = __webpack_require__(192);
 
 	var _press2 = _interopRequireDefault(_press);
 
-	var _footer = __webpack_require__(192);
+	var _faq = __webpack_require__(193);
+
+	var _faq2 = _interopRequireDefault(_faq);
+
+	var _footer = __webpack_require__(194);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
@@ -103,7 +107,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(193);
+	__webpack_require__(195);
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -118,6 +122,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      return;
+
 	      window.sr = (0, _scrollreveal2.default)();
 	      // about section
 	      sr.reveal('#aboutText', {
@@ -141,6 +146,10 @@
 	        duration: 1500,
 	        delay: 500
 	      });
+	      sr.reveal('.logoWrapper', {
+	        duration: 1500,
+	        delay: 500
+	      }, 50);
 	    }
 	  }, {
 	    key: 'render',
@@ -154,6 +163,7 @@
 	        _react2.default.createElement(_features2.default, null),
 	        _react2.default.createElement(_gorillas2.default, null),
 	        _react2.default.createElement(_press2.default, null),
+	        _react2.default.createElement(_faq2.default, null),
 	        _react2.default.createElement(_footer2.default, null)
 	      );
 	    }
@@ -22842,8 +22852,211 @@
 
 
 /***/ }),
-/* 186 */,
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _javascriptDebounce = __webpack_require__(187);
+
+	var _javascriptDebounce2 = _interopRequireDefault(_javascriptDebounce);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Nav = function (_Component) {
+		_inherits(Nav, _Component);
+
+		function Nav(props) {
+			_classCallCheck(this, Nav);
+
+			var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+
+			_this.handleClick = _this.handleClick.bind(_this);
+			_this.handleScroll = (0, _javascriptDebounce2.default)(_this.handleScroll.bind(_this), 0);
+			return _this;
+		}
+
+		_createClass(Nav, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				window.addEventListener('scroll', this.handleScroll);
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				window.removeEventListener('scroll', this.handleScroll);
+			}
+		}, {
+			key: 'handleScroll',
+			value: function handleScroll(e) {
+				var nav = document.querySelector('nav');
+				if (window.pageYOffset > 200) {
+					nav.classList.remove("is-hidden");
+				} else {
+					nav.classList.add("is-hidden");
+				}
+			}
+		}, {
+			key: 'handleClick',
+			value: function handleClick(e) {
+				var twText = encodeURI("Yellow!? Banana Phones are taking over. Get a phone with appeal at bananaphone.io 🍌");
+				var twHashtags = encodeURI("phonewithappeal,yellow?,gorillamarketing");
+				var fbUrl = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Figg.me%2Fat%2Fbananaphone&amp;src=sdkpreparse";
+				var twUrl = 'https://twitter.com/intent/tweet?text=' + twText + '&hashtags=' + twHashtags;
+				var url = void 0;
+				if (e.currentTarget.id === 'fb') url = fbUrl;else url = twUrl;
+				window.open(url, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+			}
+		}, {
+			key: 'mobilecheck',
+			value: function mobilecheck(a) {
+				var check = false;
+				if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+				return check;
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var isMobile = this.mobilecheck(navigator.userAgent || navigator.vendor || window.opera);
+				return _react2.default.createElement(
+					'nav',
+					{ className: 'is-hidden' },
+					_react2.default.createElement(
+						'section',
+						null,
+						_react2.default.createElement('img', { src: 'images/logo-whitetext.png', alt: 'Banana Phone logo' })
+					),
+					_react2.default.createElement(
+						'section',
+						{ id: 'social-media' },
+						_react2.default.createElement(
+							'figure',
+							null,
+							_react2.default.createElement(
+								'a',
+								{ className: 'fb-xfbml-parse-ignore',
+									id: 'fb',
+									onClick: this.handleClick,
+									href: isMobile ? 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Figg.me%2Fat%2Fbananaphone&amp;src=sdkpreparse' : 'javascript:void(0)',
+									target: isMobile ? '_blank' : '_self',
+									rel: isMobile ? 'noopener noreferrer' : '' },
+								_react2.default.createElement(
+									'svg',
+									{ version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
+										width: '45', height: '45', viewBox: '0 0 67 67', enableBackground: 'new 0 0 67 67' },
+									_react2.default.createElement('path', { fill: '#000000', stroke: '#FFFFFF', strokeWidth: '3', strokeMiterlimit: '10', d: 'M29.765,50.32h6.744V33.998h4.499l0.596-5.624 h-5.095l0.007-2.816c0-1.466,0.141-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369 V50.32z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30C64,50.568,50.568,64,34,64z' })
+								)
+							),
+							_react2.default.createElement(
+								'figcaption',
+								null,
+								'Share'
+							)
+						),
+						_react2.default.createElement(
+							'figure',
+							null,
+							_react2.default.createElement(
+								'a',
+								{ className: 'twitter-share-button',
+									onClick: this.handleClick,
+									id: 'tw',
+									href: isMobile ? 'https://twitter.com/intent/tweet?text=Yellow!&hashtags=#phonewithappeal,yellow,gorillamarketing' : 'javascript:void(0)',
+									target: isMobile ? '_blank' : '_self',
+									rel: isMobile ? 'noopener noreferrer' : '' },
+								_react2.default.createElement(
+									'svg',
+									{ version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
+										width: '45', height: '45', viewBox: '0 0 67 67', enableBackground: 'new 0 0 67 67' },
+									_react2.default.createElement('path', { fill: '#000000', stroke: '#FFFFFF', strokeWidth: '3', strokeMiterlimit: '10', d: 'M38.167,22.283 c-2.619,0.953-4.274,3.411-4.086,6.101l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017 c-0.754,2.267-0.272,4.661,1.299,6.271c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233 c-0.146,0.149,0.356,2.076,0.754,2.839c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021 c-1.173,0-1.215,0.021-1.089,0.467c0.419,1.378,2.074,2.84,3.918,3.476l1.299,0.444l-1.131,0.678 c-1.676,0.977-3.646,1.525-5.616,1.566C20.775,43.256,20,43.341,20,43.404c0,0.212,2.557,1.397,4.044,1.865 c4.463,1.377,9.765,0.782,13.746-1.568c2.829-1.674,5.657-5,6.978-8.221c0.713-1.715,1.426-4.852,1.426-6.354 c0-0.975,0.062-1.102,1.236-2.267c0.691-0.678,1.34-1.419,1.467-1.631c0.209-0.403,0.188-0.403-0.881-0.043 c-1.781,0.636-2.033,0.551-1.152-0.402c0.65-0.678,1.426-1.907,1.426-2.267c0-0.063-0.314,0.042-0.671,0.233 c-0.377,0.212-1.216,0.53-1.845,0.72l-1.131,0.361l-1.026-0.7c-0.566-0.381-1.361-0.805-1.781-0.932 C40.766,21.902,39.131,21.944,38.167,22.283z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4c16.568,0,30,13.431,30,30 C64,50.568,50.568,64,34,64z' })
+								)
+							),
+							_react2.default.createElement(
+								'figcaption',
+								null,
+								'Tweet'
+							)
+						),
+						_react2.default.createElement(
+							'figure',
+							null,
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://igg.me/at/bananaphone', target: '_blank', rel: 'noopener noreferrer' },
+								_react2.default.createElement(
+									'button',
+									null,
+									_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
+									'Buy on Amazon.com'
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Nav;
+	}(_react.Component);
+
+		exports.default = Nav;
+
+/***/ }),
 /* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 *  javascript-debounce 1.0.0
+	 *
+	 *  A lightweight, dependency-free JavaScript module for debouncing functions based on David Walsh's debounce function.
+	 *
+	 *  Source code available at: https://github.com/jgarber623/javascript-debounce
+	 *
+	 *  (c) 2015-present Jason Garber (http://sixtwothree.org)
+	 *
+	 *  javascript-debounce may be freely distributed under the MIT license.
+	 */
+
+	(function(root, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports === "object") {
+	    module.exports = factory();
+	  } else {
+	    root.debounce = factory();
+	  }
+	})(this, function() {
+	  "use strict";
+	  return function(callback, delay) {
+	    var timeout;
+	    return function() {
+	      var context = this, args = arguments;
+	      clearTimeout(timeout);
+	      timeout = setTimeout(function() {
+	        callback.apply(context, args);
+	      }, delay);
+	    };
+	  };
+	});
+
+/***/ }),
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22880,13 +23093,36 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"section",
-					{ className: "lp" },
+					{ className: "landingPage" },
 					_react2.default.createElement(
 						"div",
-						{ id: "top" },
-						_react2.default.createElement("img", { src: "images/front.png", alt: "Banana Phone front view" })
+						{ className: "lp" },
+						_react2.default.createElement(
+							"div",
+							{ className: "logoWrapper" },
+							_react2.default.createElement("img", { src: "images/logo.png", alt: "Banana Phone logo" }),
+							_react2.default.createElement(
+								"h1",
+								null,
+								"A PHONE WITH APPEAL"
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "scroll" },
+							_react2.default.createElement("i", { className: "fa fa-long-arrow-down fa-2x", "aria-hidden": "true" }),
+							_react2.default.createElement(
+								"p",
+								null,
+								"scroll down"
+							)
+						)
 					),
-					_react2.default.createElement("img", { id: "igBadge", src: "images/indiegogo-badge.png", alt: "Successfully funded with Indiegogo" })
+					_react2.default.createElement(
+						"div",
+						{ className: "parallax" },
+						_react2.default.createElement("img", { src: "/images/side-right.png", alt: "upclose image of the Banana Phone" })
+					)
 				);
 			}
 		}]);
@@ -22897,13 +23133,13 @@
 		exports.default = LandingPage;
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -22921,200 +23157,228 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var About = function (_Component) {
-	  _inherits(About, _Component);
+		_inherits(About, _Component);
 
-	  function About() {
-	    _classCallCheck(this, About);
+		function About() {
+			_classCallCheck(this, About);
 
-	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+		}
 
-	  _createClass(About, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "section",
-	        { className: "container about" },
-	        _react2.default.createElement(
-	          "div",
-	          { id: "aboutText" },
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            _react2.default.createElement(
-	              "strong",
-	              null,
-	              "Banana Phone"
-	            ),
-	            " is a banana-shaped, Bluetooth",
-	            _react2.default.createElement(
-	              "sup",
-	              null,
-	              "\xAE"
-	            ),
-	            "-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends ",
-	            _react2.default.createElement(
-	              "i",
-	              null,
-	              "on a banana!"
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "We\u2019re taking a bite out of the Apple accessory ecosystem one Banana at a time."
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "stepsWrapper" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "steps" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-mobile", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "instruction" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Step One"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "ul",
-	                null,
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  "Pair your smartphone via Bluetooth"
-	                )
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "steps" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
-	              _react2.default.createElement("i", { className: "fa fa-arrow-down bp-arrow", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "instruction" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Step Two"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "ul",
-	                null,
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  "Recieve calls on your Banana Phone"
-	                ),
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  "Click the multifunctional button to answer"
-	                )
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "steps" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
-	              _react2.default.createElement("i", { className: "fa fa-arrow-up bp-arrow", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "iconWrap" },
-	              _react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "instruction" },
-	              _react2.default.createElement(
-	                "p",
-	                null,
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  "Step Three"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "ul",
-	                null,
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  "Initiate calls from your Banana Phone"
-	                ),
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  "Voice activate calling with Siri and OK Google"
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
+		_createClass(About, [{
+			key: "handleClick",
+			value: function handleClick() {
+				this.refs.video.paused ? this.refs.video.play() : this.refs.video.pause();
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"section",
+					{ className: "about" },
+					_react2.default.createElement(
+						"div",
+						{ id: "aboutText", className: "container" },
+						_react2.default.createElement(
+							"p",
+							null,
+							_react2.default.createElement(
+								"strong",
+								null,
+								"Banana Phone"
+							),
+							" is a banana-shaped, Bluetooth",
+							_react2.default.createElement(
+								"sup",
+								null,
+								"\xAE"
+							),
+							"-enabled, mobile handset that connects to your smartphone: interact with your voice assistant (Siri & Google Assistant) and talk to your friends ",
+							_react2.default.createElement(
+								"i",
+								null,
+								"on a banana!"
+							)
+						),
+						_react2.default.createElement(
+							"p",
+							null,
+							"We\u2019re taking a bite out of the Apple accessory ecosystem one Banana at a time."
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "container" },
+						_react2.default.createElement(
+							"video",
+							{ src: "images/video.mp4",
+								preload: "metadata",
+								poster: "images/videoPoster.png",
+								onClick: this.handleClick.bind(this),
+								ref: "video",
+								controls: true },
+							_react2.default.createElement(
+								"p",
+								null,
+								"Sorry! Your browser is a rotten banana and doesn't support mp4 videos"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "stepsWrapper container" },
+						_react2.default.createElement(
+							"div",
+							{ className: "steps" },
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-mobile", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "instruction" },
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"strong",
+										null,
+										"Step One"
+									)
+								),
+								_react2.default.createElement(
+									"ul",
+									null,
+									_react2.default.createElement(
+										"li",
+										null,
+										"Pair your smartphone via Bluetooth"
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "steps" },
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
+								_react2.default.createElement("i", { className: "fa fa-arrow-down bp-arrow", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "instruction" },
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"strong",
+										null,
+										"Step Two"
+									)
+								),
+								_react2.default.createElement(
+									"ul",
+									null,
+									_react2.default.createElement(
+										"li",
+										null,
+										"Recieve calls on your Banana Phone"
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										"Click the multifunctional button to answer"
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "steps" },
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-phone", "aria-hidden": "true" }),
+								_react2.default.createElement("i", { className: "fa fa-arrow-up bp-arrow", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("i", { className: "fa fa-plus bp-plus", "aria-hidden": "true" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "iconWrap" },
+								_react2.default.createElement("img", { src: "images/logo-blacktext.png", alt: "Banana Phone logo" })
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "instruction" },
+								_react2.default.createElement(
+									"p",
+									null,
+									_react2.default.createElement(
+										"strong",
+										null,
+										"Step Three"
+									)
+								),
+								_react2.default.createElement(
+									"ul",
+									null,
+									_react2.default.createElement(
+										"li",
+										null,
+										"Initiate calls from your Banana Phone"
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										"Voice activate calling with Siri and OK Google"
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "parallax" },
+						_react2.default.createElement("img", { src: "images/banana-bunch.jpg", alt: "a Banana Phone in a banana bunch" })
+					)
+				);
+			}
+		}]);
 
-	  return About;
+		return About;
 	}(_react.Component);
 
 		exports.default = About;
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23151,64 +23415,68 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "section",
-	        { className: "features" },
+	        null,
 	        _react2.default.createElement(
 	          "div",
-	          null,
+	          { className: "features" },
 	          _react2.default.createElement(
-	            "h2",
+	            "div",
 	            null,
-	            "Talk More Smile More"
+	            _react2.default.createElement(
+	              "h2",
+	              null,
+	              "Features & Functions"
+	            ),
+	            _react2.default.createElement(
+	              "ul",
+	              null,
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Talk Time: 10 Hours"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Idle Time:  70 Hours"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Built in rechargeable lithium battery w/ micro USB"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Qualcomm Chipset: certified conflict free components"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Environmentally conscious 100% recycled ABS plastic"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Volume control (+/-)"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Home Button: Outbound Call/ Answer/ Bluetooth pair"
+	              ),
+	              _react2.default.createElement(
+	                "li",
+	                { className: "featureLi" },
+	                "Reduce exposure to cell phone electromagnetic radiation by keeping your Smartphone away from your head"
+	              )
+	            )
 	          ),
 	          _react2.default.createElement(
-	            "ul",
+	            "figure",
 	            null,
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Talk Time: 10 Hours"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Idle Time:  70 Hours"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Built in rechargeable lithium battery w/ micro USB"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Qualcomm Chipset: certified conflict free components"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Environmentally conscious 100% recycled ABS plastic"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Volume control (+/-)"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Home Button: Outbound Call/ Answer/ Bluetooth pair"
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              { className: "featureLi" },
-	              "Reduce exposure to cell phone electromagnetic radiation by keeping your Smartphone away from your head"
-	            )
+	            _react2.default.createElement("img", { src: "/images/front-labelled.png", alt: "Instructions to Banana Phone" })
 	          )
-	        ),
-	        _react2.default.createElement(
-	          "figure",
-	          null,
-	          _react2.default.createElement("img", { src: "/images/front-labelled.png", alt: "Instructions to Banana Phone" })
 	        )
 	      );
 	    }
@@ -23220,7 +23488,7 @@
 		exports.default = Features;
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23320,10 +23588,10 @@
 		exports.default = Gorillas;
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -23353,91 +23621,97 @@
 		}
 
 		_createClass(Press, [{
-			key: "render",
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var parent = document.querySelector('.press');
+				var pressSection = document.querySelector('.pressWrapper');
+				parent.setAttribute('style', 'height:' + (pressSection.offsetHeight + 25) + 'px');
+			}
+		}, {
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"section",
-					{ className: "press" },
-					_react2.default.createElement("img", { id: "columbia", src: "images/columbia.jpg", alt: "a hand holding a Banana Phone with a coloful Columbian village background" }),
+					'section',
+					{ className: 'press' },
 					_react2.default.createElement(
-						"div",
-						{ className: "pressWrapper container" },
+						'div',
+						{ className: 'pressWrapper container' },
 						_react2.default.createElement(
-							"h2",
+							'h2',
 							null,
-							"Press"
+							'Press'
 						),
 						_react2.default.createElement(
-							"div",
-							{ className: "pressLinks" },
+							'div',
+							{ className: 'pressLinks' },
 							_react2.default.createElement(
-								"div",
-								{ className: "logoWrapper" },
+								'div',
+								{ className: 'logoWrapper' },
 								_react2.default.createElement(
-									"div",
-									{ className: "logo" },
-									_react2.default.createElement("img", { src: "https://img.huffingtonpost.com/asset/58fe7a181c00002600e81721.png?ops=scalefit_720_noupscale", alt: "HuffPost logo" })
+									'div',
+									{ className: 'logo' },
+									_react2.default.createElement('img', { src: 'https://img.huffingtonpost.com/asset/58fe7a181c00002600e81721.png?ops=scalefit_720_noupscale', alt: 'HuffPost logo' })
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2", target: "_blank", rel: "noopener noreferrer" },
-									"A Real, Functional Banana Phone Is Coming Soon"
+									'a',
+									{ href: 'https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2', target: '_blank', rel: 'noopener noreferrer' },
+									'A Real, Functional Banana Phone Is Coming Soon'
 								)
 							),
 							_react2.default.createElement(
-								"div",
-								{ className: "logoWrapper" },
+								'div',
+								{ className: 'logoWrapper' },
 								_react2.default.createElement(
-									"div",
-									{ className: "logo" },
-									_react2.default.createElement("img", { src: "https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Verge_Logo_2016.svg", alt: "The Verge logo" })
+									'div',
+									{ className: 'logo' },
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Verge_Logo_2016.svg', alt: 'The Verge logo' })
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign", target: "_blank", rel: "noopener noreferrer" },
-									"This banana phone was created for those steadfastly dedicated to the memes of yore"
+									'a',
+									{ href: 'https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign', target: '_blank', rel: 'noopener noreferrer' },
+									'This banana phone was created for those steadfastly dedicated to the memes of yore'
 								)
 							),
 							_react2.default.createElement(
-								"div",
-								{ className: "logoWrapper" },
+								'div',
+								{ className: 'logoWrapper' },
 								_react2.default.createElement(
-									"div",
-									{ className: "logo" },
-									_react2.default.createElement("img", { src: "https://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png", alt: "CNET logo" })
+									'div',
+									{ className: 'logo' },
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png', alt: 'CNET logo' })
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/", target: "_blank", rel: "noopener noreferrer" },
-									"Banana Phone lets you tell it to a Bluetooth fruit"
+									'a',
+									{ href: 'https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/', target: '_blank', rel: 'noopener noreferrer' },
+									'Banana Phone lets you tell it to a Bluetooth fruit'
 								)
 							),
 							_react2.default.createElement(
-								"div",
-								{ className: "logoWrapper" },
+								'div',
+								{ className: 'logoWrapper' },
 								_react2.default.createElement(
-									"div",
-									{ className: "logo" },
-									_react2.default.createElement("img", { src: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Mashable.png", alt: "Mashable logo" })
+									'div',
+									{ className: 'logo' },
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Mashable.png', alt: 'Mashable logo' })
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "http://mashable.com/2017/05/04/banana-phone-indiegogo/#PFkR6ke.dPq8", target: "_blank", rel: "noopener noreferrer" },
-									"Stop what you're doing because you can now buy an actual working Banana Phone"
+									'a',
+									{ href: 'http://mashable.com/2017/05/04/banana-phone-indiegogo/#PFkR6ke.dPq8', target: '_blank', rel: 'noopener noreferrer' },
+									'Stop what you\'re doing because you can now buy an actual working Banana Phone'
 								)
 							),
 							_react2.default.createElement(
-								"div",
-								{ className: "logoWrapper" },
+								'div',
+								{ className: 'logoWrapper' },
 								_react2.default.createElement(
-									"div",
-									{ className: "logo" },
-									_react2.default.createElement("img", { src: "http://www.foodandwine.com/sites/all/modules/custom/ti_amg_fw_mm_config/img/logo_FoodandWine.png", alt: "Food and Wine logo" })
+									'div',
+									{ className: 'logo' },
+									_react2.default.createElement('img', { src: 'http://www.foodandwine.com/sites/all/modules/custom/ti_amg_fw_mm_config/img/logo_FoodandWine.png', alt: 'Food and Wine logo' })
 								),
 								_react2.default.createElement(
-									"a",
-									{ href: "http://www.foodandwine.com/news/banana-phone-indiegogo", target: "_blank", rel: "noopener noreferrer" },
-									"Banana-Shaped Phones Are Finally Going to Be a Reality"
+									'a',
+									{ href: 'http://www.foodandwine.com/news/banana-phone-indiegogo', target: '_blank', rel: 'noopener noreferrer' },
+									'Banana-Shaped Phones Are Finally Going to Be a Reality'
 								)
 							)
 						)
@@ -23452,7 +23726,148 @@
 		exports.default = Press;
 
 /***/ }),
-/* 192 */
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+			value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FAQ = function (_Component) {
+			_inherits(FAQ, _Component);
+
+			function FAQ() {
+					_classCallCheck(this, FAQ);
+
+					return _possibleConstructorReturn(this, (FAQ.__proto__ || Object.getPrototypeOf(FAQ)).apply(this, arguments));
+			}
+
+			_createClass(FAQ, [{
+					key: "render",
+					value: function render() {
+							return _react2.default.createElement(
+									"section",
+									{ className: "faq" },
+									_react2.default.createElement(
+											"h2",
+											null,
+											"FAQ"
+									),
+									_react2.default.createElement(
+											"p",
+											null,
+											_react2.default.createElement(
+													"strong",
+													null,
+													"Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?"
+											)
+									),
+									_react2.default.createElement(
+											"p",
+											null,
+											"A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging."
+									),
+									_react2.default.createElement(
+											"p",
+											null,
+											_react2.default.createElement(
+													"strong",
+													null,
+													"Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?"
+											)
+									),
+									_react2.default.createElement(
+											"p",
+											{ className: "no-padding" },
+											"A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:"
+									),
+									_react2.default.createElement(
+											"ul",
+											null,
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding" },
+													"Step 1: Open Settings"
+											),
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding" },
+													"Step 2: Select Siri and Search"
+											),
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding" },
+													"Step 3: Toggle On:"
+											),
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding faqli" },
+													_react2.default.createElement(
+															"i",
+															null,
+															"Listen for \u201CHey Siri\u201D"
+													)
+											),
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding faqli" },
+													_react2.default.createElement(
+															"i",
+															null,
+															"Press Home for Siri"
+													)
+											),
+											_react2.default.createElement(
+													"li",
+													{ className: "no-padding faqli" },
+													_react2.default.createElement(
+															"i",
+															null,
+															"Allow Siri When Locked"
+													)
+											)
+									),
+									_react2.default.createElement(
+											"p",
+											null,
+											_react2.default.createElement(
+													"strong",
+													null,
+													"Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?"
+											)
+									),
+									_react2.default.createElement(
+											"p",
+											null,
+											"A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone."
+									)
+							);
+					}
+			}]);
+
+			return FAQ;
+	}(_react.Component);
+
+		exports.default = FAQ;
+
+/***/ }),
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23537,7 +23952,7 @@
 		exports.default = Footer;
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

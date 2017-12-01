@@ -1,23 +1,73 @@
+.landingPage{
+  background-color: #000;
+}
+
 .lp {
-	height: 100vh;
-	#top {
-		background-color: #000;
-		width: 100%;
-		@include flex;
-		height: 80vh;
-		img {
-			position: absolute;
-			height: 100%;
-		}
-	}
-	#igBadge {
-		width: 15vw;
-		height: auto;
-		min-width: 100px;
-		max-width: 140px;
-		transform: rotate(15deg);
-		margin: -50px 0 0 0;
-		position: absolute;
-		right: 15vw;
-	}
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  background: -webkit-gradient(linear, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('/images/jungle.png') no-repeat center/cover;
+  height: 100vh;
+  @include flex;
+  justify-content: space-around;
+
+  .logoWrapper {
+    @include flex;
+    img {
+      width: 20vw;
+      min-width: 10em;
+      padding-top: 2em;
+    }
+    h1 {
+      color: $yellow;
+      font-family: $title;
+      padding-top: 1em;
+      margin-bottom: 0;
+      @media (max-width: 750px) {
+          font-size: 4.2rem;
+      }
+      @media (max-width: 550px) {
+          font-size: 3.2rem;
+      }
+      @media (max-width: 400px) {
+          font-size: 2.7rem;
+      }
+    }
+  }
+  .scroll {
+    color: #FFF;
+    @include flex;
+    i{
+      color: #FFF;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: $font-size-large;
+      @media (max-width: 650px) {
+        font-size: $font-size-med;
+      }
+      @media (max-width: 550px) {
+            font-size: $font-size-small;
+      }
+      @media (max-width: 450px) {
+        font-size: $font-size-small-x
+      }
+    }
+  }
+}
+.parallax {
+  background: -moz-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: -webkit-gradient(linear, #000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: -webkit-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: -o-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: -ms-linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  background: linear-gradient(#000, rgba(0, 0, 0, 0.0) 60%), url('/images/side-right.png') no-repeat center/contain;
+  @include parallax-container;
+
+  img {
+    @include parallax-img;
+  }
 }

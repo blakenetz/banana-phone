@@ -5,46 +5,20 @@
   height: 100vh;
   @include flex;
   flex-direction: row;
-  @media (max-width: 475px) {
-    flex-direction: column;
-    height: auto;
-  }
   figure{
     padding-top: 1em;
     padding-bottom: 2em;
   }
   img {
     height: 40em;
-    @media (max-width: 765px) {
+    @media (max-width: 550px) {
       height: 30em;
-    }
-    @media (max-width: 630px) {
-      height: 25em;
     }
   }
   div {
     padding-left: 4em;
     ul {
       list-style-position: outside;
-      @media(max-width: 765px){
-        font-size: $font-size-small-x;
-      }
-      @media (max-width: 630px) {
-        font-size: $font-size-small-xx;
-      }
-    }
-  }
-  h2 {
-    white-space: nowrap;
-    @media(max-width: 720px) {
-      font-size: $title-size-medium;
-    }
-    @media(max-width: 575px) {
-      white-space: initial;
-      font-size: $title-size-small;
-    }
-    @media(max-width: 475px) {
-      padding-top: 3em;
     }
   }
 }

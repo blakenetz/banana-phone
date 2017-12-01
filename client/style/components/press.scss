@@ -1,16 +1,10 @@
 .press {
-	#columbia {
-		width: 100vw;
-		@media(max-width: 765px) {
-			width: 100%;
-		}
-	}
-
+	@include flex;
+	justify-content: center;
 	.pressWrapper {
-		@include flex;
-		justify-content: center;
+		position: absolute;
 		background-color: $yellow;
-		margin-top: -50px;
+		margin-top: -25px;
 		padding: 1em 4em;
 	}
 	.logoWrapper{
