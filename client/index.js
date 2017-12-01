@@ -13,7 +13,6 @@ import Footer from './components/footer';
 require('./style/style.scss');
 
 class App extends Component {
-
   render() {
     return (
       <div>

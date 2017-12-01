@@ -10,6 +10,7 @@ class Nav extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+
   }
 
   componentWillUnmount() {
@@ -18,8 +19,7 @@ class Nav extends Component {
 
   handleScroll(e){
     const nav = document.querySelector('nav')
-    // crossbrowser hack
-    if ( (e.pageY && e.pageY > 200) || (e.srcElement && e.srcElement.body.scrollTop > 200)) {
+    if (window.pageYOffset > 200) {
       nav.classList.remove("is-hidden");
     }
     else{
