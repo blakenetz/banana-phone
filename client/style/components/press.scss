@@ -4,28 +4,15 @@
 	.pressWrapper {
 		position: absolute;
 		background-color: $yellow;
-		margin-top: -25px;
+		margin-top: -50px;
 		padding: 1em 4em;
 	}
-	.logoWrapper{
+	.pressLinks {
 		@include flex;
-		flex-direction: row;
-		padding-bottom: 1em;
-		a {
-			color: #000;
-			font-size: $font-size-large;
-			@media(max-width: 665px){
-				font-size: $font-size-med;
-			}
-			@media(max-width: 515px){
-				font-size: $font-size-small;
-			}
-		}
+		justify-content: space-around;
+		flex-flow: row wrap;
 	}
 	.logo {
-		margin-right: 3em;
-		@include flex;
-		justify-content: center;
 		width: 70px;
 		min-width: 70px;
 		@media(max-width: 380px){

@@ -36,7 +36,7 @@ export default class About extends Component {
 							<img src="images/logo-blacktext.png" alt="Banana Phone logo" />
 						</div>
 						<div className="instruction">
-							<p><strong>Step One</strong></p>
+							<p><strong>Step One:</strong></p>
 							<ul>
 								<li>Pair your smartphone via Bluetooth</li>
 							</ul>
@@ -55,9 +55,9 @@ export default class About extends Component {
 							<img src="images/logo-blacktext.png" alt="Banana Phone logo" />
 						</div>
 						<div className="instruction">
-							<p><strong>Step Two</strong></p>
+							<p><strong>Step Two:</strong></p>
 							<ul>
-								<li>Recieve calls on your Banana Phone</li>
+								<li>Receive calls on your Banana Phone</li>
 								<li>Click the multifunctional button to answer</li>
 							</ul>
 						</div>
@@ -75,7 +75,7 @@ export default class About extends Component {
 							<img src="images/logo-blacktext.png" alt="Banana Phone logo" />
 						</div>
 						<div className="instruction">
-							<p><strong>Step Three</strong></p>
+							<p><strong>Step Three:</strong></p>
 							<ul>
 								<li>Initiate calls from your Banana Phone</li>
 								<li>Voice activate calling with Siri and OK Google</li>

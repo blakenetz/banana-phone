@@ -1,5 +1,5 @@
 .faq {
-	padding: 5em;
+	padding: 0 5em 5em 5em;
 	ul {
 		padding: 0 1.6em;
 	}
@@ -8,5 +8,12 @@
 		&:not(.faqli) {
 			list-style: none;
 		}
+	}
+	a {
+		color: #000;
+	}
+	#warranty {
+		padding: 1em 3em;
+		background-color: $yellow;
 	}
 }
