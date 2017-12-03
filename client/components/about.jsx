@@ -30,7 +30,7 @@ export default class About extends Component {
 				</div>
 
 				<div className="stepsWrapper container">
-					<div className="steps">
+					<div className="steps srAsync-about">
 						<div className="iconWrap">
 							<i className="fa fa-mobile" aria-hidden="true"></i>
 						</div>
@@ -48,7 +48,7 @@ export default class About extends Component {
 						</div>
 					</div>
 
-					<div className="steps">
+					<div className="steps srAsync-about">
 						<div className="iconWrap">
 							<i className="fa fa-phone" aria-hidden="true"></i>
 							<i className="fa fa-arrow-down bp-arrow" aria-hidden="true"></i>
@@ -68,7 +68,7 @@ export default class About extends Component {
 						</div>
 					</div>
 
-					<div className="steps">
+					<div className="steps srAsync-about">
 						<div className="iconWrap">
 							<i className="fa fa-phone" aria-hidden="true"></i>
 							<i className="fa fa-arrow-up bp-arrow" aria-hidden="true"></i>

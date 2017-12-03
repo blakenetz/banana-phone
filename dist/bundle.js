@@ -121,32 +121,30 @@
 	  _createClass(App, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      return;
-
 	      window.sr = (0, _scrollreveal2.default)();
+
 	      // about section
 	      sr.reveal('#aboutText', {
 	        duration: 1500,
 	        delay: 500
 	      });
-	      sr.reveal('.steps', {
+	      sr.reveal('.lp', {
 	        duration: 1500,
 	        delay: 500
 	      }, 50);
-	      // feature and gorilla section
-	      sr.reveal('#phoneLabelled', {
-	        duration: 1500,
-	        delay: 500
-	      });
-	      sr.reveal('.featureLi', {
+	      sr.reveal('.srAsync-about', {
 	        duration: 1500,
 	        delay: 500
 	      }, 50);
-	      sr.reveal('.right', {
+	      sr.reveal('.srAsync-features', {
 	        duration: 1500,
 	        delay: 500
-	      });
-	      sr.reveal('.logoWrapper', {
+	      }, 50);
+	      sr.reveal('.srAsync-gorillas', {
+	        duration: 1500,
+	        delay: 500
+	      }, 50);
+	      sr.reveal('.srAsync-faq', {
 	        duration: 1500,
 	        delay: 500
 	      }, 50);
@@ -23764,7 +23762,7 @@
 						{ className: "stepsWrapper container" },
 						_react2.default.createElement(
 							"div",
-							{ className: "steps" },
+							{ className: "steps srAsync-about" },
 							_react2.default.createElement(
 								"div",
 								{ className: "iconWrap" },
@@ -23805,7 +23803,7 @@
 						),
 						_react2.default.createElement(
 							"div",
-							{ className: "steps" },
+							{ className: "steps srAsync-about" },
 							_react2.default.createElement(
 								"div",
 								{ className: "iconWrap" },
@@ -23852,7 +23850,7 @@
 						),
 						_react2.default.createElement(
 							"div",
-							{ className: "steps" },
+							{ className: "steps srAsync-about" },
 							_react2.default.createElement(
 								"div",
 								{ className: "iconWrap" },
@@ -23967,42 +23965,42 @@
 	              null,
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Talk Time: 10 Hours"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Idle Time:  70 Hours"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Built in rechargeable lithium battery w/ micro USB"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Qualcomm Chipset: certified conflict free components"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Environmentally conscious 100% recycled ABS plastic"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Volume control (+/-)"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Home Button: Outbound Call/ Answer/ Bluetooth pair"
 	              ),
 	              _react2.default.createElement(
 	                "li",
-	                { className: "featureLi" },
+	                { className: "srAsync-features" },
 	                "Reduce exposure to cell phone electromagnetic radiation by keeping your Smartphone away from your head"
 	              )
 	            )
@@ -24083,22 +24081,22 @@
 	            null,
 	            _react2.default.createElement(
 	              "p",
-	              null,
+	              { className: "srAsync-gorillas" },
 	              "Giving back is important at Banana Phone, which is why we're routing 1% of all sales to Gearing Up for Gorillas."
 	            ),
 	            _react2.default.createElement(
 	              "p",
-	              null,
+	              { className: "srAsync-gorillas" },
 	              "G4G focuses 100% on the conservation of the rare mountain gorilla in Virunga National Park, located in eastern DR Congo, by providing funding and equipment to the rangers who protect them."
 	            ),
 	            _react2.default.createElement(
 	              "p",
-	              null,
+	              { className: "srAsync-gorillas" },
 	              "Join us in helping provide what the rangers need and make a real difference to the future of the mountain gorilla. G4G has proven that practical assistance can be directed to where it really matters - to the rangers at the sharp end."
 	            ),
 	            _react2.default.createElement(
 	              "p",
-	              null,
+	              { className: "srAsync-gorillas" },
 	              "To learn more, checkout the award winning documentary Virunga on Netflix or visit the Gearing Up for Gorillas website at ",
 	              _react2.default.createElement(
 	                "a",
@@ -24299,97 +24297,109 @@
 							'FAQ'
 						),
 						_react2.default.createElement(
-							'p',
-							null,
+							'div',
+							{ className: 'srAsync-faq' },
 							_react2.default.createElement(
-								'strong',
+								'p',
 								null,
-								'Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?'
+								_react2.default.createElement(
+									'strong',
+									null,
+									'Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'imgWrapper' },
+								_react2.default.createElement('img', { src: 'images/cord-in-box.png', alt: 'the charging cable is located in a compartment above the banana phone device' })
 							)
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							'A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.'
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'imgWrapper' },
-							_react2.default.createElement('img', { src: 'images/cord-in-box.png', alt: 'the charging cable is located in a compartment above the banana phone device' })
-						),
-						_react2.default.createElement(
-							'p',
-							null,
+							{ className: 'srAsync-faq' },
 							_react2.default.createElement(
-								'strong',
+								'p',
 								null,
-								'Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?'
-							)
-						),
-						_react2.default.createElement(
-							'p',
-							{ className: 'no-padding' },
-							'A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:'
-						),
-						_react2.default.createElement(
-							'ul',
-							null,
-							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding' },
-								'Step 1: Open Settings'
-							),
-							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding' },
-								'Step 2: Select Siri and Search'
-							),
-							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding' },
-								'Step 3: Toggle On:'
-							),
-							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding faqli' },
 								_react2.default.createElement(
-									'i',
+									'strong',
 									null,
-									'Listen for \u201CHey Siri\u201D'
+									'Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?'
 								)
 							),
 							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding faqli' },
-								_react2.default.createElement(
-									'i',
-									null,
-									'Press Home for Siri'
-								)
+								'p',
+								{ className: 'no-padding' },
+								'A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:'
 							),
 							_react2.default.createElement(
-								'li',
-								{ className: 'no-padding faqli' },
-								_react2.default.createElement(
-									'i',
-									null,
-									'Allow Siri When Locked'
-								)
-							)
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							_react2.default.createElement(
-								'strong',
+								'ul',
 								null,
-								'Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?'
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding' },
+									'Step 1: Open Settings'
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding' },
+									'Step 2: Select Siri and Search'
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding' },
+									'Step 3: Toggle On:'
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding faqli' },
+									_react2.default.createElement(
+										'i',
+										null,
+										'Listen for \u201CHey Siri\u201D'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding faqli' },
+									_react2.default.createElement(
+										'i',
+										null,
+										'Press Home for Siri'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'no-padding faqli' },
+									_react2.default.createElement(
+										'i',
+										null,
+										'Allow Siri When Locked'
+									)
+								)
 							)
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone.'
+							'div',
+							{ className: 'srAsync-faq' },
+							_react2.default.createElement(
+								'p',
+								null,
+								_react2.default.createElement(
+									'strong',
+									null,
+									'Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone.'
+							)
 						),
 						_react2.default.createElement(
 							'a',

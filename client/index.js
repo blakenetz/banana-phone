@@ -15,32 +15,30 @@ require('./style/style.scss');
 
 class App extends Component {
   componentDidMount() {
-    return;
-
     window.sr = ScrollReveal();
+
     // about section
     sr.reveal('#aboutText', {
       duration: 1500,
       delay: 500,
     });
-    sr.reveal('.steps', {
+    sr.reveal('.lp', {
       duration: 1500,
       delay: 500,
     }, 50);
-    // feature and gorilla section
-    sr.reveal('#phoneLabelled', {
-      duration: 1500,
-      delay: 500,
-    });
-    sr.reveal('.featureLi', {
+    sr.reveal('.srAsync-about', {
       duration: 1500,
       delay: 500,
     }, 50);
-    sr.reveal('.right', {
+    sr.reveal('.srAsync-features', {
       duration: 1500,
       delay: 500,
-    });
-    sr.reveal('.logoWrapper', {
+    }, 50);
+    sr.reveal('.srAsync-gorillas', {
+      duration: 1500,
+      delay: 500,
+    }, 50);
+    sr.reveal('.srAsync-faq', {
       duration: 1500,
       delay: 500,
     }, 50);
