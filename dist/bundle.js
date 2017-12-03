@@ -22998,7 +22998,7 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://igg.me/at/bananaphone', target: '_blank', rel: 'noopener noreferrer' },
+								{ href: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(
 									'button',
 									null,
@@ -23121,7 +23121,7 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "parallax" },
-						_react2.default.createElement("img", { src: "/images/side-right.png", alt: "upclose image of the Banana Phone" })
+						_react2.default.createElement("img", { src: "/images/front.png", alt: "upclose image of the Banana Phone" })
 					)
 				);
 			}
@@ -23254,7 +23254,7 @@
 									_react2.default.createElement(
 										"strong",
 										null,
-										"Step One"
+										"Step One:"
 									)
 								),
 								_react2.default.createElement(
@@ -23296,7 +23296,7 @@
 									_react2.default.createElement(
 										"strong",
 										null,
-										"Step Two"
+										"Step Two:"
 									)
 								),
 								_react2.default.createElement(
@@ -23305,7 +23305,7 @@
 									_react2.default.createElement(
 										"li",
 										null,
-										"Recieve calls on your Banana Phone"
+										"Receive calls on your Banana Phone"
 									),
 									_react2.default.createElement(
 										"li",
@@ -23343,7 +23343,7 @@
 									_react2.default.createElement(
 										"strong",
 										null,
-										"Step Three"
+										"Step Three:"
 									)
 								),
 								_react2.default.createElement(
@@ -23625,7 +23625,7 @@
 			value: function componentDidMount() {
 				var parent = document.querySelector('.press');
 				var pressSection = document.querySelector('.pressWrapper');
-				parent.setAttribute('style', 'height:' + (pressSection.offsetHeight + 25) + 'px');
+				parent.setAttribute('style', 'height:' + pressSection.offsetHeight + 'px');
 			}
 		}, {
 			key: 'render',
@@ -23646,72 +23646,47 @@
 							{ className: 'pressLinks' },
 							_react2.default.createElement(
 								'div',
-								{ className: 'logoWrapper' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'logo' },
-									_react2.default.createElement('img', { src: 'https://img.huffingtonpost.com/asset/58fe7a181c00002600e81721.png?ops=scalefit_720_noupscale', alt: 'HuffPost logo' })
-								),
+								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
 									{ href: 'https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2', target: '_blank', rel: 'noopener noreferrer' },
-									'A Real, Functional Banana Phone Is Coming Soon'
+									_react2.default.createElement('img', { src: 'https://img.huffingtonpost.com/asset/58fe7a181c00002600e81721.png?ops=scalefit_720_noupscale', alt: 'HuffPost logo' })
 								)
 							),
 							_react2.default.createElement(
 								'div',
-								{ className: 'logoWrapper' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'logo' },
-									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Verge_Logo_2016.svg', alt: 'The Verge logo' })
-								),
-								_react2.default.createElement(
-									'a',
-									{ href: 'https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign', target: '_blank', rel: 'noopener noreferrer' },
-									'This banana phone was created for those steadfastly dedicated to the memes of yore'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'logoWrapper' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'logo' },
-									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png', alt: 'CNET logo' })
-								),
-								_react2.default.createElement(
-									'a',
-									{ href: 'https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/', target: '_blank', rel: 'noopener noreferrer' },
-									'Banana Phone lets you tell it to a Bluetooth fruit'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'logoWrapper' },
-								_react2.default.createElement(
-									'div',
-									{ className: 'logo' },
-									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Mashable.png', alt: 'Mashable logo' })
-								),
+								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
 									{ href: 'http://mashable.com/2017/05/04/banana-phone-indiegogo/#PFkR6ke.dPq8', target: '_blank', rel: 'noopener noreferrer' },
-									'Stop what you\'re doing because you can now buy an actual working Banana Phone'
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Mashable.png', alt: 'Mashable logo' })
 								)
 							),
 							_react2.default.createElement(
 								'div',
-								{ className: 'logoWrapper' },
+								{ className: 'logo' },
 								_react2.default.createElement(
-									'div',
-									{ className: 'logo' },
-									_react2.default.createElement('img', { src: 'http://www.foodandwine.com/sites/all/modules/custom/ti_amg_fw_mm_config/img/logo_FoodandWine.png', alt: 'Food and Wine logo' })
-								),
+									'a',
+									{ href: 'https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign', target: '_blank', rel: 'noopener noreferrer' },
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Verge_Logo_2016.svg', alt: 'The Verge logo' })
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
 									{ href: 'http://www.foodandwine.com/news/banana-phone-indiegogo', target: '_blank', rel: 'noopener noreferrer' },
-									'Banana-Shaped Phones Are Finally Going to Be a Reality'
+									_react2.default.createElement('img', { src: 'http://www.foodandwine.com/sites/all/modules/custom/ti_amg_fw_mm_config/img/logo_FoodandWine.png', alt: 'Food and Wine logo' })
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'logo' },
+								_react2.default.createElement(
+									'a',
+									{ href: 'https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/', target: '_blank', rel: 'noopener noreferrer' },
+									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png', alt: 'CNET logo' })
 								)
 							)
 						)
@@ -23729,10 +23704,10 @@
 /* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-			value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -23750,118 +23725,271 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var FAQ = function (_Component) {
-			_inherits(FAQ, _Component);
+		_inherits(FAQ, _Component);
 
-			function FAQ() {
-					_classCallCheck(this, FAQ);
+		function FAQ() {
+			_classCallCheck(this, FAQ);
 
-					return _possibleConstructorReturn(this, (FAQ.__proto__ || Object.getPrototypeOf(FAQ)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (FAQ.__proto__ || Object.getPrototypeOf(FAQ)).apply(this, arguments));
+		}
+
+		_createClass(FAQ, [{
+			key: 'handleClick',
+			value: function handleClick() {
+				var warranty = document.querySelector('#warranty');
+				var view = document.querySelector('.view');
+				var hide = document.querySelector('.hide');
+				if (warranty.className == 'is-hidden') {
+					warranty.classList.remove('is-hidden');
+					hide.classList.remove('is-hidden');
+					view.classList.add('is-hidden');
+				} else {
+					warranty.classList.add('is-hidden');
+					hide.classList.add('is-hidden');
+					view.classList.remove('is-hidden');
+				}
 			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ className: 'faq' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'FAQ'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						_react2.default.createElement(
+							'strong',
+							null,
+							'Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?'
+						)
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						_react2.default.createElement(
+							'strong',
+							null,
+							'Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?'
+						)
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'no-padding' },
+						'A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:'
+					),
+					_react2.default.createElement(
+						'ul',
+						null,
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding' },
+							'Step 1: Open Settings'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding' },
+							'Step 2: Select Siri and Search'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding' },
+							'Step 3: Toggle On:'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding faqli' },
+							_react2.default.createElement(
+								'i',
+								null,
+								'Listen for \u201CHey Siri\u201D'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding faqli' },
+							_react2.default.createElement(
+								'i',
+								null,
+								'Press Home for Siri'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: 'no-padding faqli' },
+							_react2.default.createElement(
+								'i',
+								null,
+								'Allow Siri When Locked'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						_react2.default.createElement(
+							'strong',
+							null,
+							'Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?'
+						)
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone.'
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: '#warranty', onClick: this.handleClick.bind(this) },
+						_react2.default.createElement(
+							'strong',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'view' },
+								'View'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'hide is-hidden' },
+								'Hide'
+							),
+							'\xA0warranty'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'warranty', className: 'is-hidden' },
+						_react2.default.createElement(
+							'h2',
+							null,
+							'LIMITED WARRANTY ON Banana Phone'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'THIS LIMITED WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS AND YOU MAY ALSO HAVE OTHER RIGHTS, WHICH VARY FROM STATE TO STATE.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'WE WARRANT THAT DURING THE WARRANTY PERIOD, THE PRODUCT WILL BE FREE FROM DEFECTS IN MATERIALS AND WORKMANSHIP.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'WE LIMIT THE DURATION AND REMEDIES OF ALL IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE TO THE DURATION OF THIS EXPRESS LIMITED WARRANTY.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'SOME STATES DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'OUR RESPONSIBILITY FOR DEFECTIVE GOODS IS LIMITED TO REPAIR, REPLACEMENT, OR REFUND AS DESCRIBED BELOW IN THIS WARRANTY STATEMENT.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'WHO MAY USE THIS WARRANTY?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Banana Phone LLC. located at address 9 Swallow Ln, Orchard Park, NY 14127 ("we") extend this limited warranty only to the consumer who originally purchased the product ("you"). It does not extend to any subsequent owner or other transferee of the product.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'WHAT DOES THIS WARRANTY COVER?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'This limited warranty covers defects in materials and workmanship of the Banana Phone (the "product") for the Warranty Period as defined below.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'WHAT DOES THIS WARRANTY NOT COVER?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'This limited warranty does not cover any damage due to: (a) transportation; (b) storage; (c) improper use; (d) failure to follow the product instructions; (e) modifications; (f) unauthorized repair; (g) normal wear and tear; (h) purchase from unauthorized seller; (i) unauthorized reselling; or (j) external causes such as accidents, abuse, or other actions or events beyond our reasonable control.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'WHAT IS THE PERIOD OF COVERAGE?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'This limited warranty starts on the date of your purchase and lasts for one year (the "Warranty Period"). The Warranty Period is not extended if we repair or replace the product. We may change the availability of this limited warranty at our discretion, but any changes will not be retroactive.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'WHAT ARE YOUR REMEDIES UNDER THIS WARRANTY?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'With respect to any defective product during the Warranty Period, we will, in our sole discretion, either: (a) repair or replace such product (or the defective part) free of charge, or (b) refund the purchase price of such product. We will also pay for shipping and handling fees to return the repaired or replacement product to you if we elect to repair or replace the defective product.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'HOW DO YOU OBTAIN WARRANTY SERVICE?'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'To obtain warranty service, email our Customer Service Department at yellow@bananaphone.io during the Warranty Period to obtain a Defective Merchandise Authorization ("DMA") number. No warranty service will be provided without a DMA number. To obtain a DMA, you must submit a copy of your receipt proving you are the original purchaser of your product. After we have provided you with a DMA, we will provide you instructions on how to return your product for examination of eligibility by our warranty department. Once your product is received, our warranty department will examine the product to make the determination of whether the product is covered by this limited warranty. Should your product not qualify under this warranty, you shall bear the costs of shipping and delivery of the product back to your possession.'
+						),
+						_react2.default.createElement(
+							'h3',
+							null,
+							'LIMITATION OF LIABILITY'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'THE REMEDIES DESCRIBED ABOVE ARE YOUR SOLE AND EXCLUSIVE REMEDIES AND OUR ENTIRE LIABILITY FOR ANY BREACH OF THIS LIMITED WARRANTY. OUR LIABILITY SHALL UNDER NO CIRCUMSTANCES EXCEED THE ACTUAL AMOUNT PAID BY YOU FOR THE DEFECTIVE PRODUCT, NOR SHALL WE UNDER ANY CIRCUMSTANCES BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES OR LOSSES, WHETHER DIRECT OR INDIRECT.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#warranty', onClick: this.handleClick.bind(this) },
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Hide warranty'
+							)
+						)
+					)
+				);
+			}
+		}]);
 
-			_createClass(FAQ, [{
-					key: "render",
-					value: function render() {
-							return _react2.default.createElement(
-									"section",
-									{ className: "faq" },
-									_react2.default.createElement(
-											"h2",
-											null,
-											"FAQ"
-									),
-									_react2.default.createElement(
-											"p",
-											null,
-											_react2.default.createElement(
-													"strong",
-													null,
-													"Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?"
-											)
-									),
-									_react2.default.createElement(
-											"p",
-											null,
-											"A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging."
-									),
-									_react2.default.createElement(
-											"p",
-											null,
-											_react2.default.createElement(
-													"strong",
-													null,
-													"Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?"
-											)
-									),
-									_react2.default.createElement(
-											"p",
-											{ className: "no-padding" },
-											"A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:"
-									),
-									_react2.default.createElement(
-											"ul",
-											null,
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding" },
-													"Step 1: Open Settings"
-											),
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding" },
-													"Step 2: Select Siri and Search"
-											),
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding" },
-													"Step 3: Toggle On:"
-											),
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding faqli" },
-													_react2.default.createElement(
-															"i",
-															null,
-															"Listen for \u201CHey Siri\u201D"
-													)
-											),
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding faqli" },
-													_react2.default.createElement(
-															"i",
-															null,
-															"Press Home for Siri"
-													)
-											),
-											_react2.default.createElement(
-													"li",
-													{ className: "no-padding faqli" },
-													_react2.default.createElement(
-															"i",
-															null,
-															"Allow Siri When Locked"
-													)
-											)
-									),
-									_react2.default.createElement(
-											"p",
-											null,
-											_react2.default.createElement(
-													"strong",
-													null,
-													"Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?"
-											)
-									),
-									_react2.default.createElement(
-											"p",
-											null,
-											"A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone."
-									)
-							);
-					}
-			}]);
-
-			return FAQ;
+		return FAQ;
 	}(_react.Component);
 
 		exports.default = FAQ;

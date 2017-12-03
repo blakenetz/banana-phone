@@ -208,12 +208,12 @@ footer {
           font-size: 0.9em; } }
 
 .parallax {
-  background: -moz-linear-gradient(#000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
-  background: -webkit-gradient(linear, #000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
-  background: -webkit-linear-gradient(#000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
-  background: -o-linear-gradient(#000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
-  background: -ms-linear-gradient(#000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
-  background: linear-gradient(#000, transparent 60%), url("/images/side-right.png") no-repeat center/contain;
+  background: -moz-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
+  background: -webkit-gradient(linear, #000, transparent 60%), url("/images/front.png") no-repeat center/contain;
+  background: -webkit-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
+  background: -o-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
+  background: -ms-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
+  background: linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
   height: 100vh;
   background-attachment: fixed;
   display: -webkit-box;
@@ -242,7 +242,9 @@ footer {
     font-size: 1.4em;
     font-weight: 100;
     text-align: center;
-    text-shadow: 0px 0px 6px #FFF; }
+    text-shadow: 0px 0px 6px #FFF;
+    width: 100%;
+    text-align: left; }
     @media (max-width: 650px) {
       .about p, .about .faq li, .faq .about li {
         font-size: 1.2em; } }
@@ -484,9 +486,9 @@ footer {
   .press .pressWrapper {
     position: absolute;
     background-color: #FDE303;
-    margin-top: -25px;
+    margin-top: -50px;
     padding: 1em 4em; }
-  .press .logoWrapper {
+  .press .pressLinks {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -494,27 +496,9 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
-    flex-direction: row;
-    padding-bottom: 1em; }
-    .press .logoWrapper a {
-      color: #000;
-      font-size: 1.4em; }
-      @media (max-width: 665px) {
-        .press .logoWrapper a {
-          font-size: 1.2em; } }
-      @media (max-width: 515px) {
-        .press .logoWrapper a {
-          font-size: 1em; } }
+    justify-content: space-around;
+    flex-flow: row wrap; }
   .press .logo {
-    margin-right: 3em;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
     width: 70px;
     min-width: 70px; }
     @media (max-width: 380px) {
@@ -525,10 +509,15 @@ footer {
       width: 100%; }
 
 .faq {
-  padding: 5em; }
+  padding: 0 5em 5em 5em; }
   .faq ul {
     padding: 0 1.6em; }
   .faq li:not(.faqli) {
     list-style: none; }
+  .faq a {
+    color: #000; }
+  .faq #warranty {
+    padding: 1em 3em;
+    background-color: #FDE303; }
 
 /*# sourceMappingURL=style.css.map*/
