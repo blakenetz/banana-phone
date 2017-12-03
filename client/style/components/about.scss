@@ -168,9 +168,9 @@ $about-break-third: 450px;
 		}
 	}
 	.parallax {
-		background: url('/images/columbia.jpg') no-repeat center/cover;
+		background: url('/images/columbia.png') no-repeat center/cover;
 		@include parallax-container;
-		height: auto;
+		height: 100vh;
 		img {
 			width:100vw;
 			height: auto;

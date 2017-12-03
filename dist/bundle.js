@@ -71,31 +71,31 @@
 
 	var _nav2 = _interopRequireDefault(_nav);
 
-	var _landingPage = __webpack_require__(188);
+	var _landingPage = __webpack_require__(189);
 
 	var _landingPage2 = _interopRequireDefault(_landingPage);
 
-	var _about = __webpack_require__(189);
+	var _about = __webpack_require__(190);
 
 	var _about2 = _interopRequireDefault(_about);
 
-	var _features = __webpack_require__(190);
+	var _features = __webpack_require__(191);
 
 	var _features2 = _interopRequireDefault(_features);
 
-	var _gorillas = __webpack_require__(191);
+	var _gorillas = __webpack_require__(192);
 
 	var _gorillas2 = _interopRequireDefault(_gorillas);
 
-	var _press = __webpack_require__(192);
+	var _press = __webpack_require__(193);
 
 	var _press2 = _interopRequireDefault(_press);
 
-	var _faq = __webpack_require__(193);
+	var _faq = __webpack_require__(194);
 
 	var _faq2 = _interopRequireDefault(_faq);
 
-	var _footer = __webpack_require__(194);
+	var _footer = __webpack_require__(195);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
@@ -107,7 +107,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(195);
+	__webpack_require__(196);
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -22871,6 +22871,8 @@
 
 	var _javascriptDebounce2 = _interopRequireDefault(_javascriptDebounce);
 
+	__webpack_require__(188);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22893,9 +22895,52 @@
 		}
 
 		_createClass(Nav, [{
+			key: 'updateNav',
+			value: function updateNav(country) {
+				var america = document.querySelector('#america');
+				if (country == 'international') {
+					var international = document.querySelector('#international');
+					america.classList.add('is-hidden');
+					international.classList.remove('is-hidden');
+				} else if (america.classList == 'is-hidden') {
+					var _international = document.querySelector('#international');
+					america.classList.remove('is-hidden');
+					_international.classList.add('is-hidden');
+				}
+			}
+		}, {
 			key: 'componentDidMount',
 			value: function componentDidMount() {
+				var _this2 = this;
+
 				window.addEventListener('scroll', this.handleScroll);
+				var ipLocation = localStorage.getItem('location');
+				if (!ipLocation) {
+					fetch('https://ipinfo.io', {
+						method: 'GET',
+						headers: {
+							'Accept': 'application/json',
+							'Content-Type': 'application/json'
+						}
+					}).then(function (response) {
+						return response.json();
+					}).then(function (responseJson) {
+						// default america
+						if (!responseJson) {
+							responseJson.country = 'america';
+							localStorage.setItem('location', 'america');
+						} else if (responseJson.country == 'US') {
+							localStorage.setItem('location', 'america');
+						} else {
+							localStorage.setItem('location', 'internation');
+						}
+						_this2.updateNav(responseJson.country);
+					}).catch(function (error) {
+						localStorage.setItem('location', 'america');
+					});
+				} else {
+					this.updateNav(ipLocation);
+				}
 			}
 		}, {
 			key: 'componentWillUnmount',
@@ -22998,12 +23043,25 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset', target: '_blank', rel: 'noopener noreferrer' },
+								{ href: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset', target: '_blank', rel: 'noopener noreferrer',
+									id: 'america' },
 								_react2.default.createElement(
 									'button',
 									null,
 									_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
 									'Buy on Amazon.com'
+								)
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: 'https://igg.me/at/bananaphone', target: '_blank', rel: 'noopener noreferrer',
+									className: 'is-hidden',
+									id: 'international' },
+								_react2.default.createElement(
+									'button',
+									null,
+									_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
+									'Buy now'
 								)
 							)
 						)
@@ -23057,6 +23115,473 @@
 
 /***/ }),
 /* 188 */
+/***/ (function(module, exports) {
+
+	(function(self) {
+	  'use strict';
+
+	  if (self.fetch) {
+	    return
+	  }
+
+	  var support = {
+	    searchParams: 'URLSearchParams' in self,
+	    iterable: 'Symbol' in self && 'iterator' in Symbol,
+	    blob: 'FileReader' in self && 'Blob' in self && (function() {
+	      try {
+	        new Blob()
+	        return true
+	      } catch(e) {
+	        return false
+	      }
+	    })(),
+	    formData: 'FormData' in self,
+	    arrayBuffer: 'ArrayBuffer' in self
+	  }
+
+	  if (support.arrayBuffer) {
+	    var viewClasses = [
+	      '[object Int8Array]',
+	      '[object Uint8Array]',
+	      '[object Uint8ClampedArray]',
+	      '[object Int16Array]',
+	      '[object Uint16Array]',
+	      '[object Int32Array]',
+	      '[object Uint32Array]',
+	      '[object Float32Array]',
+	      '[object Float64Array]'
+	    ]
+
+	    var isDataView = function(obj) {
+	      return obj && DataView.prototype.isPrototypeOf(obj)
+	    }
+
+	    var isArrayBufferView = ArrayBuffer.isView || function(obj) {
+	      return obj && viewClasses.indexOf(Object.prototype.toString.call(obj)) > -1
+	    }
+	  }
+
+	  function normalizeName(name) {
+	    if (typeof name !== 'string') {
+	      name = String(name)
+	    }
+	    if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(name)) {
+	      throw new TypeError('Invalid character in header field name')
+	    }
+	    return name.toLowerCase()
+	  }
+
+	  function normalizeValue(value) {
+	    if (typeof value !== 'string') {
+	      value = String(value)
+	    }
+	    return value
+	  }
+
+	  // Build a destructive iterator for the value list
+	  function iteratorFor(items) {
+	    var iterator = {
+	      next: function() {
+	        var value = items.shift()
+	        return {done: value === undefined, value: value}
+	      }
+	    }
+
+	    if (support.iterable) {
+	      iterator[Symbol.iterator] = function() {
+	        return iterator
+	      }
+	    }
+
+	    return iterator
+	  }
+
+	  function Headers(headers) {
+	    this.map = {}
+
+	    if (headers instanceof Headers) {
+	      headers.forEach(function(value, name) {
+	        this.append(name, value)
+	      }, this)
+	    } else if (Array.isArray(headers)) {
+	      headers.forEach(function(header) {
+	        this.append(header[0], header[1])
+	      }, this)
+	    } else if (headers) {
+	      Object.getOwnPropertyNames(headers).forEach(function(name) {
+	        this.append(name, headers[name])
+	      }, this)
+	    }
+	  }
+
+	  Headers.prototype.append = function(name, value) {
+	    name = normalizeName(name)
+	    value = normalizeValue(value)
+	    var oldValue = this.map[name]
+	    this.map[name] = oldValue ? oldValue+','+value : value
+	  }
+
+	  Headers.prototype['delete'] = function(name) {
+	    delete this.map[normalizeName(name)]
+	  }
+
+	  Headers.prototype.get = function(name) {
+	    name = normalizeName(name)
+	    return this.has(name) ? this.map[name] : null
+	  }
+
+	  Headers.prototype.has = function(name) {
+	    return this.map.hasOwnProperty(normalizeName(name))
+	  }
+
+	  Headers.prototype.set = function(name, value) {
+	    this.map[normalizeName(name)] = normalizeValue(value)
+	  }
+
+	  Headers.prototype.forEach = function(callback, thisArg) {
+	    for (var name in this.map) {
+	      if (this.map.hasOwnProperty(name)) {
+	        callback.call(thisArg, this.map[name], name, this)
+	      }
+	    }
+	  }
+
+	  Headers.prototype.keys = function() {
+	    var items = []
+	    this.forEach(function(value, name) { items.push(name) })
+	    return iteratorFor(items)
+	  }
+
+	  Headers.prototype.values = function() {
+	    var items = []
+	    this.forEach(function(value) { items.push(value) })
+	    return iteratorFor(items)
+	  }
+
+	  Headers.prototype.entries = function() {
+	    var items = []
+	    this.forEach(function(value, name) { items.push([name, value]) })
+	    return iteratorFor(items)
+	  }
+
+	  if (support.iterable) {
+	    Headers.prototype[Symbol.iterator] = Headers.prototype.entries
+	  }
+
+	  function consumed(body) {
+	    if (body.bodyUsed) {
+	      return Promise.reject(new TypeError('Already read'))
+	    }
+	    body.bodyUsed = true
+	  }
+
+	  function fileReaderReady(reader) {
+	    return new Promise(function(resolve, reject) {
+	      reader.onload = function() {
+	        resolve(reader.result)
+	      }
+	      reader.onerror = function() {
+	        reject(reader.error)
+	      }
+	    })
+	  }
+
+	  function readBlobAsArrayBuffer(blob) {
+	    var reader = new FileReader()
+	    var promise = fileReaderReady(reader)
+	    reader.readAsArrayBuffer(blob)
+	    return promise
+	  }
+
+	  function readBlobAsText(blob) {
+	    var reader = new FileReader()
+	    var promise = fileReaderReady(reader)
+	    reader.readAsText(blob)
+	    return promise
+	  }
+
+	  function readArrayBufferAsText(buf) {
+	    var view = new Uint8Array(buf)
+	    var chars = new Array(view.length)
+
+	    for (var i = 0; i < view.length; i++) {
+	      chars[i] = String.fromCharCode(view[i])
+	    }
+	    return chars.join('')
+	  }
+
+	  function bufferClone(buf) {
+	    if (buf.slice) {
+	      return buf.slice(0)
+	    } else {
+	      var view = new Uint8Array(buf.byteLength)
+	      view.set(new Uint8Array(buf))
+	      return view.buffer
+	    }
+	  }
+
+	  function Body() {
+	    this.bodyUsed = false
+
+	    this._initBody = function(body) {
+	      this._bodyInit = body
+	      if (!body) {
+	        this._bodyText = ''
+	      } else if (typeof body === 'string') {
+	        this._bodyText = body
+	      } else if (support.blob && Blob.prototype.isPrototypeOf(body)) {
+	        this._bodyBlob = body
+	      } else if (support.formData && FormData.prototype.isPrototypeOf(body)) {
+	        this._bodyFormData = body
+	      } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
+	        this._bodyText = body.toString()
+	      } else if (support.arrayBuffer && support.blob && isDataView(body)) {
+	        this._bodyArrayBuffer = bufferClone(body.buffer)
+	        // IE 10-11 can't handle a DataView body.
+	        this._bodyInit = new Blob([this._bodyArrayBuffer])
+	      } else if (support.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(body) || isArrayBufferView(body))) {
+	        this._bodyArrayBuffer = bufferClone(body)
+	      } else {
+	        throw new Error('unsupported BodyInit type')
+	      }
+
+	      if (!this.headers.get('content-type')) {
+	        if (typeof body === 'string') {
+	          this.headers.set('content-type', 'text/plain;charset=UTF-8')
+	        } else if (this._bodyBlob && this._bodyBlob.type) {
+	          this.headers.set('content-type', this._bodyBlob.type)
+	        } else if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body)) {
+	          this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8')
+	        }
+	      }
+	    }
+
+	    if (support.blob) {
+	      this.blob = function() {
+	        var rejected = consumed(this)
+	        if (rejected) {
+	          return rejected
+	        }
+
+	        if (this._bodyBlob) {
+	          return Promise.resolve(this._bodyBlob)
+	        } else if (this._bodyArrayBuffer) {
+	          return Promise.resolve(new Blob([this._bodyArrayBuffer]))
+	        } else if (this._bodyFormData) {
+	          throw new Error('could not read FormData body as blob')
+	        } else {
+	          return Promise.resolve(new Blob([this._bodyText]))
+	        }
+	      }
+
+	      this.arrayBuffer = function() {
+	        if (this._bodyArrayBuffer) {
+	          return consumed(this) || Promise.resolve(this._bodyArrayBuffer)
+	        } else {
+	          return this.blob().then(readBlobAsArrayBuffer)
+	        }
+	      }
+	    }
+
+	    this.text = function() {
+	      var rejected = consumed(this)
+	      if (rejected) {
+	        return rejected
+	      }
+
+	      if (this._bodyBlob) {
+	        return readBlobAsText(this._bodyBlob)
+	      } else if (this._bodyArrayBuffer) {
+	        return Promise.resolve(readArrayBufferAsText(this._bodyArrayBuffer))
+	      } else if (this._bodyFormData) {
+	        throw new Error('could not read FormData body as text')
+	      } else {
+	        return Promise.resolve(this._bodyText)
+	      }
+	    }
+
+	    if (support.formData) {
+	      this.formData = function() {
+	        return this.text().then(decode)
+	      }
+	    }
+
+	    this.json = function() {
+	      return this.text().then(JSON.parse)
+	    }
+
+	    return this
+	  }
+
+	  // HTTP methods whose capitalization should be normalized
+	  var methods = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
+
+	  function normalizeMethod(method) {
+	    var upcased = method.toUpperCase()
+	    return (methods.indexOf(upcased) > -1) ? upcased : method
+	  }
+
+	  function Request(input, options) {
+	    options = options || {}
+	    var body = options.body
+
+	    if (input instanceof Request) {
+	      if (input.bodyUsed) {
+	        throw new TypeError('Already read')
+	      }
+	      this.url = input.url
+	      this.credentials = input.credentials
+	      if (!options.headers) {
+	        this.headers = new Headers(input.headers)
+	      }
+	      this.method = input.method
+	      this.mode = input.mode
+	      if (!body && input._bodyInit != null) {
+	        body = input._bodyInit
+	        input.bodyUsed = true
+	      }
+	    } else {
+	      this.url = String(input)
+	    }
+
+	    this.credentials = options.credentials || this.credentials || 'omit'
+	    if (options.headers || !this.headers) {
+	      this.headers = new Headers(options.headers)
+	    }
+	    this.method = normalizeMethod(options.method || this.method || 'GET')
+	    this.mode = options.mode || this.mode || null
+	    this.referrer = null
+
+	    if ((this.method === 'GET' || this.method === 'HEAD') && body) {
+	      throw new TypeError('Body not allowed for GET or HEAD requests')
+	    }
+	    this._initBody(body)
+	  }
+
+	  Request.prototype.clone = function() {
+	    return new Request(this, { body: this._bodyInit })
+	  }
+
+	  function decode(body) {
+	    var form = new FormData()
+	    body.trim().split('&').forEach(function(bytes) {
+	      if (bytes) {
+	        var split = bytes.split('=')
+	        var name = split.shift().replace(/\+/g, ' ')
+	        var value = split.join('=').replace(/\+/g, ' ')
+	        form.append(decodeURIComponent(name), decodeURIComponent(value))
+	      }
+	    })
+	    return form
+	  }
+
+	  function parseHeaders(rawHeaders) {
+	    var headers = new Headers()
+	    rawHeaders.split(/\r?\n/).forEach(function(line) {
+	      var parts = line.split(':')
+	      var key = parts.shift().trim()
+	      if (key) {
+	        var value = parts.join(':').trim()
+	        headers.append(key, value)
+	      }
+	    })
+	    return headers
+	  }
+
+	  Body.call(Request.prototype)
+
+	  function Response(bodyInit, options) {
+	    if (!options) {
+	      options = {}
+	    }
+
+	    this.type = 'default'
+	    this.status = 'status' in options ? options.status : 200
+	    this.ok = this.status >= 200 && this.status < 300
+	    this.statusText = 'statusText' in options ? options.statusText : 'OK'
+	    this.headers = new Headers(options.headers)
+	    this.url = options.url || ''
+	    this._initBody(bodyInit)
+	  }
+
+	  Body.call(Response.prototype)
+
+	  Response.prototype.clone = function() {
+	    return new Response(this._bodyInit, {
+	      status: this.status,
+	      statusText: this.statusText,
+	      headers: new Headers(this.headers),
+	      url: this.url
+	    })
+	  }
+
+	  Response.error = function() {
+	    var response = new Response(null, {status: 0, statusText: ''})
+	    response.type = 'error'
+	    return response
+	  }
+
+	  var redirectStatuses = [301, 302, 303, 307, 308]
+
+	  Response.redirect = function(url, status) {
+	    if (redirectStatuses.indexOf(status) === -1) {
+	      throw new RangeError('Invalid status code')
+	    }
+
+	    return new Response(null, {status: status, headers: {location: url}})
+	  }
+
+	  self.Headers = Headers
+	  self.Request = Request
+	  self.Response = Response
+
+	  self.fetch = function(input, init) {
+	    return new Promise(function(resolve, reject) {
+	      var request = new Request(input, init)
+	      var xhr = new XMLHttpRequest()
+
+	      xhr.onload = function() {
+	        var options = {
+	          status: xhr.status,
+	          statusText: xhr.statusText,
+	          headers: parseHeaders(xhr.getAllResponseHeaders() || '')
+	        }
+	        options.url = 'responseURL' in xhr ? xhr.responseURL : options.headers.get('X-Request-URL')
+	        var body = 'response' in xhr ? xhr.response : xhr.responseText
+	        resolve(new Response(body, options))
+	      }
+
+	      xhr.onerror = function() {
+	        reject(new TypeError('Network request failed'))
+	      }
+
+	      xhr.ontimeout = function() {
+	        reject(new TypeError('Network request failed'))
+	      }
+
+	      xhr.open(request.method, request.url, true)
+
+	      if (request.credentials === 'include') {
+	        xhr.withCredentials = true
+	      }
+
+	      if ('responseType' in xhr && support.blob) {
+	        xhr.responseType = 'blob'
+	      }
+
+	      request.headers.forEach(function(value, name) {
+	        xhr.setRequestHeader(name, value)
+	      })
+
+	      xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
+	    })
+	  }
+	  self.fetch.polyfill = true
+	})(typeof self !== 'undefined' ? self : this);
+
+
+/***/ }),
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23100,7 +23625,7 @@
 						_react2.default.createElement(
 							"div",
 							{ className: "logoWrapper" },
-							_react2.default.createElement("img", { src: "images/logo.png", alt: "Banana Phone logo" }),
+							_react2.default.createElement("img", { src: "images/logo-whitetext.png", alt: "Banana Phone logo" }),
 							_react2.default.createElement(
 								"h1",
 								null,
@@ -23116,6 +23641,11 @@
 								null,
 								"scroll down"
 							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "igBadge" },
+							_react2.default.createElement("img", { src: "images/indiegogo-badge.png", alt: "successfully funded on Indiegogo" })
 						)
 					),
 					_react2.default.createElement(
@@ -23133,7 +23663,7 @@
 		exports.default = LandingPage;
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23168,7 +23698,13 @@
 		_createClass(About, [{
 			key: "handleClick",
 			value: function handleClick() {
-				this.refs.video.paused ? this.refs.video.play() : this.refs.video.pause();
+				if (this.refs.video.paused) {
+					this.refs.video.play();
+					this.refs.video.controls = true;
+				} else {
+					this.refs.video.pause();
+					this.refs.video.controls = false;
+				}
 			}
 		}, {
 			key: "render",
@@ -23208,15 +23744,14 @@
 					),
 					_react2.default.createElement(
 						"div",
-						{ className: "container" },
+						{ className: "videoWrapper container" },
 						_react2.default.createElement(
 							"video",
 							{ src: "images/video.mp4",
 								preload: "metadata",
 								poster: "images/videoPoster.png",
 								onClick: this.handleClick.bind(this),
-								ref: "video",
-								controls: true },
+								ref: "video" },
 							_react2.default.createElement(
 								"p",
 								null,
@@ -23366,7 +23901,7 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "parallax" },
-						_react2.default.createElement("img", { src: "images/banana-bunch.jpg", alt: "a Banana Phone in a banana bunch" })
+						_react2.default.createElement("img", { src: "images/banana-bunch.png", alt: "a Banana Phone in a banana bunch" })
 					)
 				);
 			}
@@ -23378,7 +23913,7 @@
 		exports.default = About;
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23488,7 +24023,7 @@
 		exports.default = Features;
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23588,7 +24123,7 @@
 		exports.default = Gorillas;
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23701,7 +24236,7 @@
 		exports.default = Press;
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23756,122 +24291,131 @@
 					'section',
 					{ className: 'faq' },
 					_react2.default.createElement(
-						'h2',
-						null,
-						'FAQ'
-					),
-					_react2.default.createElement(
-						'p',
-						null,
+						'div',
+						{ className: 'faqWrapper' },
 						_react2.default.createElement(
-							'strong',
+							'h2',
 							null,
-							'Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?'
-						)
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						'A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.'
-					),
-					_react2.default.createElement(
-						'p',
-						null,
+							'FAQ'
+						),
 						_react2.default.createElement(
-							'strong',
+							'p',
 							null,
-							'Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?'
-						)
-					),
-					_react2.default.createElement(
-						'p',
-						{ className: 'no-padding' },
-						'A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:'
-					),
-					_react2.default.createElement(
-						'ul',
-						null,
-						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding' },
-							'Step 1: Open Settings'
-						),
-						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding' },
-							'Step 2: Select Siri and Search'
-						),
-						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding' },
-							'Step 3: Toggle On:'
-						),
-						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding faqli' },
 							_react2.default.createElement(
-								'i',
+								'strong',
 								null,
-								'Listen for \u201CHey Siri\u201D'
+								'Q1: Where is the Banana Phone Charger? I didn\u2019t see it in the box?'
 							)
 						),
 						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding faqli' },
+							'p',
+							null,
+							'A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'imgWrapper' },
+							_react2.default.createElement('img', { src: 'images/cord-in-box.png', alt: 'the charging cable is located in a compartment above the banana phone device' })
+						),
+						_react2.default.createElement(
+							'p',
+							null,
 							_react2.default.createElement(
-								'i',
+								'strong',
 								null,
-								'Press Home for Siri'
+								'Q2: Why can\u2019t I activate Siri on my iPhone through Banana Phone?'
 							)
 						),
 						_react2.default.createElement(
-							'li',
-							{ className: 'no-padding faqli' },
-							_react2.default.createElement(
-								'i',
-								null,
-								'Allow Siri When Locked'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'p',
-						null,
+							'p',
+							{ className: 'no-padding' },
+							'A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:'
+						),
 						_react2.default.createElement(
-							'strong',
-							null,
-							'Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?'
-						)
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						'A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone.'
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: '#warranty', onClick: this.handleClick.bind(this) },
-						_react2.default.createElement(
-							'strong',
+							'ul',
 							null,
 							_react2.default.createElement(
-								'span',
-								{ className: 'view' },
-								'View'
+								'li',
+								{ className: 'no-padding' },
+								'Step 1: Open Settings'
 							),
 							_react2.default.createElement(
-								'span',
-								{ className: 'hide is-hidden' },
-								'Hide'
+								'li',
+								{ className: 'no-padding' },
+								'Step 2: Select Siri and Search'
 							),
-							'\xA0warranty'
+							_react2.default.createElement(
+								'li',
+								{ className: 'no-padding' },
+								'Step 3: Toggle On:'
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'no-padding faqli' },
+								_react2.default.createElement(
+									'i',
+									null,
+									'Listen for \u201CHey Siri\u201D'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'no-padding faqli' },
+								_react2.default.createElement(
+									'i',
+									null,
+									'Press Home for Siri'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'no-padding faqli' },
+								_react2.default.createElement(
+									'i',
+									null,
+									'Allow Siri When Locked'
+								)
+							)
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							_react2.default.createElement(
+								'strong',
+								null,
+								'Q3: On Android, I\u2019m having trouble knowing when to say the name of the person I\u2019m dialing.  What\u2019s the trick?'
+							)
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'A3: No worries.  We recommend waiting for the beep from your Android before you say the name of the person you wish to dial.  It\u2019s best to practice a couple times with your Android device in front of you. Ensure that \u201COK Google\u201D has been activated on your smart phone.'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: '#warranty', onClick: this.handleClick.bind(this) },
+							_react2.default.createElement(
+								'strong',
+								null,
+								_react2.default.createElement(
+									'span',
+									{ className: 'view' },
+									'View'
+								),
+								_react2.default.createElement(
+									'span',
+									{ className: 'hide is-hidden' },
+									'Hide'
+								),
+								'\xA0warranty'
+							)
 						)
 					),
 					_react2.default.createElement(
 						'div',
 						{ id: 'warranty', className: 'is-hidden' },
 						_react2.default.createElement(
-							'h2',
+							'h3',
 							null,
 							'LIMITED WARRANTY ON Banana Phone'
 						),
@@ -23901,7 +24445,7 @@
 							'OUR RESPONSIBILITY FOR DEFECTIVE GOODS IS LIMITED TO REPAIR, REPLACEMENT, OR REFUND AS DESCRIBED BELOW IN THIS WARRANTY STATEMENT.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'WHO MAY USE THIS WARRANTY?'
 						),
@@ -23911,7 +24455,7 @@
 							'Banana Phone LLC. located at address 9 Swallow Ln, Orchard Park, NY 14127 ("we") extend this limited warranty only to the consumer who originally purchased the product ("you"). It does not extend to any subsequent owner or other transferee of the product.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'WHAT DOES THIS WARRANTY COVER?'
 						),
@@ -23921,7 +24465,7 @@
 							'This limited warranty covers defects in materials and workmanship of the Banana Phone (the "product") for the Warranty Period as defined below.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'WHAT DOES THIS WARRANTY NOT COVER?'
 						),
@@ -23931,7 +24475,7 @@
 							'This limited warranty does not cover any damage due to: (a) transportation; (b) storage; (c) improper use; (d) failure to follow the product instructions; (e) modifications; (f) unauthorized repair; (g) normal wear and tear; (h) purchase from unauthorized seller; (i) unauthorized reselling; or (j) external causes such as accidents, abuse, or other actions or events beyond our reasonable control.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'WHAT IS THE PERIOD OF COVERAGE?'
 						),
@@ -23941,7 +24485,7 @@
 							'This limited warranty starts on the date of your purchase and lasts for one year (the "Warranty Period"). The Warranty Period is not extended if we repair or replace the product. We may change the availability of this limited warranty at our discretion, but any changes will not be retroactive.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'WHAT ARE YOUR REMEDIES UNDER THIS WARRANTY?'
 						),
@@ -23951,7 +24495,7 @@
 							'With respect to any defective product during the Warranty Period, we will, in our sole discretion, either: (a) repair or replace such product (or the defective part) free of charge, or (b) refund the purchase price of such product. We will also pay for shipping and handling fees to return the repaired or replacement product to you if we elect to repair or replace the defective product.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'HOW DO YOU OBTAIN WARRANTY SERVICE?'
 						),
@@ -23961,7 +24505,7 @@
 							'To obtain warranty service, email our Customer Service Department at yellow@bananaphone.io during the Warranty Period to obtain a Defective Merchandise Authorization ("DMA") number. No warranty service will be provided without a DMA number. To obtain a DMA, you must submit a copy of your receipt proving you are the original purchaser of your product. After we have provided you with a DMA, we will provide you instructions on how to return your product for examination of eligibility by our warranty department. Once your product is received, our warranty department will examine the product to make the determination of whether the product is covered by this limited warranty. Should your product not qualify under this warranty, you shall bear the costs of shipping and delivery of the product back to your possession.'
 						),
 						_react2.default.createElement(
-							'h3',
+							'h4',
 							null,
 							'LIMITATION OF LIABILITY'
 						),
@@ -23995,7 +24539,7 @@
 		exports.default = FAQ;
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24080,7 +24624,7 @@
 		exports.default = Footer;
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

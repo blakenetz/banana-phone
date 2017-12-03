@@ -46,9 +46,10 @@ nav {
     align-items: center; }
     @media (max-width: 480px) {
       nav section#social-media {
-        width: 100vw;
+        width: 100%;
         justify-content: space-around;
-        padding-left: 0; } }
+        padding-left: 0;
+        position: absolute; } }
   nav figure {
     display: -webkit-box;
     display: -moz-box;
@@ -110,6 +111,11 @@ nav {
       color: #FDE303; }
       nav button:hover i {
         color: #FDE303; }
+    nav button i {
+      padding-right: 0.5em; }
+    @media (max-width: 400px) {
+      nav button {
+        padding: 0.6em 1.5em; } }
 
 footer {
   padding: 1em;
@@ -147,7 +153,6 @@ footer {
   background: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   background: -ms-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.9) 100%), url("/images/jungle.png") no-repeat center/cover;
-  height: 100vh;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -155,7 +160,11 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  height: 100vh; }
+  @media (max-width: 550px) {
+    .lp {
+      height: auto; } }
   .lp .logoWrapper {
     display: -webkit-box;
     display: -moz-box;
@@ -206,6 +215,19 @@ footer {
       @media (max-width: 450px) {
         .lp .scroll p, .lp .scroll .faq li, .faq .lp .scroll li {
           font-size: 0.9em; } }
+    @media (max-width: 550px) {
+      .lp .scroll {
+        display: none; } }
+  .lp .igBadge {
+    position: absolute;
+    right: 5%;
+    top: 5%; }
+    @media (max-width: 550px) {
+      .lp .igBadge {
+        position: relative;
+        right: unset;
+        bottom: unset;
+        padding-top: 3em; } }
 
 .parallax {
   background: -moz-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
@@ -223,21 +245,26 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  justify-content: center; }
   @media (max-width: 550px) {
     .parallax {
-      background: #000;
-      height: auto; } }
+      background: #000; } }
   .parallax img {
-    display: none; }
+    display: none;
+    height: 80vh; }
     @media (max-width: 550px) {
       .parallax img {
-        height: 15em;
         display: block; } }
 
 .about {
   min-height: 100vh;
   padding-top: 5em; }
+  @media (max-width: 650px) {
+    .about {
+      padding-top: 0; } }
+  .about #aboutText p, .about #aboutText .faq li, .faq .about #aboutText li {
+    text-align: center; }
   .about p, .about .faq li, .faq .about li {
     font-size: 1.4em;
     font-weight: 100;
@@ -262,15 +289,23 @@ footer {
       @media (max-width: 650px) {
         .about p:first-of-type, .about .faq li:first-of-type, .faq .about li:first-of-type {
           padding-top: 3.5em; } }
+  .about .videoWrapper {
+    padding: 5em 0; }
+    @media (max-width: 450px) {
+      .about .videoWrapper {
+        padding: 1em 0; } }
+    @media (max-width: 450px) {
+      .about .videoWrapper {
+        width: 100vw; } }
   .about video {
-    padding: 5em 0;
     width: 100%; }
   .about .stepsWrapper {
     padding: 0 0 5em 0;
     background: url("/images/side-right.png") no-repeat right/contain; }
     @media (max-width: 740px) {
       .about .stepsWrapper {
-        background: #FFF; } }
+        background: #FFF;
+        padding-bottom: 0; } }
   .about .steps {
     display: -webkit-box;
     display: -moz-box;
@@ -375,7 +410,7 @@ footer {
         .about .instruction li {
           font-size: 0.9em; } }
   .about .parallax {
-    background: url("/images/columbia.jpg") no-repeat center/cover;
+    background: url("/images/columbia.png") no-repeat center/cover;
     height: 100vh;
     background-attachment: fixed;
     display: -webkit-box;
@@ -386,23 +421,21 @@ footer {
     flex-flow: column;
     align-items: center;
     justify-content: flex-end;
-    width: 100vw; }
+    height: 100vh; }
     @media (max-width: 550px) {
       .about .parallax {
-        background: #000;
-        height: auto; } }
+        background: #000; } }
     .about .parallax img {
+      width: 100vw;
+      height: auto;
       display: none; }
       @media (max-width: 550px) {
         .about .parallax img {
-          height: 15em;
           display: block; } }
 
 .features {
   background: #000;
   color: #FFF;
-  width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -410,10 +443,19 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-top: 1em;
+  width: 100vw; }
+  @media (max-width: 550px) {
+    .features {
+      flex-wrap: wrap; } }
   .features figure {
     padding-top: 1em;
     padding-bottom: 2em; }
+    @media (max-width: 550px) {
+      .features figure {
+        width: 100%;
+        text-align: center; } }
   .features img {
     height: 40em; }
     @media (max-width: 550px) {
@@ -421,8 +463,14 @@ footer {
         height: 30em; } }
   .features div {
     padding-left: 4em; }
+    @media (max-width: 550px) {
+      .features div {
+        padding-left: 2em; } }
     .features div ul {
       list-style-position: outside; }
+  @media (max-width: 400px) {
+    .features li {
+      font-size: 0.9em; } }
 
 .gorillas {
   color: #FFF;
@@ -486,8 +534,16 @@ footer {
   .press .pressWrapper {
     position: absolute;
     background-color: #FDE303;
-    margin-top: -50px;
-    padding: 1em 4em; }
+    padding: 1em 4em;
+    margin-top: -50px; }
+    @media (max-width: 800px) {
+      .press .pressWrapper {
+        margin-top: -30px; } }
+    @media (max-width: 590px) {
+      .press .pressWrapper {
+        position: relative;
+        width: 100vw;
+        margin-bottom: 1em; } }
   .press .pressLinks {
     display: -webkit-box;
     display: -moz-box;
@@ -507,9 +563,15 @@ footer {
         min-width: 45px; } }
     .press .logo img {
       width: 100%; }
+  @media (max-width: 590px) {
+    .press {
+      height: auto; } }
 
 .faq {
   padding: 0 5em 5em 5em; }
+  @media (max-width: 450px) {
+    .faq {
+      padding: 0; } }
   .faq ul {
     padding: 0 1.6em; }
   .faq li:not(.faqli) {
@@ -519,5 +581,16 @@ footer {
   .faq #warranty {
     padding: 1em 3em;
     background-color: #FDE303; }
+  @media (max-width: 450px) {
+    .faq .faqWrapper {
+      padding: 2.5em; } }
+  .faq .imgWrapper {
+    text-align: center; }
+    @media (max-width: 550px) {
+      .faq .imgWrapper img {
+        width: 100%; } }
+    @media (max-width: 450px) {
+      .faq .imgWrapper {
+        width: 100%; } }
 
 /*# sourceMappingURL=style.css.map*/

@@ -5,9 +5,7 @@
   flex-direction: row;
   padding-top: 1em;
   width: 100vw;
-  height: 100vh;
   @media(max-width: $parallax-width) {
-    height: auto;
     flex-wrap: wrap;
   }
 

@@ -59,6 +59,20 @@
         font-size: $font-size-small-x;
       }
     }
+    @media (max-width: $parallax-width) {
+      display: none;
+    }
+  }
+  .igBadge {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    @media (max-width: $parallax-width) {
+      position: relative;
+      right: unset;
+      bottom: unset;
+      padding-top: 3em;
+    }
   }
 }
 .parallax {
