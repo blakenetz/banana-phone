@@ -4,6 +4,10 @@
 	$about-break-first: 950px;
 	$about-break-second: 650px;
 
+	#aboutText p {
+		text-align: center;
+	}
+
 	p {
 		font-size: $font-size-large;
 		font-weight: 100;

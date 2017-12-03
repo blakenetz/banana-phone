@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 
 export default class About extends Component {
 	handleClick () {
-		this.refs.video.paused ? this.refs.video.play() : this.refs.video.pause();
+		if (this.refs.video.paused) {
+			this.refs.video.play();
+			this.refs.video.controls = true;
+		} else {
+			this.refs.video.pause();
+			this.refs.video.controls = false;
+		}
 	}
 
 	render(){
@@ -18,8 +24,7 @@ export default class About extends Component {
 									preload="metadata"
 									poster="images/videoPoster.png"
 									onClick={this.handleClick.bind(this)}
-									ref="video"
-									controls>
+									ref="video">
 						<p>Sorry! Your browser is a rotten banana and doesn't support mp4 videos</p>
 					</video>
 				</div>

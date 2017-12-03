@@ -43,6 +43,7 @@
   "dependencies": {
     "javascript-debounce": "^1.0.0",
     "scrollreveal": "^3.3.6",
-    "serve-favicon": "^2.4.1"
+    "serve-favicon": "^2.4.1",
+    "whatwg-fetch": "^2.0.3"
   }
 }

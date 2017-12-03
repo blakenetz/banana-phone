@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import debounce from 'javascript-debounce';
+import 'whatwg-fetch';
 
 export default class Nav extends Component {
 	constructor(props){
@@ -8,8 +9,53 @@ export default class Nav extends Component {
 		this.handleScroll = debounce(this.handleScroll.bind(this), 0)
 	}
 
+	updateNav(country) {
+		const america = document.querySelector('#america');
+		if (country == 'international') {
+			const international = document.querySelector('#international');
+			america.classList.add('is-hidden');
+			international.classList.remove('is-hidden');
+		}
+		else if (america.classList == 'is-hidden') {
+			const international = document.querySelector('#international');
+			america.classList.remove('is-hidden');
+			international.classList.add('is-hidden');
+		}
+	}
+
 	componentDidMount() {
 		window.addEventListener('scroll', this.handleScroll);
+		const ipLocation = localStorage.getItem('location');
+		if ( ! ipLocation) {
+			fetch('https://ipinfo.io', {
+				method: 'GET',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+				},
+			})
+			.then((response) => response.json())
+			.then((responseJson) => {
+				// default america
+				if ( ! responseJson ) {
+					responseJson.country = 'america';
+					localStorage.setItem('location', 'america')
+				}
+				else if (responseJson.country == 'US') {
+					localStorage.setItem('location', 'america');
+				}
+				else {
+					localStorage.setItem('location', 'internation');
+				}
+				this.updateNav(responseJson.country);
+			})
+			.catch((error) => {
+				localStorage.setItem('location', 'america');
+			});
+		}
+		else {
+			this.updateNav(ipLocation);
+		}
 	}
 
 	componentWillUnmount() {
@@ -106,11 +152,20 @@ export default class Nav extends Component {
 
 					{/* BUY NOW */}
 					<figure>
-						<a href="https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset" target="_blank" rel="noopener noreferrer"
+							id="america">
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy on Amazon.com
-								</button>
+							</button>
+						</a>
+						<a href="https://igg.me/at/bananaphone" target="_blank" rel="noopener noreferrer"
+							className="is-hidden"
+							id="international">
+							<button>
+								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+								Buy now
+							</button>
 						</a>
 					</figure>
 				</section>
