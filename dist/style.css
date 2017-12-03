@@ -224,10 +224,11 @@ footer {
     top: 5%; }
     @media (max-width: 550px) {
       .lp .igBadge {
-        position: relative;
-        right: unset;
-        bottom: unset;
-        padding-top: 3em; } }
+        top: 0;
+        padding-top: 3em;
+        width: 15vw; }
+        .lp .igBadge img {
+          width: 100%; } }
 
 .parallax {
   background: -moz-linear-gradient(#000, transparent 60%), url("/images/front.png") no-repeat center/contain;
@@ -421,7 +422,7 @@ footer {
     flex-flow: column;
     align-items: center;
     justify-content: flex-end;
-    height: 100vh; }
+    height: auto; }
     @media (max-width: 550px) {
       .about .parallax {
         background: #000; } }
