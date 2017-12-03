@@ -23,6 +23,9 @@ export default class FAQ extends Component {
 
 				<p><strong>Q1: Where is the Banana Phone Charger? I didn’t see it in the box?</strong></p>
 				<p>A1: Have no fear!  The Banana Phone Micro USB charging cord is located inside the white paper tray cube base.  Photo below.  It can be connected to any wall outlet base or computer for charging.</p>
+				<div className="imgWrapper">
+					<img src="images/cord-in-box.png" alt="the charging cable is located in a compartment above the banana phone device" />
+				</div>
 
 				<p><strong>Q2: Why can’t I activate Siri on my iPhone through Banana Phone?</strong></p>
 				<p className="no-padding">A2: Easy Fix! Please ensure 3 Siri settings are activated on your iPhone by following the steps below:</p>
