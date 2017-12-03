@@ -1,24 +1,42 @@
 .features {
   background: #000;
   color: #FFF;
-  width: 100vw;
-  height: 100vh;
   @include flex;
   flex-direction: row;
+  padding-top: 1em;
+  width: 100vw;
+  height: 100vh;
+  @media(max-width: $parallax-width) {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
   figure{
     padding-top: 1em;
     padding-bottom: 2em;
+    @media(max-width: $parallax-width) {
+      width: 100%;
+      text-align: center;
+    }
   }
   img {
     height: 40em;
-    @media (max-width: 550px) {
+    @media (max-width: $parallax-width) {
       height: 30em;
     }
   }
   div {
     padding-left: 4em;
+    @media (max-width: $parallax-width) {
+      padding-left: 2em;
+    }
     ul {
       list-style-position: outside;
+    }
+  }
+  @media(max-width: 400px) {
+    li {
+      font-size: $font-size-small-x
     }
   }
 }

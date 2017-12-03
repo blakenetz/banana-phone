@@ -19,7 +19,7 @@ export default class About extends Component {
 					<p>We’re taking a bite out of the Apple accessory ecosystem one Banana at a time.</p>
 				</div>
 
-				<div className="container">
+				<div className="videoWrapper container">
 					<video src="images/video.mp4"
 									preload="metadata"
 									poster="images/videoPoster.png"
@@ -90,7 +90,7 @@ export default class About extends Component {
 				</div>
 
 				<div className="parallax">
-					<img src="images/banana-bunch.jpg" alt="a Banana Phone in a banana bunch" />
+					<img src="images/banana-bunch.png" alt="a Banana Phone in a banana bunch" />
 				</div>
 			</section>
 		)

@@ -1,11 +1,20 @@
+$press-break-small: 590px;
 .press {
 	@include flex;
 	justify-content: center;
 	.pressWrapper {
 		position: absolute;
 		background-color: $yellow;
-		margin-top: -50px;
 		padding: 1em 4em;
+		margin-top: -50px;
+		@media(max-width: 800px) {
+			margin-top: -30px;
+		}
+		@media(max-width: $press-break-small) {
+			position: relative;
+			width: 100vw;
+			margin-bottom: 1em;
+		}
 	}
 	.pressLinks {
 		@include flex;
@@ -22,5 +31,8 @@
 		img {
 			width: 100%;
 		}
+	}
+	@media(max-width: $press-break-small) {
+		height: auto;
 	}
 }

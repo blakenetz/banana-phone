@@ -1,9 +1,12 @@
+$about-break-first: 950px;
+$about-break-second: 650px;
+$about-break-third: 450px;
 .about{
 	min-height: 100vh;
 	padding-top: 5em;
-	$about-break-first: 950px;
-	$about-break-second: 650px;
-
+	@media (max-width: $about-break-second) {
+		padding-top: 0;
+	}
 	#aboutText p {
 		text-align: center;
 	}
@@ -18,10 +21,10 @@
 		@media(max-width: $about-break-second) {
 			font-size: $font-size-med;
 		}
-		@media(max-width: 550px) {
+		@media(max-width: $parallax-width) {
 			font-size: $font-size-small;
 		}
-		@media(max-width: 450px) {
+		@media(max-width: $about-break-third) {
 			font-size: $font-size-small-x;
 		}
 		&:first-of-type {
@@ -34,9 +37,16 @@
 			}
 		}
 	}
-
-	video {
+	.videoWrapper {
 		padding: 5em 0;
+		@media(max-width: $about-break-third) {
+			padding: 1em 0;
+		}
+		@media(max-width: $about-break-third) {
+			width: 100vw;
+		}
+	}
+	video {
 		width: 100%;
 	}
 
@@ -45,6 +55,7 @@
 		background: url('/images/side-right.png') no-repeat right/contain;
 		@media(max-width: 740px) {
 			background: #FFF;
+			padding-bottom: 0;
 		}
 	}
 
@@ -159,9 +170,10 @@
 	.parallax {
 		background: url('/images/columbia.jpg') no-repeat center/cover;
 		@include parallax-container;
-		width:100vw;
-
+		height: auto;
 		img {
+			width:100vw;
+			height: auto;
 			@include parallax-img;
 		}
 	}

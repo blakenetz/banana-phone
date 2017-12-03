@@ -17,21 +17,22 @@
 	background: linear-gradient(0deg, #000 33%, rgba(0, 0, 0, 0));
 }
 
+$parallax-width: 550px;
+
 @mixin parallax-container {
 	height: 100vh;
 	background-attachment: fixed;
 	@include flex;
 	justify-content: flex-end;
-	@media (max-width: 550px) {
+	@media (max-width: $parallax-width) {
 		background: #000;
-		height: auto;
 	}
 }
 
 @mixin parallax-img {
 	display: none;
-	@media (max-width: 550px) {
-		height: 15em;
+	@media (max-width: $parallax-width) {
 		display: block;
 	}
 }
+

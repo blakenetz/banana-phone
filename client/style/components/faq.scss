@@ -1,5 +1,9 @@
+$faq-break-point: 450px;
 .faq {
 	padding: 0 5em 5em 5em;
+	@media(max-width: $faq-break-point) {
+		padding: 0;
+	}
 	ul {
 		padding: 0 1.6em;
 	}
@@ -16,7 +20,20 @@
 		padding: 1em 3em;
 		background-color: $yellow;
 	}
+	.faqWrapper{
+		@media(max-width: $faq-break-point) {
+			padding: 2.5em;
+		}
+	}
 	.imgWrapper {
 		text-align: center;
+		img {
+			@media(max-width: $parallax-width) {
+				width: 100%;
+			}
+		}
+		@media(max-width: $faq-break-point) {
+			width:100%;
+		}
 	}
 }
