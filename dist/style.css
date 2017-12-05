@@ -509,7 +509,7 @@ footer {
     width: 35%; }
     .gorillas .left img {
       width: 100%; }
-      @media (min-width: 1250) {
+      @media (min-width: 1250px) {
         .gorillas .left img {
           margin-top: -50px; } }
       @media (max-width: 475px) {
@@ -517,7 +517,6 @@ footer {
           display: none; } }
   .gorillas .right {
     height: 660px;
-    max-height: 660px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -527,6 +526,10 @@ footer {
     align-items: center;
     justify-content: space-around;
     width: 65%; }
+    @media (max-width: 605px) {
+      .gorillas .right {
+        height: auto;
+        max-height: initial; } }
     @media (max-width: 475px) {
       .gorillas .right {
         width: 100%; } }
@@ -561,7 +564,7 @@ footer {
     @media (max-width: 800px) {
       .press .pressWrapper {
         margin-top: -30px; } }
-    @media (max-width: 590px) {
+    @media (max-width: 605px) {
       .press .pressWrapper {
         position: relative;
         width: 100vw;
@@ -585,9 +588,9 @@ footer {
         min-width: 45px; } }
     .press .logo img {
       width: 100%; }
-  @media (max-width: 590px) {
+  @media (max-width: 605px) {
     .press {
-      height: auto; } }
+      height: auto !important; } }
 
 .faq {
   padding: 0 5em 5em 5em; }
