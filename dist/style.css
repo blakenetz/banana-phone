@@ -83,7 +83,8 @@ nav {
   nav button {
     height: 100%;
     padding-top: 0.6em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #FFF; }
     nav button:hover {
       border-color: #FDE303;
       color: #FDE303; }
