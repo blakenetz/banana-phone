@@ -17,7 +17,7 @@ export default class Press extends Component {
 						{/* HUFFPOST */}
 						<div className="logo">
 							<a href="https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2" target="_blank" rel="noopener noreferrer">
-								<img src="https://img.huffingtonpost.com/asset/58fe7a181c00002600e81721.png?ops=scalefit_720_noupscale" alt="HuffPost logo" />
+								<img src="images/huffpost.png" alt="HuffPost logo" />
 							</a>
 						</div>
 
@@ -31,7 +31,7 @@ export default class Press extends Component {
 						{/* THE VERGE */}
 						<div className="logo">
 							<a href="https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign" target="_blank" rel="noopener noreferrer">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Verge_Logo_2016.svg" alt="The Verge logo" />
+								<img src="images/verge.png" alt="The Verge logo" />
 							</a>
 						</div>
 

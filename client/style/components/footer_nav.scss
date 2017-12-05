@@ -1,3 +1,4 @@
+$nav-break-point: 480px;
 nav {
 	@include flex;
 	flex-flow: row;
@@ -9,23 +10,14 @@ nav {
 	right: 0;
 	height: 5.5em;
 	z-index: 3;
-	@media (max-width: 480px){
-		top: initial;
-		bottom: 0;
+	@media (max-width: $nav-break-point){
+		display: none;
 	}
 
 	section{
 		padding-left: 2em;
 		display: inherit;
 		align-items: center;
-		@media (max-width: 480px){
-			&#social-media {
-				width: 100%;
-				justify-content: space-around;
-				padding-left: 0;
-				position: absolute;
-			}
-		}
 	}
 	figure {
 		@include flex;
@@ -47,9 +39,6 @@ nav {
 	img {
 		width: 6em;
 		height: 5em;
-		@media (max-width: 480px){
-			display: none;
-		}
 	}
 	figcaption {
 		visibility: hidden;
@@ -59,28 +48,15 @@ nav {
 			position: absolute;
 			top: 4.5em
 		}
-		@media (max-width: 480px) {
-			visibility: visible;
-			&:active {
-				color: $yellow;
-			}
-		}
 	}
 	path {
 		&:hover{
 			fill: $yellow;
 			stroke: #000;
 		}
-		@media (max-width: 480px) {
-			fill: $yellow;
-			stroke: #000;
-		}
 	}
 	i{
 		color: #FFF;
-		@media (max-width: 480px) {
-			color: $yellow;
-		}
 	}
 	.fa-3x {
 		font-size: 2.5em;
@@ -103,9 +79,6 @@ nav {
 		i {
 			padding-right: 0.5em;
 		}
-		@media(max-width: 400px) {
-			padding: 0.6em 1.5em;
-		}
 	}
 }
 
@@ -113,8 +86,35 @@ nav {
 footer {
 	padding: 1em;
 	@include flex;
-	@media (max-width: 480px) {
-		padding-bottom: 5.5em;
+	@media (max-width: $nav-break-point) {
+		position: fixed;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+	}
+	section {
+		@media(max-width: $nav-break-point) {
+			background-color: #000;
+			@include flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100vw;
+			padding: 0.7em 0;
+			&:first-of-type {
+				display: none;
+			}
+			&:last-of-type {
+				display: none;
+			}
+		}
+		i.fa {
+			@media(max-width: $nav-break-point) {
+				font-size: 2.5em;
+			}
+			@media(max-width: 375px) {
+				font-size: 2em;
+			}
+		}
 	}
 	a {
 		color: #000;
@@ -123,16 +123,35 @@ footer {
 		&:hover {
 			color: $yellow;
 		}
-		@media (max-width: 480px) {
+		@media (max-width: $nav-break-point) {
+			color: #FFF;
 			&:active {
 				color: $yellow;
 			}
 		}
 	}
-	img {
-		width: 5em;
-	}
 	p {
 		margin-bottom: 0;
+		@media(max-width: $nav-break-point) {
+			display: none;
+		}
+	}
+	button {
+		color: #FFF;
+		height: auto;
+		margin-bottom: 0;
+		padding: 0.2em 1em;
+		&:hover {
+			color: $yellow;
+		}
+	}
+	#foot-america, #foot-international {
+		display: none;
+		@media(max-width: $nav-break-point) {
+			display: block;
+			&.is-hidden {
+				display: none;
+			}
+		}
 	}
 }
