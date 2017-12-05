@@ -38,18 +38,11 @@ nav {
   z-index: 3; }
   @media (max-width: 480px) {
     nav {
-      top: initial;
-      bottom: 0; } }
+      display: none; } }
   nav section {
     padding-left: 2em;
     display: inherit;
     align-items: center; }
-    @media (max-width: 480px) {
-      nav section#social-media {
-        width: 100%;
-        justify-content: space-around;
-        padding-left: 0;
-        position: absolute; } }
   nav figure {
     display: -webkit-box;
     display: -moz-box;
@@ -71,9 +64,6 @@ nav {
   nav img {
     width: 6em;
     height: 5em; }
-    @media (max-width: 480px) {
-      nav img {
-        display: none; } }
   nav figcaption {
     visibility: hidden;
     margin-top: -0.7em;
@@ -81,23 +71,11 @@ nav {
     nav figcaption:last-of-type {
       position: absolute;
       top: 4.5em; }
-    @media (max-width: 480px) {
-      nav figcaption {
-        visibility: visible; }
-        nav figcaption:active {
-          color: #FDE303; } }
   nav path:hover {
     fill: #FDE303;
     stroke: #000; }
-  @media (max-width: 480px) {
-    nav path {
-      fill: #FDE303;
-      stroke: #000; } }
   nav i {
     color: #FFF; }
-    @media (max-width: 480px) {
-      nav i {
-        color: #FDE303; } }
   nav .fa-3x {
     font-size: 2.5em; }
   nav .fb-share-button {
@@ -113,9 +91,6 @@ nav {
         color: #FDE303; }
     nav button i {
       padding-right: 0.5em; }
-    @media (max-width: 400px) {
-      nav button {
-        padding: 0.6em 1.5em; } }
 
 footer {
   padding: 1em;
@@ -128,7 +103,34 @@ footer {
   align-items: center; }
   @media (max-width: 480px) {
     footer {
-      padding-bottom: 5.5em; } }
+      position: fixed;
+      bottom: 0;
+      padding: 0;
+      margin: 0; } }
+  @media (max-width: 480px) {
+    footer section {
+      background-color: #000;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100vw;
+      padding: 0.7em 0; }
+      footer section:first-of-type {
+        display: none; }
+      footer section:last-of-type {
+        display: none; } }
+  @media (max-width: 480px) {
+    footer section i.fa {
+      font-size: 2.5em; } }
+  @media (max-width: 375px) {
+    footer section i.fa {
+      font-size: 2em; } }
   footer a {
     color: #000;
     padding-left: 0.5em;
@@ -136,12 +138,29 @@ footer {
     footer a:hover {
       color: #FDE303; }
     @media (max-width: 480px) {
-      footer a:active {
-        color: #FDE303; } }
-  footer img {
-    width: 5em; }
+      footer a {
+        color: #FFF; }
+        footer a:active {
+          color: #FDE303; } }
   footer p, footer .faq li, .faq footer li {
     margin-bottom: 0; }
+    @media (max-width: 480px) {
+      footer p, footer .faq li, .faq footer li {
+        display: none; } }
+  footer button {
+    color: #FFF;
+    height: auto;
+    margin-bottom: 0;
+    padding: 0.2em 1em; }
+    footer button:hover {
+      color: #FDE303; }
+  footer #foot-america, footer #foot-international {
+    display: none; }
+    @media (max-width: 480px) {
+      footer #foot-america, footer #foot-international {
+        display: block; }
+        footer #foot-america.is-hidden, footer #foot-international.is-hidden {
+          display: none; } }
 
 .landingPage {
   background-color: #000; }
