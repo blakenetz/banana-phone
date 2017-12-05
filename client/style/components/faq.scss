@@ -1,6 +1,9 @@
 $faq-break-point: 450px;
 .faq {
 	padding: 0 5em 5em 5em;
+	@media(max-width: 480px) { /* bottom nav */
+		margin-bottom: 5em;
+	}
 	@media(max-width: $faq-break-point) {
 		padding: 0;
 	}

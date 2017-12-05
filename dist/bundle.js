@@ -22936,24 +22936,9 @@
 		}
 
 		_createClass(Nav, [{
-			key: 'updateNav',
-			value: function updateNav(country) {
-				var america = document.querySelector('#nav-america');
-				if (country == 'international') {
-					var international = document.querySelector('#nav-international');
-					america.classList.add('is-hidden');
-					international.classList.remove('is-hidden');
-				} else if (america.classList == 'is-hidden') {
-					var _international = document.querySelector('#nav-international');
-					america.classList.remove('is-hidden');
-					_international.classList.add('is-hidden');
-				}
-			}
-		}, {
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 				window.addEventListener('scroll', this.handleScroll);
-				this.updateNav(this.props.location);
 			}
 		}, {
 			key: 'componentWillUnmount',
@@ -23045,25 +23030,14 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ href: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset', target: '_blank', rel: 'noopener noreferrer',
-									id: 'nav-america' },
+								{ href: this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
+									target: '_blank',
+									rel: 'noopener noreferrer' },
 								_react2.default.createElement(
 									'button',
 									null,
 									_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
-									'Buy on Amazon.com'
-								)
-							),
-							_react2.default.createElement(
-								'a',
-								{ href: 'https://igg.me/at/bananaphone', target: '_blank', rel: 'noopener noreferrer',
-									className: 'is-hidden',
-									id: 'nav-international' },
-								_react2.default.createElement(
-									'button',
-									null,
-									_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
-									'Buy now'
+									'Buy now!'
 								)
 							)
 						)
@@ -24556,7 +24530,7 @@
 /* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -24586,88 +24560,58 @@
 		}
 
 		_createClass(Footer, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				this.updateFooter(this.props.location);
-			}
-		}, {
-			key: 'updateFooter',
-			value: function updateFooter(country) {
-				var america = document.querySelector('#foot-america');
-				if (country == 'international') {
-					var international = document.querySelector('#foot-international');
-					america.classList.add('is-hidden');
-					international.classList.remove('is-hidden');
-				} else if (america.classList == 'is-hidden') {
-					var _international = document.querySelector('#foot-international');
-					america.classList.remove('is-hidden');
-					_international.classList.add('is-hidden');
-				}
-			}
-		}, {
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'footer',
+					"footer",
 					null,
 					_react2.default.createElement(
-						'section',
+						"section",
 						null,
 						_react2.default.createElement(
-							'p',
+							"p",
 							null,
-							'visit us at'
+							"visit us at"
 						)
 					),
 					_react2.default.createElement(
-						'section',
+						"section",
 						null,
 						_react2.default.createElement(
-							'a',
-							{ href: 'https://www.facebook.com/bananaphone.io/', target: '_blank', rel: 'noopener noreferrer' },
-							_react2.default.createElement('i', { className: 'fa fa-facebook-square fa-3x', 'aria-hidden': 'true' })
+							"a",
+							{ href: "https://www.facebook.com/bananaphone.io/", target: "_blank", rel: "noopener noreferrer" },
+							_react2.default.createElement("i", { className: "fa fa-facebook-square fa-3x", "aria-hidden": "true" })
 						),
 						_react2.default.createElement(
-							'a',
-							{ href: 'https://www.instagram.com/bananaphone.io/?hl=en', target: '_blank', rel: 'noopener noreferrer' },
-							_react2.default.createElement('i', { className: 'fa fa-instagram fa-3x', 'aria-hidden': 'true' })
+							"a",
+							{ href: "https://www.instagram.com/bananaphone.io/?hl=en", target: "_blank", rel: "noopener noreferrer" },
+							_react2.default.createElement("i", { className: "fa fa-instagram fa-3x", "aria-hidden": "true" })
 						),
 						_react2.default.createElement(
-							'a',
-							{ href: 'https://twitter.com/bananaphoneco?lang=en', target: '_blank', rel: 'noopener noreferrer' },
-							_react2.default.createElement('i', { className: 'fa fa-twitter fa-3x', 'aria-hidden': 'true' })
+							"a",
+							{ href: "https://twitter.com/bananaphoneco?lang=en", target: "_blank", rel: "noopener noreferrer" },
+							_react2.default.createElement("i", { className: "fa fa-twitter fa-3x", "aria-hidden": "true" })
 						),
 						_react2.default.createElement(
-							'a',
-							{ href: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset', target: '_blank', rel: 'noopener noreferrer',
-								id: 'foot-america' },
+							"a",
+							{ href: this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
+								target: "_blank",
+								rel: "noopener noreferrer" },
 							_react2.default.createElement(
-								'button',
+								"button",
 								null,
-								_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
-								'Buy on Amazon.com'
-							)
-						),
-						_react2.default.createElement(
-							'a',
-							{ href: 'https://igg.me/at/bananaphone', target: '_blank', rel: 'noopener noreferrer',
-								className: 'is-hidden',
-								id: 'foot-international' },
-							_react2.default.createElement(
-								'button',
-								null,
-								_react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-3x', 'aria-hidden': 'true' }),
-								'Buy now'
+								_react2.default.createElement("i", { className: "fa fa-shopping-cart fa-3x", "aria-hidden": "true" }),
+								"Buy now!"
 							)
 						)
 					),
 					_react2.default.createElement(
-						'section',
+						"section",
 						null,
 						_react2.default.createElement(
-							'p',
+							"p",
 							null,
-							'#bananaphone'
+							"#bananaphone"
 						)
 					)
 				);

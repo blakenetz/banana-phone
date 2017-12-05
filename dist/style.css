@@ -83,7 +83,8 @@ nav {
   nav button {
     height: 100%;
     padding-top: 0.6em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #FFF; }
     nav button:hover {
       border-color: #FDE303;
       color: #FDE303; }
@@ -137,6 +138,11 @@ footer {
     padding-right: 0.5em; }
     footer a:hover {
       color: #FDE303; }
+    footer a:last-of-type {
+      display: none; }
+      @media (max-width: 480px) {
+        footer a:last-of-type {
+          display: block; } }
     @media (max-width: 480px) {
       footer a {
         color: #FFF; }
@@ -154,13 +160,6 @@ footer {
     padding: 0.2em 1em; }
     footer button:hover {
       color: #FDE303; }
-  footer #foot-america, footer #foot-international {
-    display: none; }
-    @media (max-width: 480px) {
-      footer #foot-america, footer #foot-international {
-        display: block; }
-        footer #foot-america.is-hidden, footer #foot-international.is-hidden {
-          display: none; } }
 
 .landingPage {
   background-color: #000; }
@@ -336,11 +335,14 @@ footer {
     align-items: center;
     flex-direction: row;
     padding-top: 3em; }
+    .about .steps:last-of-type {
+      padding-bottom: 3em; }
     @media (max-width: 950px) {
       .about .steps {
         padding-top: 1.5em; } }
-    .about .steps:last-of-type {
-      padding-bottom: 3em; }
+    @media (max-width: 450px) {
+      .about .steps {
+        padding-left: 1em; } }
   .about .iconWrap {
     display: -webkit-box;
     display: -moz-box;
@@ -589,6 +591,10 @@ footer {
 
 .faq {
   padding: 0 5em 5em 5em; }
+  @media (max-width: 480px) {
+    .faq {
+      /* bottom nav */
+      margin-bottom: 5em; } }
   @media (max-width: 450px) {
     .faq {
       padding: 0; } }

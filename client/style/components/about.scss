@@ -63,11 +63,14 @@ $about-break-third: 450px;
 		@include flex;
 		flex-direction: row;
 		padding-top: 3em;
+		&:last-of-type {
+			padding-bottom: 3em;
+		}
 		@media(max-width: $about-break-first) {
 			padding-top: 1.5em;
 		}
-		&:last-of-type {
-			padding-bottom: 3em;
+		@media(max-width: $about-break-third) {
+			padding-left: 1em;
 		}
 	}
 
