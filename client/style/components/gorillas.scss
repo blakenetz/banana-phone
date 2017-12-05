@@ -17,7 +17,7 @@
     width: 35%;
     img {
       width: 100%;
-      @media(min-width: 1250) {
+      @media(min-width: 1250px) {
         margin-top: -50px;
       }
       @media (max-width: 475px) {
@@ -28,10 +28,13 @@
 
   .right {
     height: 660px;
-    max-height: 660px;
     @include flex;
     justify-content: space-around;
     width: 65%;
+    @media (max-width: 605px) {
+      height: auto;
+      max-height: initial;
+    }
     @media (max-width: 475px) {
       width: 100%;
     }
