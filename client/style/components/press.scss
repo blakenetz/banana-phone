@@ -1,4 +1,4 @@
-$press-break-small: 590px;
+$press-break-small: 605px;
 .press {
 	@include flex;
 	justify-content: center;
@@ -33,6 +33,6 @@ $press-break-small: 590px;
 		}
 	}
 	@media(max-width: $press-break-small) {
-		height: auto;
+		height: auto !important;
 	}
 }

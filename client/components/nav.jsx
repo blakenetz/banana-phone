@@ -9,23 +9,8 @@ export default class Nav extends Component {
 		this.handleScroll = debounce(this.handleScroll.bind(this), 0)
 	}
 
-	updateNav(country) {
-		const america = document.querySelector('#nav-america');
-		if (country == 'international') {
-			const international = document.querySelector('#nav-international');
-			america.classList.add('is-hidden');
-			international.classList.remove('is-hidden');
-		}
-		else if (america.classList == 'is-hidden') {
-			const international = document.querySelector('#nav-international');
-			america.classList.remove('is-hidden');
-			international.classList.add('is-hidden');
-		}
-	}
-
 	componentDidMount() {
 		window.addEventListener('scroll', this.handleScroll);
-		this.updateNav(this.props.location);
 	}
 
 	componentWillUnmount() {
@@ -112,19 +97,12 @@ export default class Nav extends Component {
 
 					{/* BUY NOW */}
 					<figure>
-						<a href="https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset" target="_blank" rel="noopener noreferrer"
-							id="nav-america">
+						<a href={(this.props.location == 'america') ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone'}
+							target="_blank"
+							rel="noopener noreferrer" >
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-								Buy on Amazon.com
-							</button>
-						</a>
-						<a href="https://igg.me/at/bananaphone" target="_blank" rel="noopener noreferrer"
-							className="is-hidden"
-							id="nav-international">
-							<button>
-								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
-								Buy now
+								Buy now!
 							</button>
 						</a>
 					</figure>

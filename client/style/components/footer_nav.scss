@@ -124,6 +124,12 @@ footer {
 		&:hover {
 			color: $yellow;
 		}
+		&:last-of-type{
+			display: none;
+			@media(max-width: $nav-break-point) {
+				display: block;
+			}
+		}
 		@media (max-width: $nav-break-point) {
 			color: #FFF;
 			&:active {
@@ -144,15 +150,6 @@ footer {
 		padding: 0.2em 1em;
 		&:hover {
 			color: $yellow;
-		}
-	}
-	#foot-america, #foot-international {
-		display: none;
-		@media(max-width: $nav-break-point) {
-			display: block;
-			&.is-hidden {
-				display: none;
-			}
 		}
 	}
 }
