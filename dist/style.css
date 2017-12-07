@@ -229,10 +229,10 @@ footer {
           font-size: 1.2em; } }
       @media (max-width: 550px) {
         .lp .scroll p, .lp .scroll .faq li, .faq .lp .scroll li {
-          font-size: 1em; } }
+          font-size: 1.1em; } }
       @media (max-width: 450px) {
         .lp .scroll p, .lp .scroll .faq li, .faq .lp .scroll li {
-          font-size: 0.9em; } }
+          font-size: 1em; } }
     @media (max-width: 550px) {
       .lp .scroll {
         display: none; } }
@@ -296,10 +296,10 @@ footer {
         font-size: 1.2em; } }
     @media (max-width: 550px) {
       .about p, .about .faq li, .faq .about li {
-        font-size: 1em; } }
+        font-size: 1.1em; } }
     @media (max-width: 450px) {
       .about p, .about .faq li, .faq .about li {
-        font-size: 0.9em; } }
+        font-size: 1em; } }
     .about p:first-of-type, .about .faq li:first-of-type, .faq .about li:first-of-type {
       margin-bottom: 0em; }
       @media (max-width: 950px) {
@@ -430,7 +430,7 @@ footer {
       margin-bottom: 0; }
       @media (max-width: 950px) {
         .about .instruction li {
-          font-size: 0.9em; } }
+          font-size: 1em; } }
   .about .parallax {
     background: url("/images/columbia.png") no-repeat center/cover;
     height: 100vh;
@@ -492,7 +492,7 @@ footer {
       list-style-position: outside; }
   @media (max-width: 400px) {
     .features li {
-      font-size: 0.9em; } }
+      font-size: 1em; } }
 
 .gorillas {
   color: #FFF;
