@@ -3,6 +3,7 @@
   color: #FFF;
   @include flex;
   flex-direction: row;
+  justify-content: center;
   padding-top: 1em;
   width: 100vw;
   @media(max-width: $parallax-width) {

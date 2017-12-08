@@ -29,11 +29,8 @@ nav {
 			color: $yellow;
 		}
 
-		a:last-of-type {
-			height: 45px; /* same as svg viewbox*/
-			i {
-				padding-right: 0.4em;
-			}
+		#navButton i {
+			padding-right: 0.4em;
 		}
 	}
 	img {
@@ -69,6 +66,7 @@ nav {
 		height: 100%;
 		padding-top: 0.6em;
 		margin-bottom: 0;
+		margin-top: 1em;
 		color: #FFF;
 		&:hover {
 			border-color: $yellow;
@@ -79,6 +77,13 @@ nav {
 		}
 		i {
 			padding-right: 0.5em;
+		}
+	}
+	a:last-of-type {
+		color: #FFF;
+		padding-bottom: 0.3em;
+		&:hover {
+			color: $yellow;
 		}
 	}
 }
@@ -124,12 +129,6 @@ footer {
 		&:hover {
 			color: $yellow;
 		}
-		&:last-of-type{
-			display: none;
-			@media(max-width: $nav-break-point) {
-				display: block;
-			}
-		}
 		@media (max-width: $nav-break-point) {
 			color: #FFF;
 			&:active {
@@ -144,11 +143,26 @@ footer {
 		}
 	}
 	button {
-		color: #FFF;
+		color: #000;
 		height: auto;
 		margin-bottom: 0;
 		padding: 0.2em 1em;
 		&:hover {
+			color: $yellow;
+		}
+	}
+	.buttonWrapper {
+		text-align: center;
+		display: none;
+		@media(max-width: $nav-break-point) {
+			display: inherit;
+			flex-direction: column;
+		}
+		button {
+			color: #FFF;
+		}
+
+		a:last-of-type:hover {
 			color: $yellow;
 		}
 	}

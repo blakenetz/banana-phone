@@ -56,11 +56,8 @@ nav {
     nav figure:hover figcaption {
       visibility: visible;
       color: #FDE303; }
-    nav figure a:last-of-type {
-      height: 45px;
-      /* same as svg viewbox*/ }
-      nav figure a:last-of-type i {
-        padding-right: 0.4em; }
+    nav figure #navButton i {
+      padding-right: 0.4em; }
   nav img {
     width: 6em;
     height: 5em; }
@@ -84,6 +81,7 @@ nav {
     height: 100%;
     padding-top: 0.6em;
     margin-bottom: 0;
+    margin-top: 1em;
     color: #FFF; }
     nav button:hover {
       border-color: #FDE303;
@@ -92,6 +90,11 @@ nav {
         color: #FDE303; }
     nav button i {
       padding-right: 0.5em; }
+  nav a:last-of-type {
+    color: #FFF;
+    padding-bottom: 0.3em; }
+    nav a:last-of-type:hover {
+      color: #FDE303; }
 
 footer {
   padding: 1em;
@@ -138,11 +141,6 @@ footer {
     padding-right: 0.5em; }
     footer a:hover {
       color: #FDE303; }
-    footer a:last-of-type {
-      display: none; }
-      @media (max-width: 480px) {
-        footer a:last-of-type {
-          display: block; } }
     @media (max-width: 480px) {
       footer a {
         color: #FFF; }
@@ -154,11 +152,22 @@ footer {
       footer p, footer .faq li, .faq footer li {
         display: none; } }
   footer button {
-    color: #FFF;
+    color: #000;
     height: auto;
     margin-bottom: 0;
     padding: 0.2em 1em; }
     footer button:hover {
+      color: #FDE303; }
+  footer .buttonWrapper {
+    text-align: center;
+    display: none; }
+    @media (max-width: 480px) {
+      footer .buttonWrapper {
+        display: inherit;
+        flex-direction: column; } }
+    footer .buttonWrapper button {
+      color: #FFF; }
+    footer .buttonWrapper a:last-of-type:hover {
       color: #FDE303; }
 
 .landingPage {
@@ -466,6 +475,7 @@ footer {
   flex-flow: column;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
   padding-top: 1em;
   width: 100vw; }
   @media (max-width: 550px) {
@@ -560,7 +570,8 @@ footer {
     position: absolute;
     background-color: #FDE303;
     padding: 1em 4em;
-    margin-top: -50px; }
+    margin-top: -50px;
+    max-width: unset; }
     @media (max-width: 800px) {
       .press .pressWrapper {
         margin-top: -30px; } }

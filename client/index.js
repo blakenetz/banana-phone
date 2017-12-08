@@ -65,6 +65,7 @@ class App extends Component {
       })
       .then((response) => response.json())
       .then((responseJson) => {
+        console.log(responseJson)
         // default america
         if ( ! responseJson ) {
           responseJson.country = 'america';
