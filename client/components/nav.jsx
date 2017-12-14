@@ -15,7 +15,9 @@ export default class Nav extends Component {
 			backupUrl: (this.props.location == 'america')
 				? 'https://igg.me/at/bananaphone'
 				: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-			backupText: (this.props.location == 'america') ? 'International' : 'American',
+			backupText: (this.props.location == 'america')
+				? 'Ordering from outside the US?'
+				: 'Ordering from within the US?',
 		}
 	}
 
@@ -114,7 +116,7 @@ export default class Nav extends Component {
 							</button>
 						</a>
 						<a href={this.state.backupUrl} className="no-padding" target="_blank" rel="noopener noreferrer">
-							{this.state.backupText}? Click here
+							{this.state.backupText}
 						</a>
 					</figure>
 				</section>

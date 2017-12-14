@@ -22937,7 +22937,7 @@
 				location: _this.props.location,
 				localUrl: _this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
 				backupUrl: _this.props.location == 'america' ? 'https://igg.me/at/bananaphone' : 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-				backupText: _this.props.location == 'america' ? 'International' : 'American'
+				backupText: _this.props.location == 'america' ? 'Ordering from outside the US?' : 'Ordering from within the US?'
 			};
 			return _this;
 		}
@@ -23048,8 +23048,7 @@
 							_react2.default.createElement(
 								'a',
 								{ href: this.state.backupUrl, className: 'no-padding', target: '_blank', rel: 'noopener noreferrer' },
-								this.state.backupText,
-								'? Click here'
+								this.state.backupText
 							)
 						)
 					)
@@ -24573,7 +24572,7 @@
 				location: _this.props.location,
 				localUrl: _this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
 				backupUrl: _this.props.location == 'america' ? 'https://igg.me/at/bananaphone' : 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-				backupText: _this.props.location == 'america' ? 'International' : 'American'
+				backupText: _this.props.location == 'america' ? 'Ordering from outside the US?' : 'Ordering from within the US?'
 			};
 			return _this;
 		}
@@ -24627,8 +24626,7 @@
 							_react2.default.createElement(
 								'a',
 								{ href: this.state.backupUrl, target: '_blank', rel: 'noopener noreferrer' },
-								this.state.backupText,
-								'? Click here'
+								this.state.backupText
 							)
 						)
 					),
