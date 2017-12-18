@@ -183,19 +183,14 @@
 					}).then(function (response) {
 						return response.json();
 					}).then(function (responseJson) {
-						// default america
-						if (!responseJson) {
-							responseJson.country = 'america';
-							localStorage.setItem('location', 'america');
-						} else if (responseJson.country.toLowerCase() == 'us' || responseJson.country.toLowerCase() == 'usa' || responseJson.country.toLowerCase() == 'america') {
-							localStorage.setItem('location', 'america');
-						} else {
-							localStorage.setItem('location', 'internation');
-						}
+						var country = (responseJson.country || 'america').toLowerCase();
+						country = country == 'us' || country == 'usa' || country == 'america' ? 'america' : country;
 
-						_this2.setState({ location: responseJson.country });
+						localStorage.setItem('location', country);
+						_this2.setState({ location: country });
 					}).catch(function (error) {
 						localStorage.setItem('location', 'america');
+						_this2.setState({ location: 'america' });
 					});
 				} else {
 					this.setState({ location: ipLocation });
