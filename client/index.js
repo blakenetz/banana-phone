@@ -65,13 +65,12 @@ class App extends Component {
       })
       .then((response) => response.json())
       .then((responseJson) => {
-        console.log(responseJson)
         // default america
         if ( ! responseJson ) {
           responseJson.country = 'america';
           localStorage.setItem('location', 'america')
         }
-        else if (responseJson.country == 'US') {
+        else if (responseJson.country.toLowerCase() == 'us' || responseJson.country.toLowerCase() == 'usa' || responseJson.country.toLowerCase() == 'america') {
           localStorage.setItem('location', 'america');
         }
         else {

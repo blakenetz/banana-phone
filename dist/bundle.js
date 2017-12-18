@@ -174,12 +174,11 @@
 	        }).then(function (response) {
 	          return response.json();
 	        }).then(function (responseJson) {
-	          console.log(responseJson);
 	          // default america
 	          if (!responseJson) {
 	            responseJson.country = 'america';
 	            localStorage.setItem('location', 'america');
-	          } else if (responseJson.country == 'US') {
+	          } else if (responseJson.country.toLowerCase() == 'us' || responseJson.country.toLowerCase() == 'usa' || responseJson.country.toLowerCase() == 'america') {
 	            localStorage.setItem('location', 'america');
 	          } else {
 	            localStorage.setItem('location', 'internation');
@@ -22935,9 +22934,9 @@
 			_this.handleScroll = (0, _javascriptDebounce2.default)(_this.handleScroll.bind(_this), 0);
 			_this.state = {
 				location: _this.props.location,
-				localUrl: _this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
-				backupUrl: _this.props.location == 'america' ? 'https://igg.me/at/bananaphone' : 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-				backupText: _this.props.location == 'america' ? 'Ordering from outside the US?' : 'Ordering from within the US?'
+				isAmerica: _this.props.location.toLowerCase() == 'america',
+				americaURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
+				internationURL: 'https://igg.me/at/bananaphone'
 			};
 			return _this;
 		}
@@ -23037,7 +23036,7 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ href: this.state.localUrl, id: 'navButton', target: '_blank', rel: 'noopener noreferrer' },
+								{ href: this.state.isAmerica ? this.state.americaURL : this.state.internationURL, id: 'navButton', target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(
 									'button',
 									null,
@@ -23047,8 +23046,10 @@
 							),
 							_react2.default.createElement(
 								'a',
-								{ href: this.state.backupUrl, className: 'no-padding', target: '_blank', rel: 'noopener noreferrer' },
-								this.state.backupText
+								{ href: this.state.isAmerica ? this.state.internationURL : this.state.americaURL, className: 'no-padding', target: '_blank', rel: 'noopener noreferrer' },
+								'Ordering from ',
+								this.state.isAmerica ? 'outside' : 'within',
+								' the US?'
 							)
 						)
 					)
@@ -24570,9 +24571,9 @@
 
 			_this.state = {
 				location: _this.props.location,
-				localUrl: _this.props.location == 'america' ? 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset' : 'https://igg.me/at/bananaphone',
-				backupUrl: _this.props.location == 'america' ? 'https://igg.me/at/bananaphone' : 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-				backupText: _this.props.location == 'america' ? 'Ordering from outside the US?' : 'Ordering from within the US?'
+				isAmerica: _this.props.location.toLowerCase() == 'america',
+				americaURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
+				internationURL: 'https://igg.me/at/bananaphone'
 			};
 			return _this;
 		}
@@ -24615,7 +24616,7 @@
 							{ className: 'buttonWrapper' },
 							_react2.default.createElement(
 								'a',
-								{ href: this.state.localUrl, target: '_blank', rel: 'noopener noreferrer' },
+								{ href: this.state.isAmerica ? this.state.americaURL : this.state.internationURL, target: '_blank', rel: 'noopener noreferrer' },
 								_react2.default.createElement(
 									'button',
 									null,
@@ -24625,8 +24626,10 @@
 							),
 							_react2.default.createElement(
 								'a',
-								{ href: this.state.backupUrl, target: '_blank', rel: 'noopener noreferrer' },
-								this.state.backupText
+								{ href: this.state.isAmerica ? this.state.internationURL : this.state.americaURL, target: '_blank', rel: 'noopener noreferrer' },
+								'Ordering from ',
+								this.state.isAmerica ? 'outside' : 'within',
+								' the US?'
 							)
 						)
 					),
