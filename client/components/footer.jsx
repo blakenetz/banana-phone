@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { OutboundLink } from 'react-ga';
 
 export default class Footer extends Component {
 	constructor(props) {
@@ -6,8 +7,8 @@ export default class Footer extends Component {
 		this.state = {
 			location: this.props.location,
 			isAmerica: (this.props.location.toLowerCase() == 'america'),
-			americaURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
-			internationURL: 'https://igg.me/at/bananaphone',
+			amazonURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
+			iggURL: 'https://igg.me/at/bananaphone',
 		}
 	}
 	render(){
@@ -22,15 +23,24 @@ export default class Footer extends Component {
 					<a href="https://twitter.com/bananaphoneco?lang=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
 
 					<div className="buttonWrapper">
-						<a href={this.state.isAmerica ? this.state.americaURL : this.state.internationURL} target="_blank" rel="noopener noreferrer">
+						<OutboundLink
+								eventLabel={this.state.isAmerica ? 'outboundToAmazon' : 'outboundToIgg'}
+								to={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
+								target="_blank"
+								rel="noopener noreferrer">
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy now!
 							</button>
-						</a>
-						<a href={this.state.isAmerica ? this.state.internationURL : this.state.americaURL} target="_blank" rel="noopener noreferrer">
+						</OutboundLink>
+
+						<OutboundLink
+								eventLabel={this.state.isAmerica ? 'outboundToIgg' : 'outboundToAmazon'}
+								to={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
+								target="_blank"
+								rel="noopener noreferrer">
 							Ordering from {this.state.isAmerica ? 'outside' : 'within'} the US?
-						</a>
+						</OutboundLink>
 					</div>
 				</section>
 				<section>
