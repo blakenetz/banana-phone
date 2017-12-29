@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ScrollReveal from 'scrollreveal';
-import ReactGA from 'react-ga';
 
 // components
 import Nav from './components/nav';
@@ -27,8 +26,6 @@ class App extends Component {
 
 	componentDidMount() {
 		this.setScrollAnimations();
-		ReactGA.initialize('UA-96623014-1');
-		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
 
 	setScrollAnimations() {

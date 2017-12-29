@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { OutboundLink } from 'react-ga';
 
 export default class Footer extends Component {
 	constructor(props) {
 		super(props);
+		this.handleClick = this.handleClick.bind(this);
 		this.state = {
 			location: this.props.location,
 			isAmerica: (this.props.location.toLowerCase() == 'america'),
@@ -11,6 +11,12 @@ export default class Footer extends Component {
 			iggURL: 'https://igg.me/at/bananaphone',
 		}
 	}
+
+	handleClick(e){
+		const GAevent = ((e.currentTarget.href).indexOf('amazon.com') != -1) ? 'OutboundToAmazon' : 'OutboundToIgg';
+		dataLayer.push({'event': GAevent});
+	}
+
 	render(){
 		return (
 			<footer>
@@ -23,24 +29,22 @@ export default class Footer extends Component {
 					<a href="https://twitter.com/bananaphoneco?lang=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
 
 					<div className="buttonWrapper">
-						<OutboundLink
-								eventLabel={this.state.isAmerica ? 'outboundToAmazon' : 'outboundToIgg'}
-								to={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
-								target="_blank"
-								rel="noopener noreferrer">
+						<a href={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
+							onClick={this.handleClick}
+							target="_blank"
+							rel="noopener noreferrer">
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy now!
 							</button>
-						</OutboundLink>
+						</a>
 
-						<OutboundLink
-								eventLabel={this.state.isAmerica ? 'outboundToIgg' : 'outboundToAmazon'}
-								to={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
-								target="_blank"
-								rel="noopener noreferrer">
+						<a href={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
+							onClick={this.handleClick}
+							target="_blank"
+							rel="noopener noreferrer">
 							Ordering from {this.state.isAmerica ? 'outside' : 'within'} the US?
-						</OutboundLink>
+						</a>
 					</div>
 				</section>
 				<section>

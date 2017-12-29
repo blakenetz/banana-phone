@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import debounce from 'javascript-debounce';
 import 'whatwg-fetch';
-import { OutboundLink } from 'react-ga';
 
 export default class Nav extends Component {
 	constructor(props){
 		super(props);
-		this.handleClick = this.handleClick.bind(this);
+		this.handleSocialClick = this.handleSocialClick.bind(this);
+		this.handleBuyClick = this.handleBuyClick.bind(this);
 		this.handleScroll = debounce(this.handleScroll.bind(this), 0);
 		this.state = {
 			location: this.props.location,
@@ -34,7 +34,7 @@ export default class Nav extends Component {
 		}
 	}
 
-	handleClick(e){
+	handleSocialClick(e){
 		const fbUrl = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Figg.me%2Fat%2Fbananaphone&amp;src=sdkpreparse";
 		const twUrl = `https://twitter.com/intent/tweet
 			?text=${encodeURI("Yellow!? Banana Phones are taking over. Get a phone with appeal at bananaphone.io 🍌")}
@@ -45,6 +45,11 @@ export default class Nav extends Component {
 			'_blank',
 			'location=yes,height=570,width=520,scrollbars=yes,status=yes'
 		);
+	}
+
+	handleBuyClick(e){
+		const GAevent = ((e.currentTarget.href).indexOf('amazon.com') != -1) ? 'OutboundToAmazon' : 'OutboundToIgg';
+		dataLayer.push({'event': GAevent});
 	}
 
 	render() {
@@ -60,7 +65,7 @@ export default class Nav extends Component {
 					<figure>
 						<a className="fb-xfbml-parse-ignore"
 							id="fb"
-							onClick={this.handleClick}
+							onClick={this.handleSocialClick}
 							href='javascript:void(0)'
 							target='_self'
 							rel='noopener noreferrer'>
@@ -78,7 +83,7 @@ export default class Nav extends Component {
 					{/* TWITTER */}
 					<figure>
 						<a className="twitter-share-button"
-								onClick={this.handleClick}
+								onClick={this.handleSocialClick}
 								id="tw"
 								href='javascript:void(0)'
 								target='_self'
@@ -104,26 +109,24 @@ export default class Nav extends Component {
 
 					{/* BUY NOW */}
 					<figure>
-						<OutboundLink
-							eventLabel={this.state.isAmerica ? 'outboundToAmazon' : 'outboundToIgg'}
-							to={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
+						<a href={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
 							target="_blank"
-							id="navButton"
-							rel="noopener noreferrer">
+							className="navButton"
+							rel="noopener noreferrer"
+							onClick={this.handleBuyClick} >
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy now!
 							</button>
-						</OutboundLink>
+						</a>
 
-						<OutboundLink
-							eventLabel={this.state.isAmerica ? 'outboundToIgg' : 'outboundToAmazon'}
-							to={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
+						<a href={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
 							target="_blank"
 							className="no-padding"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+							onClick={this.handleBuyClick} >
 							Ordering from {this.state.isAmerica ? 'outside' : 'within'} the US?
-						</OutboundLink>
+						</a>
 					</figure>
 				</section>
 			</nav>

@@ -56,7 +56,7 @@ nav {
     nav figure:hover figcaption {
       visibility: visible;
       color: #FDE303; }
-    nav figure #navButton i {
+    nav figure .navButton i {
       padding-right: 0.4em; }
   nav img {
     width: 6em;
