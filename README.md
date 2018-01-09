@@ -10,6 +10,8 @@ Hosted at BananaPhone.io
   * SCSS
   * ExtractTextPlugin 😮
   * Image compression / encoding with PNGQuant and Guetzli
+  * Google Tag Manager + Google Analytics + Facebook Pixel
+  * [ScrollReveal](https://scrollrevealjs.org)
 
 🔩 Hosting specs:
   * Static files held on S3
