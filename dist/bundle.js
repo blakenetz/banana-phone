@@ -22929,7 +22929,6 @@
 			var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
 
 			_this.handleSocialClick = _this.handleSocialClick.bind(_this);
-			_this.handleBuyClick = _this.handleBuyClick.bind(_this);
 			_this.handleScroll = (0, _javascriptDebounce2.default)(_this.handleScroll.bind(_this), 0);
 			_this.state = {
 				location: _this.props.location,
@@ -22966,13 +22965,7 @@
 				var fbUrl = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Figg.me%2Fat%2Fbananaphone&amp;src=sdkpreparse";
 				var twUrl = 'https://twitter.com/intent/tweet\n\t\t\t?text=' + encodeURI("Yellow!? Banana Phones are taking over. Get a phone with appeal at bananaphone.io 🍌") + '\n\t\t\t&hashtags=' + encodeURI("phonewithappeal,yellow?,gorillamarketing");
 
-				window.open(e.currentTarget.id === 'fb' ? fbUrl : twUrl, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-			}
-		}, {
-			key: 'handleBuyClick',
-			value: function handleBuyClick(e) {
-				var GAevent = e.currentTarget.href.indexOf('amazon.com') != -1 ? 'OutboundToAmazon' : 'OutboundToIgg';
-				dataLayer.push({ 'event': GAevent });
+				window.open(e.currentTarget.id === 'facebook' ? fbUrl : twUrl, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 			}
 		}, {
 			key: 'render',
@@ -22993,12 +22986,11 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ className: 'fb-xfbml-parse-ignore',
-									id: 'fb',
+								{ className: 'fb-xfbml-parse-ignore gtm-social-post',
+									id: 'facebook',
 									onClick: this.handleSocialClick,
 									href: 'javascript:void(0)',
-									target: '_self',
-									rel: 'noopener noreferrer' },
+									target: '_self' },
 								_react2.default.createElement(
 									'svg',
 									{ version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
@@ -23017,12 +23009,11 @@
 							null,
 							_react2.default.createElement(
 								'a',
-								{ className: 'twitter-share-button',
+								{ className: 'twitter-share-button gtm-social-post',
 									onClick: this.handleSocialClick,
-									id: 'tw',
+									id: 'twitter',
 									href: 'javascript:void(0)',
-									target: '_self',
-									rel: 'noopener noreferrer' },
+									target: '_self' },
 								_react2.default.createElement(
 									'svg',
 									{ version: '1.1', xmlns: 'http://www.w3.org/2000/svg', x: '0px', y: '0px',
@@ -23043,9 +23034,8 @@
 								'a',
 								{ href: this.state.isAmerica ? this.state.amazonURL : this.state.iggURL,
 									target: '_blank',
-									className: 'navButton',
-									rel: 'noopener noreferrer',
-									onClick: this.handleBuyClick },
+									className: this.state.isAmerica ? 'navButton gtm-amazon' : 'navButton gtm-igg',
+									rel: 'noopener noreferrer' },
 								_react2.default.createElement(
 									'button',
 									null,
@@ -23057,9 +23047,8 @@
 								'a',
 								{ href: this.state.isAmerica ? this.state.iggURL : this.state.amazonURL,
 									target: '_blank',
-									className: 'no-padding',
-									rel: 'noopener noreferrer',
-									onClick: this.handleBuyClick },
+									className: this.state.isAmerica ? 'no-padding gtm-igg' : 'no-padding gtm-amazon',
+									rel: 'noopener noreferrer' },
 								'Ordering from ',
 								this.state.isAmerica ? 'outside' : 'within',
 								' the US?'
@@ -24184,7 +24173,11 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2', target: '_blank', rel: 'noopener noreferrer' },
+									{ href: 'https://www.huffingtonpost.com/entry/ring-ring-ring-ring-ring-ring-ring_us_590b3d84e4b02655f844f1e2',
+										target: '_blank',
+										rel: 'noopener noreferrer',
+										id: 'gtm-huffpost',
+										className: 'gtm-media' },
 									_react2.default.createElement('img', { src: 'images/huffpost.png', alt: 'HuffPost logo' })
 								)
 							),
@@ -24193,7 +24186,11 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'http://mashable.com/2017/05/04/banana-phone-indiegogo/#PFkR6ke.dPq8', target: '_blank', rel: 'noopener noreferrer' },
+									{ href: 'http://mashable.com/2017/05/04/banana-phone-indiegogo/#PFkR6ke.dPq8',
+										target: '_blank',
+										rel: 'noopener noreferrer',
+										id: 'gtm-mashable',
+										className: 'gtm-media' },
 									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Mashable.png', alt: 'Mashable logo' })
 								)
 							),
@@ -24202,7 +24199,11 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign', target: '_blank', rel: 'noopener noreferrer' },
+									{ href: 'https://www.theverge.com/circuitbreaker/2017/5/4/15545232/banana-phone-indiegogo-campaign',
+										target: '_blank',
+										rel: 'noopener noreferrer',
+										id: 'gtm-verge',
+										className: 'gtm-media' },
 									_react2.default.createElement('img', { src: 'images/verge.png', alt: 'The Verge logo' })
 								)
 							),
@@ -24211,7 +24212,11 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'http://www.foodandwine.com/news/banana-phone-indiegogo', target: '_blank', rel: 'noopener noreferrer' },
+									{ href: 'http://www.foodandwine.com/news/banana-phone-indiegogo',
+										target: '_blank',
+										rel: 'noopener noreferrer',
+										id: 'gtm-foodandwine',
+										className: 'gtm-media' },
 									_react2.default.createElement('img', { src: 'http://www.foodandwine.com/sites/all/modules/custom/ti_amg_fw_mm_config/img/logo_FoodandWine.png', alt: 'Food and Wine logo' })
 								)
 							),
@@ -24220,7 +24225,11 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/', target: '_blank', rel: 'noopener noreferrer' },
+									{ href: 'https://www.cnet.com/news/banana-phone-indiegogo-crowdfunding-bluetooth-handset/',
+										target: '_blank',
+										rel: 'noopener noreferrer',
+										id: 'gtm-cnet',
+										className: 'gtm-media' },
 									_react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png', alt: 'CNET logo' })
 								)
 							)
@@ -24582,7 +24591,6 @@
 
 			var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
 
-			_this.handleClick = _this.handleClick.bind(_this);
 			_this.state = {
 				location: _this.props.location,
 				isAmerica: _this.props.location.toLowerCase() == 'america',
@@ -24593,12 +24601,6 @@
 		}
 
 		_createClass(Footer, [{
-			key: 'handleClick',
-			value: function handleClick(e) {
-				var GAevent = e.currentTarget.href.indexOf('amazon.com') != -1 ? 'OutboundToAmazon' : 'OutboundToIgg';
-				dataLayer.push({ 'event': GAevent });
-			}
-		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -24618,17 +24620,26 @@
 						null,
 						_react2.default.createElement(
 							'a',
-							{ href: 'https://www.facebook.com/bananaphone.io/', target: '_blank', rel: 'noopener noreferrer' },
+							{ href: 'https://www.facebook.com/bananaphone.io/',
+								target: '_blank',
+								rel: 'noopener noreferrer',
+								className: 'gtm-social-redirect' },
 							_react2.default.createElement('i', { className: 'fa fa-facebook-square fa-3x', 'aria-hidden': 'true' })
 						),
 						_react2.default.createElement(
 							'a',
-							{ href: 'https://www.instagram.com/bananaphone.io/?hl=en', target: '_blank', rel: 'noopener noreferrer' },
+							{ href: 'https://www.instagram.com/bananaphone.io/?hl=en',
+								target: '_blank',
+								rel: 'noopener noreferrer',
+								className: 'gtm-social-redirect' },
 							_react2.default.createElement('i', { className: 'fa fa-instagram fa-3x', 'aria-hidden': 'true' })
 						),
 						_react2.default.createElement(
 							'a',
-							{ href: 'https://twitter.com/bananaphoneco?lang=en', target: '_blank', rel: 'noopener noreferrer' },
+							{ href: 'https://twitter.com/bananaphoneco?lang=en',
+								target: '_blank',
+								rel: 'noopener noreferrer',
+								className: 'gtm-social-redirect' },
 							_react2.default.createElement('i', { className: 'fa fa-twitter fa-3x', 'aria-hidden': 'true' })
 						),
 						_react2.default.createElement(
@@ -24637,9 +24648,9 @@
 							_react2.default.createElement(
 								'a',
 								{ href: this.state.isAmerica ? this.state.amazonURL : this.state.iggURL,
-									onClick: this.handleClick,
 									target: '_blank',
-									rel: 'noopener noreferrer' },
+									rel: 'noopener noreferrer',
+									className: this.state.isAmerica ? 'gtm-amazon' : 'gtm-igg' },
 								_react2.default.createElement(
 									'button',
 									null,
@@ -24650,9 +24661,9 @@
 							_react2.default.createElement(
 								'a',
 								{ href: this.state.isAmerica ? this.state.iggURL : this.state.amazonURL,
-									onClick: this.handleClick,
 									target: '_blank',
-									rel: 'noopener noreferrer' },
+									rel: 'noopener noreferrer',
+									className: this.state.isAmerica ? 'gtm-igg' : 'gtm-amazon' },
 								'Ordering from ',
 								this.state.isAmerica ? 'outside' : 'within',
 								' the US?'
