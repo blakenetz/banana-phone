@@ -40,7 +40,7 @@ export default class Nav extends Component {
 			&hashtags=${encodeURI("phonewithappeal,yellow?,gorillamarketing")}`;
 
 		window.open(
-			(e.currentTarget.id === 'fb') ? fbUrl : twUrl,
+			(e.currentTarget.id === 'facebook') ? fbUrl : twUrl,
 			'_blank',
 			'location=yes,height=570,width=520,scrollbars=yes,status=yes'
 		);
@@ -57,12 +57,11 @@ export default class Nav extends Component {
 
 					{/* FACEBOOK */}
 					<figure>
-						<a className="fb-xfbml-parse-ignore"
-							id="fb"
+						<a className="fb-xfbml-parse-ignore gtm-social-post"
+							id="facebook"
 							onClick={this.handleSocialClick}
 							href='javascript:void(0)'
-							target='_self'
-							rel='noopener noreferrer'>
+							target='_self'>
 
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								 width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
@@ -76,12 +75,12 @@ export default class Nav extends Component {
 
 					{/* TWITTER */}
 					<figure>
-						<a className="twitter-share-button"
+						<a className="twitter-share-button gtm-social-post"
 								onClick={this.handleSocialClick}
-								id="tw"
+								id="twitter"
 								href='javascript:void(0)'
-								target='_self'
-								rel='noopener noreferrer'>
+								target='_self'>
+
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								 width="45" height="45" viewBox="0 0 67 67" enableBackground="new 0 0 67 67">
 								<path fill="#000000" stroke="#FFFFFF" strokeWidth="3" strokeMiterlimit="10" d="M38.167,22.283
@@ -105,7 +104,7 @@ export default class Nav extends Component {
 					<figure>
 						<a href={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
 							target="_blank"
-							className="navButton"
+							className={this.state.isAmerica ? 'navButton gtm-amazon' : 'navButton gtm-igg'}
 							rel="noopener noreferrer" >
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
@@ -115,7 +114,7 @@ export default class Nav extends Component {
 
 						<a href={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
 							target="_blank"
-							className="no-padding"
+							className={this.state.isAmerica ? 'no-padding gtm-igg' : 'no-padding gtm-amazon'}
 							rel="noopener noreferrer" >
 							Ordering from {this.state.isAmerica ? 'outside' : 'within'} the US?
 						</a>

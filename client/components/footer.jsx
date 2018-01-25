@@ -18,14 +18,30 @@ export default class Footer extends Component {
 					<p>visit us at</p>
 				</section>
 				<section>
-					<a href="https://www.facebook.com/bananaphone.io/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-					<a href="https://www.instagram.com/bananaphone.io/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-					<a href="https://twitter.com/bananaphoneco?lang=en" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/bananaphone.io/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="gtm-social-redirect">
+						<i className="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.instagram.com/bananaphone.io/?hl=en"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="gtm-social-redirect">
+						<i className="fa fa-instagram fa-3x" aria-hidden="true"></i>
+					</a>
+					<a href="https://twitter.com/bananaphoneco?lang=en"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="gtm-social-redirect">
+						<i className="fa fa-twitter fa-3x" aria-hidden="true"></i>
+					</a>
 
 					<div className="buttonWrapper">
 						<a href={this.state.isAmerica ? this.state.amazonURL : this.state.iggURL}
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+							className={this.state.isAmerica ? 'gtm-amazon' : 'gtm-igg'} >
 							<button>
 								<i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
 								Buy now!
@@ -34,7 +50,8 @@ export default class Footer extends Component {
 
 						<a href={this.state.isAmerica ? this.state.iggURL : this.state.amazonURL}
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+							className={this.state.isAmerica ? 'gtm-igg' : 'gtm-amazon'} >
 							Ordering from {this.state.isAmerica ? 'outside' : 'within'} the US?
 						</a>
 					</div>
