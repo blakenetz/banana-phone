@@ -49,7 +49,7 @@ export default class Press extends Component {
 
 						{/* FOOD AND WINE */}
 						<div className="logo">
-							<a href="http://www.foodandwine.com/news/banana-phone-indiegogo"
+							<a href="https://www.foodandwine.com/news/banana-phone-indiegogo"
 								target="_blank"
 								rel="noopener noreferrer"
 								id="gtm-foodandwine"
