@@ -4,7 +4,7 @@ export default class Footer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			location: this.props.location,
+			location: this.props.location ? this.props.location : 'america',
 			isAmerica: (this.props.location.toLowerCase() == 'america'),
 			amazonURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
 			iggURL: 'https://igg.me/at/bananaphone',

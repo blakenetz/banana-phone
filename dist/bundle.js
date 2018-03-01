@@ -22931,7 +22931,7 @@
 			_this.handleSocialClick = _this.handleSocialClick.bind(_this);
 			_this.handleScroll = (0, _javascriptDebounce2.default)(_this.handleScroll.bind(_this), 0);
 			_this.state = {
-				location: _this.props.location,
+				location: _this.props.location ? _this.props.location : 'america',
 				isAmerica: _this.props.location.toLowerCase() == 'america',
 				amazonURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
 				iggURL: 'https://igg.me/at/bananaphone'
@@ -24592,7 +24592,7 @@
 			var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
 
 			_this.state = {
-				location: _this.props.location,
+				location: _this.props.location ? _this.props.location : 'america',
 				isAmerica: _this.props.location.toLowerCase() == 'america',
 				amazonURL: 'https://www.amazon.com/Banana-Phone-Wireless-Bluetooth-Handset/dp/B0761VVFDX/ref=sr_1_1?ie=UTF8&qid=1511969802&sr=8-1&keywords=banana+phone+handset',
 				iggURL: 'https://igg.me/at/bananaphone'
