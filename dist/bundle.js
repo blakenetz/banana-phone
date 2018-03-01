@@ -24212,7 +24212,7 @@
 								{ className: 'logo' },
 								_react2.default.createElement(
 									'a',
-									{ href: 'http://www.foodandwine.com/news/banana-phone-indiegogo',
+									{ href: 'https://www.foodandwine.com/news/banana-phone-indiegogo',
 										target: '_blank',
 										rel: 'noopener noreferrer',
 										id: 'gtm-foodandwine',
