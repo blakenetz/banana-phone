@@ -31,16 +31,17 @@
     "babel-preset-stage-1": "^6.16.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.9.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "javascript-debounce": "^1.0.0",
+    "npm": "^6.1.0",
     "scrollreveal": "^3.4.0",
     "serve-favicon": "^2.5.0",
     "whatwg-fetch": "^2.0.4"
