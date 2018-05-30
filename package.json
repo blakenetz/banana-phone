@@ -24,7 +24,7 @@
   "homepage": "https://github.com/blakeface/banana-phone#readme",
   "devDependencies": {
     "babel": "^6.23.0",
-    "babel-core": "^6.17.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "javascript-debounce": "^1.0.0",
-    "scrollreveal": "^3.3.6",
-    "serve-favicon": "^2.4.1",
-    "whatwg-fetch": "^2.0.3"
+    "scrollreveal": "^3.4.0",
+    "serve-favicon": "^2.5.0",
+    "whatwg-fetch": "^2.0.4"
   }
 }
