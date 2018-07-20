@@ -1,7 +1,9 @@
 # Banana Phone
 
+😢 This product and myself have decided to see other people. It is now a shopify site 😢
+
 🍌 A phone with appeal 🍌
-Hosted at BananaPhone.io
+
 
 🛠 Specs:
   * React
