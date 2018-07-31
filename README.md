@@ -1,6 +1,6 @@
 # Banana Phone
 
-😢 This product and myself have decided to see other people. It is now a shopify site 😢
+😢 This product and myself have decided to see other people. It is now a shopify site. You can view an archived version of it [here](https://web.archive.org/web/20180617034234/https://www.bananaphone.io) 😢
 
 🍌 A phone with appeal 🍌
 
