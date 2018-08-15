@@ -1,7 +1,9 @@
 # Banana Phone
 
-🍌 A phone with appeal 🍌
-Hosted at BananaPhone.io
+🍌 A phone with appeal 🍌  
+Hosted at BananaPhone.io  
+
+Note: this is the Node branch. The site has since transformed into a simple serverless static website.
 
 🛠 Specs:
   * Node.js
